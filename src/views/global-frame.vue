@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative flex flex-col w-screen h-fit min-h-screen">
+    <div class="relative flex flex-col h-fit min-h-screen">
       <router-view></router-view>
     </div>
     <div class="bg-gray-100 px-8 py-8 text-gray-600">
