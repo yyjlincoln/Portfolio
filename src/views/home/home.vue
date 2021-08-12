@@ -1,17 +1,19 @@
 <template>
   <div>
     <!-- Root -->
-    <div class="flex flex-col pt-20 sm:mt-0 sm:flex-row min-h-screen h-fit justify-space-between">
+    <div
+      class="
+        flex flex-col
+        pt-20
+        sm:mt-0
+        sm:flex-row
+        min-h-screen
+        h-fit
+        justify-space-between
+      "
+    >
       <div
-        class="
-          flex flex-col
-          h-fit
-          justify-center
-          ml-10
-          sm:ml-20
-          md:ml-40
-          mr-10
-        "
+        class="flex flex-col h-fit justify-center ml-10 sm:ml-20 md:ml-40 mr-10"
       >
         <!-- First full screen -->
         <div>
@@ -32,7 +34,19 @@
         </div>
         <div class="mt-8 flex flex-col sm:flex-row">
           <!-- Buttons -->
-          <router-link to="/portfolio" class="ml-0 mx-3">
+          <router-link
+            to="/portfolio"
+            class="
+              ml-0
+              mx-3
+              transition-all
+              shadow-lg
+              hover:shadow-md
+              active:shadow-sm
+              ease-in-out
+              rounded-md
+            "
+          >
             <div
               class="rounded-md flex px-5 py-3 max-w-xl font-extrabold"
               style="background-color: #3fab52; color: #e2f3e8"
@@ -48,7 +62,19 @@
           </router-link>
           <a
             href="mailto:lincoln@yyjlincoln.com"
-            class="mx-3 ml-0 sm:ml-3 mt-3 sm:mt-0"
+            class="
+              mx-3
+              ml-0
+              sm:ml-3
+              mt-3
+              sm:mt-0
+              transition-all
+              shadow-lg
+              hover:shadow-md
+              active:shadow-sm
+              ease-in-out
+              rounded-md
+            "
           >
             <div
               class="rounded-md flex px-5 py-3 font-extrabold"
@@ -65,7 +91,18 @@
           </a>
         </div>
       </div>
-      <div class="mx-auto my-10 sm:mx-10 flex flex-col justify-center flex sm:hidden md:flex">
+      <div
+        class="
+          mx-auto
+          my-10
+          sm:mx-10
+          flex flex-col
+          justify-center
+          flex
+          sm:hidden
+          md:flex
+        "
+      >
         <div class="w-fit h-fit">
           <img class="w-80 h-80 object-contain" src="@/assets/logo.png" />
         </div>
