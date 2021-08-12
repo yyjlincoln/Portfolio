@@ -10,12 +10,24 @@ const MAIN_ROOTS = [
     {
         path: '',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: {
+            nav: {
+                available: false,
+                name: "Lincoln Yan"
+            }
+        }
     },
     {
         path: 'portfolio',
         name: 'Portfolio',
-        component: Portfolio
+        component: Portfolio,
+        meta: {
+            nav: {
+                available: true,
+                name:"Portfolio"
+            }
+        }
     }
 ]
 
@@ -30,11 +42,12 @@ const router = new VueRouter({
         },
         {
             path: '*',
-            name:'Error',
+            name: 'Error',
             component: NotFound,
         }
     ],
-    mode: 'history'
+    mode: 'history',
+    scrollBehavior: () => ({ y: 0 })
 })
 
 export default router

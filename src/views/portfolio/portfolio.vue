@@ -23,7 +23,7 @@
 <script>
 export default {
   mounted() {
-    window.location.href = "https://linkedin.com/in/yyjlincoln";
+    // window.location.href = "https://linkedin.com/in/yyjlincoln";
   },
 };
 </script>
