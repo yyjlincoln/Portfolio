@@ -12,13 +12,13 @@ export default {
     $route: function (to, from) {
       from;
       document.title = to.meta.title
-        ? to.meta.title + " - @yyjlincoln"
+        ? to.meta.title
         : "Lincoln Yan - @yyjlincoln";
     },
   },
   mounted() {
     document.title = this.$route.meta.title
-      ? this.$route.meta.title + " - @yyjlincoln"
+      ? this.$route.meta.title
       : "Lincoln Yan - @yyjlincoln";
   },
 };
