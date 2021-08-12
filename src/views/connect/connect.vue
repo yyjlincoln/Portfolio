@@ -46,7 +46,7 @@
           <div class="mt-4 md:mt-8">
             <text-styles class="" type="title_color"
               ><box-icon name="error" color="#157f1f" class="mr-2"></box-icon>
-              Complains and Legal issues:</text-styles
+              Complaints and Legal issues:</text-styles
             >
             <a href="mailto:legal@yyjlincoln.com">
               <text-styles class="mt-4 text-hover" type="subtitle_color">
