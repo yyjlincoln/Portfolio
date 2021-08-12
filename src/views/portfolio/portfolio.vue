@@ -1,32 +1,33 @@
 <template>
   <div>
-    <div class="flex flex-col min-h-screen h-fit justify-center">
-      <div class="mx-auto">
-        <div class="text-xl sm:text-2xl md:text-3xl font-extrabold">
-          <!-- Title -->
-          <div style="color: #4cb963" class="flex flex-row justify-center">
-            <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-              <path
-                class="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
-            </svg>
-            <div>Redirecting you to LinkedIn...</div>
-          </div>
+    <page-frame>
+      <div class="flex flex-col">
+        <div class="mt-8 px-8 md:md-16 md:px-16">
+          <!-- Block 1 - Who am I? -->
+          <text-styles type="primary">Who am I?</text-styles>
+          <text-styles class="my-2" type="title">I'm Lincoln</text-styles>
         </div>
       </div>
-    </div>
+    </page-frame>
   </div>
 </template>
 
+
+
 <script>
+import PageFrame from "../../components/page-frame.vue";
+import TextStyles from "../../components/text-styles.vue";
 export default {
   mounted() {
     // window.location.href = "https://linkedin.com/in/yyjlincoln";
   },
+  components: {
+    PageFrame,
+    TextStyles,
+  },
 };
 </script>
+    
 
 <style>
 </style>

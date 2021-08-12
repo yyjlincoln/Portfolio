@@ -4,6 +4,8 @@ import GlobalFrame from '@/views/global-frame.vue'
 import Home from '@/views/home/home.vue'
 import Portfolio from '@/views/portfolio/portfolio.vue'
 import NotFound from '@/views/not-found.vue'
+import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
+
 Vue.use(VueRouter)
 
 const MAIN_ROOTS = [
@@ -25,7 +27,18 @@ const MAIN_ROOTS = [
         meta: {
             nav: {
                 available: true,
-                name:"Portfolio"
+                name: "Portfolio"
+            }
+        }
+    },
+    {
+        path: 'curriculum-vitae',
+        name: 'Curriculum Vitae',
+        component: CurriculumVitae,
+        meta: {
+            nav: {
+                available: true,
+                name: "Curriculum Vitae"
             }
         }
     }

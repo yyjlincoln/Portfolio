@@ -35,7 +35,7 @@
         <div class="mt-8 flex flex-col sm:flex-row">
           <!-- Buttons -->
           <router-link
-            to="/portfolio"
+            to="/curriculum-vitae"
             class="
               ml-0
               mx-3
@@ -57,9 +57,39 @@
                 color="#e2f3e8"
                 class="mr-1"
               ></box-icon
+              >Curriculum Vitae
+            </div>
+          </router-link>
+          <router-link
+            to="/portfolio"
+            class="
+              mx-3
+              ml-0
+              sm:ml-3
+              mt-3
+              sm:mt-0
+              transition-all
+              shadow-lg
+              hover:shadow-md
+              active:shadow-sm
+              ease-in-out
+              rounded-md
+            "
+          >
+            <div
+              class="rounded-md flex px-5 py-3 max-w-xl font-extrabold"
+              style="background-color: #3fab52; color: #e2f3e8"
+            >
+              <box-icon
+                type="solid"
+                name="right-arrow-circle"
+                color="#e2f3e8"
+                class="mr-1"
+              ></box-icon
               >My Portfolio
             </div>
           </router-link>
+
           <a
             href="mailto:lincoln@yyjlincoln.com"
             class="
@@ -108,8 +138,6 @@
         </div>
       </div>
     </div>
-
-    <div class="h-screen w-screen"></div>
   </div>
 </template>
 

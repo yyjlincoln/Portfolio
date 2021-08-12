@@ -36,7 +36,14 @@
                 <div class="mx-1 hidden md:block">Back</div>
               </div>
             </div>
-            <div class="flex-grow flex flex-row justify-center w-1/3">
+            <div
+              class="
+                flex-grow flex flex-row
+                justify-center
+                min-w-1/3
+                flex-shrink-0
+              "
+            >
               <div class="flex flex-col justify-center">
                 <!-- Center -->
                 <div>{{ nav.name }}</div>
@@ -49,8 +56,9 @@
           </div>
         </div>
       </div>
-
-      <router-view></router-view>
+      <transition :name="page_transition" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </div>
     <div class="bg-gray-100 px-8 py-8 text-gray-600">
       <!-- Footer -->
@@ -97,6 +105,7 @@ export default {
       },
     },
     nav: {},
+    page_transition: "slide-left",
   }),
   watch: {
     $route: function (to, from) {
