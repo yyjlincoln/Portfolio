@@ -21,9 +21,14 @@ body {
   padding: 0;
   margin: 0;
 }
+
+#app {
+  overflow-x: hidden;
+}
+
 .slide-left-leave-active,
 .slide-right-leave-active {
-  display: none;  
+  display: none;
 }
 
 .slide-left-enter-active,
