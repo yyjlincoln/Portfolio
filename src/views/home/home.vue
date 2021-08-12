@@ -46,11 +46,9 @@
               ease-in-out
               rounded-md
             "
+            style="background-color: #3fab52; color: #e2f3e8"
           >
-            <div
-              class="rounded-md flex px-5 py-3 max-w-xl font-extrabold"
-              style="background-color: #3fab52; color: #e2f3e8"
-            >
+            <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
               <box-icon
                 type="solid"
                 name="right-arrow-circle"
@@ -75,11 +73,9 @@
               ease-in-out
               rounded-md
             "
+            style="background-color: #3fab52; color: #e2f3e8"
           >
-            <div
-              class="rounded-md flex px-5 py-3 max-w-xl font-extrabold"
-              style="background-color: #3fab52; color: #e2f3e8"
-            >
+            <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
               <box-icon
                 type="solid"
                 name="right-arrow-circle"
@@ -90,8 +86,8 @@
             </div>
           </router-link>
 
-          <a
-            href="mailto:lincoln@yyjlincoln.com"
+          <router-link
+            to="/connect"
             class="
               mx-3
               ml-0
@@ -105,20 +101,18 @@
               ease-in-out
               rounded-md
             "
+            style="background-color: #e2f3e8; color: #3fab52"
           >
-            <div
-              class="rounded-md flex px-5 py-3 font-extrabold"
-              style="background-color: #e2f3e8; color: #3fab52"
-            >
+            <div class="rounded-md flex px-5 py-3 font-extrabold">
               <box-icon
                 type="solid"
                 name="right-arrow-circle"
                 color="#3fab52"
                 class="mr-1"
               ></box-icon
-              >Contact Me
+              >Connect
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
       <div

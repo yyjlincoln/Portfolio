@@ -5,6 +5,7 @@ import Home from '@/views/home/home.vue'
 import Portfolio from '@/views/portfolio/portfolio.vue'
 import NotFound from '@/views/not-found.vue'
 import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
+import Connect from '@/views/connect/connect.vue'
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,18 @@ const MAIN_ROOTS = [
                 name: "Curriculum Vitae"
             }
         }
+    },
+    {
+        path: 'connect',
+        name: 'Connect',
+        component: Connect,
+        meta: {
+            nav: {
+                available: true,
+                name: "Connect with me"
+            }
+        }
+
     }
 ]
 

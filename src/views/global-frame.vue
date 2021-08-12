@@ -89,6 +89,9 @@
             :class="ui.icons.linkedin ? 'animate-pulse' : ''"
           ></box-icon
         ></a>
+        <a href="mailto:yyjlincoln@yyjlincoln.com" class="mx-1"
+          ><box-icon name="paper-plane"></box-icon
+        ></a>
       </div>
     </div>
   </div>

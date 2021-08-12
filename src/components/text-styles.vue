@@ -17,8 +17,20 @@ const font_styles = {
     style: "color: #4cb963;",
   },
   title: {
-    class: "text-xl sm:text-2xl md:text-3xl",
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
     style: "",
+  },
+  subtitle: {
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
+    style: "",
+  },
+  title_color: {
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
+    style: "color: #157f1f;",
+  },
+  subtitle_color: {
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
+    style: "color: #4cb963;",
   },
   normal: {
     class: "",
