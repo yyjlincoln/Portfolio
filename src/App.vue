@@ -8,6 +8,19 @@
 export default {
   name: "App",
   components: {},
+  watch: {
+    $route: function (to, from) {
+      from;
+      document.title = to.meta.title
+        ? to.meta.title + " - @yyjlincoln"
+        : "Lincoln Yan - @yyjlincoln";
+    },
+  },
+  mounted() {
+    document.title = this.$route.meta.title
+      ? this.$route.meta.title + " - @yyjlincoln"
+      : "Lincoln Yan - @yyjlincoln";
+  },
 };
 </script>
 

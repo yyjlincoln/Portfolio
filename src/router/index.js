@@ -18,7 +18,8 @@ const MAIN_ROOTS = [
             nav: {
                 available: false,
                 name: "Lincoln Yan"
-            }
+            },
+            title: "Hi, I'm Lincoln Yan."
         }
     },
     {
@@ -29,7 +30,8 @@ const MAIN_ROOTS = [
             nav: {
                 available: true,
                 name: "Portfolio"
-            }
+            },
+            title: "Portfolio"
         }
     },
     {
@@ -40,7 +42,8 @@ const MAIN_ROOTS = [
             nav: {
                 available: true,
                 name: "Curriculum Vitae"
-            }
+            },
+            title: "My Curriculum Vitae"
         }
     },
     {
@@ -51,7 +54,8 @@ const MAIN_ROOTS = [
             nav: {
                 available: true,
                 name: "Connect with me"
-            }
+            },
+            title: "Connect with me"
         }
 
     }
