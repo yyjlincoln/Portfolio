@@ -325,7 +325,6 @@ export default {
       .to("#black_cover", {
         scrollTrigger: {
           trigger: ".section-top",
-          markers: true,
           scrub: true,
           invalidateOnRefresh: true,
           start: "top center",
