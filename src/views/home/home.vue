@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Root -->
-    <div class="previous-top" style="z-index: -3">
+    <div class="previous-top" style="z-index: 0">
       <div
         class="
           flex flex-col
@@ -309,6 +309,7 @@ export default {
         },
         translateY: "-30%",
         opacity: 0,
+        zIndex: -3
       })
       .to(".section-top", {
         scrollTrigger: {
