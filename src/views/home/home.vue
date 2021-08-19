@@ -1,134 +1,284 @@
 <template>
   <div>
     <!-- Root -->
-    <div
-      class="
-        flex flex-col
-        pt-20
-        sm:mt-0
-        sm:flex-row
-        min-h-screen
-        h-fit
-        justify-space-between
-      "
-    >
-      <div
-        class="flex flex-col h-fit justify-center ml-10 sm:ml-20 md:ml-40 mr-10"
-      >
-        <!-- First full screen -->
-        <div>
-          <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold">
-            <!-- Title -->
-            <div style="color: #4cb963">Hello,</div>
-            <div style="color: #157f1f">I'm Lincoln.</div>
-          </div>
-          <div
-            class="text-lg sm:text-xl md:text-2xl font-extrabold mt-4 md:mt-0"
-          >
-            <div class="md:mt-4" style="color: #84cf95">
-              A Year 12 student at Killarney Heights High School, Australia
-            </div>
-            <div style="color: #84cf95">Python &amp; Javascript Developer</div>
-            <div style="color: #84cf95">Technology Enthusiast</div>
-          </div>
-        </div>
-        <div class="mt-8 flex flex-col sm:flex-row">
-          <!-- Buttons -->
-          <router-link
-            to="/curriculum-vitae"
-            class="
-              ml-0
-              mx-3
-              transition-all
-              shadow-lg
-              hover:shadow-md
-              active:shadow-sm
-              ease-in-out
-              rounded-md
-            "
-            style="background-color: #3fab52; color: #e2f3e8"
-          >
-            <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
-              <box-icon
-                type="solid"
-                name="right-arrow-circle"
-                color="#e2f3e8"
-                class="mr-1"
-              ></box-icon
-              >Curriculum Vitae
-            </div>
-          </router-link>
-          <router-link
-            to="/portfolio"
-            class="
-              mx-3
-              ml-0
-              sm:ml-3
-              mt-3
-              sm:mt-0
-              transition-all
-              shadow-lg
-              hover:shadow-md
-              active:shadow-sm
-              ease-in-out
-              rounded-md
-            "
-            style="background-color: #3fab52; color: #e2f3e8"
-          >
-            <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
-              <box-icon
-                type="solid"
-                name="right-arrow-circle"
-                color="#e2f3e8"
-                class="mr-1"
-              ></box-icon
-              >My Portfolio
-            </div>
-          </router-link>
-
-          <router-link
-            to="/connect"
-            class="
-              mx-3
-              ml-0
-              sm:ml-3
-              mt-3
-              sm:mt-0
-              transition-all
-              shadow-lg
-              hover:shadow-md
-              active:shadow-sm
-              ease-in-out
-              rounded-md
-            "
-            style="background-color: #e2f3e8; color: #3fab52"
-          >
-            <div class="rounded-md flex px-5 py-3 font-extrabold">
-              <box-icon
-                type="solid"
-                name="right-arrow-circle"
-                color="#3fab52"
-                class="mr-1"
-              ></box-icon
-              >Connect
-            </div>
-          </router-link>
-        </div>
-      </div>
+    <div class="previous-top" style="z-index: -3">
       <div
         class="
-          mx-auto
-          my-10
-          sm:mx-10
           flex flex-col
-          justify-center
-          flex
-          sm:hidden
-          md:flex
+          pt-20
+          sm:mt-0
+          sm:flex-row
+          min-h-screen
+          h-fit
+          justify-space-between
+          2xl:justify-center
         "
       >
-        <div class="w-fit h-fit">
-          <img class="w-80 h-80 object-contain" src="@/assets/logo.png" />
+        <!-- First full screen -->
+        <div
+          class="
+            flex flex-col
+            h-fit
+            justify-center
+            ml-10
+            sm:ml-20
+            md:ml-40
+            mr-10
+          "
+        >
+          <div>
+            <div
+              class="text-4xl sm:text-5xl md:text-6xl font-extrabold max-w-4xl"
+            >
+              <!-- Title -->
+
+              <div style="color: #4cb963">Hello,</div>
+              <div style="color: #157f1f">I'm Lincoln.</div>
+            </div>
+            <div
+              class="
+                text-lg
+                sm:text-xl
+                md:text-2xl
+                font-extrabold
+                mt-4
+                md:mt-0
+                max-w-4xl
+              "
+            >
+              <div class="md:mt-4" style="color: #84cf95">
+                A Year 12 student at Killarney Heights High School, Australia
+              </div>
+              <div style="color: #84cf95">
+                Python &amp; Javascript Developer
+              </div>
+              <div style="color: #84cf95">Technology Enthusiast</div>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row">
+            <!-- Buttons -->
+            <router-link
+              to="/curriculum-vitae"
+              class="
+                ml-0
+                mx-3
+                transition-all
+                shadow-lg
+                hover:shadow-md
+                active:shadow-sm
+                ease-in-out
+                rounded-md
+              "
+              style="background-color: #3fab52; color: #e2f3e8"
+              id="button-curriculum-vitae"
+            >
+              <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
+                <box-icon
+                  type="solid"
+                  name="right-arrow-circle"
+                  color="#e2f3e8"
+                  class="mr-1"
+                ></box-icon
+                >Curriculum Vitae
+              </div>
+            </router-link>
+            <router-link
+              to="/portfolio"
+              class="
+                mx-3
+                ml-0
+                sm:ml-3
+                mt-3
+                sm:mt-0
+                transition-all
+                shadow-lg
+                hover:shadow-md
+                active:shadow-sm
+                ease-in-out
+                rounded-md
+              "
+              style="background-color: #3fab52; color: #e2f3e8"
+              id="button-portfolio"
+            >
+              <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
+                <box-icon
+                  type="solid"
+                  name="right-arrow-circle"
+                  color="#e2f3e8"
+                  class="mr-1"
+                ></box-icon
+                >My Portfolio
+              </div>
+            </router-link>
+
+            <router-link
+              to="/connect"
+              class="
+                mx-3
+                ml-0
+                sm:ml-3
+                mt-3
+                sm:mt-0
+                transition-all
+                shadow-lg
+                hover:shadow-md
+                active:shadow-sm
+                ease-in-out
+                rounded-md
+              "
+              style="background-color: #e2f3e8; color: #3fab52"
+              id="button-connect"
+            >
+              <div class="rounded-md flex px-5 py-3 font-extrabold">
+                <box-icon
+                  type="solid"
+                  name="right-arrow-circle"
+                  color="#3fab52"
+                  class="mr-1"
+                ></box-icon
+                >Connect
+              </div>
+            </router-link>
+          </div>
+        </div>
+        <div
+          class="
+            mx-auto
+            my-10
+            sm:mx-10
+            flex flex-col
+            justify-center
+            flex
+            sm:hidden
+            md:flex
+          "
+        >
+          <div class="w-fit h-fit">
+            <img class="w-80 h-80 object-contain" src="@/assets/logo.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        background: url('https://static.nowask.me/yyjlincoln-background.jpg');
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+      "
+      class="section-top min-h-screen"
+    >
+      <div
+        class="w-full h-full min-h-screen"
+        style="background: rgba(0, 0, 0, 0.6); z-index: 10; opacity: 0"
+        id="black_cover"
+      ></div>
+    </div>
+    <div style="z-index: 1" class="text-top min-h-screen">
+      <div
+        class="
+          flex flex-col
+          pt-20
+          md:pt-40
+          sm:mt-0
+          sm:flex-row
+          min-h-screen
+          h-fit
+          justify-space-between
+        "
+      >
+        <div class="flex flex-col h-fit ml-10 sm:ml-20 md:ml-40 mr-10">
+          <div>
+            <div
+              class="text-4xl sm:text-5xl md:text-6xl font-extrabold max-w-4xl"
+            >
+              <!-- Title -->
+              <div style="color: #e2f3e8">I write code,</div>
+              <div style="color: #84cf95">to turn my ideas into reality.</div>
+            </div>
+
+            <div
+              class="
+                text-lg
+                sm:text-xl
+                md:text-2xl
+                font-extrabold
+                mt-4
+                md:mt-0
+                max-w-4xl
+              "
+              style="color: #e2f3e8"
+            >
+              <div class="md:mt-8">
+                Ever since I was a kid, I've always had lots of ideas --
+              </div>
+              <div>and I've always wanted to turn them into reality.</div>
+              <div class="mt-4">
+                And that's why I've chosen to code --
+              </div>
+              <div class="mt-4">
+                To make something new &amp; unique.
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row">
+            <!-- Buttons -->
+            <router-link
+              to="/journey"
+              class="
+                mx-3
+                ml-0
+                mt-3
+                sm:mt-0
+                transition-all
+                shadow-lg
+                hover:shadow-md
+                active:shadow-sm
+                ease-in-out
+                rounded-md
+              "
+              style="background-color: #e2f3e8; color: #3fab52"
+              id="button-connect"
+            >
+              <div class="rounded-md flex px-5 py-3 font-extrabold">
+                <box-icon
+                  type="solid"
+                  name="right-arrow-circle"
+                  color="#3fab52"
+                  class="mr-1"
+                ></box-icon
+                >My journey
+              </div>
+            </router-link>
+            <router-link
+              to="/portfolio"
+              class="
+                mx-3
+                ml-0
+                mt-3
+                md:ml-3
+                sm:mt-0
+                transition-all
+                shadow-lg
+                hover:shadow-md
+                active:shadow-sm
+                ease-in-out
+                rounded-md
+              "
+              style="background-color: #e2f3e8; color: #3fab52"
+              id="button-connect"
+            >
+              <div class="rounded-md flex px-5 py-3 font-extrabold">
+                <box-icon
+                  type="solid"
+                  name="right-arrow-circle"
+                  color="#3fab52"
+                  class="mr-1"
+                ></box-icon
+                >Check out my portfolio
+              </div>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -136,7 +286,56 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+export default {
+  mounted() {
+    gsap
+      .timeline()
+      .to(".previous-top", {
+        scrollTrigger: {
+          trigger: ".previous-top",
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+          start: "bottom bottom",
+          end: "bottom top",
+          snap: {
+            duration: 0.5,
+            snapTo: 1,
+          },
+        },
+        translateY: "-30%",
+        opacity: 0,
+      })
+      .to(".section-top", {
+        scrollTrigger: {
+          trigger: ".section-top",
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+          start: "top top",
+          endTrigger: ".text-top",
+          end: "bottom bottom",
+        },
+      })
+      .to("#black_cover", {
+        scrollTrigger: {
+          trigger: ".section-top",
+          markers: true,
+          scrub: true,
+          invalidateOnRefresh: true,
+          start: "top center",
+          endTrigger: ".text-top",
+          end: "top center",
+        },
+        opacity: 1,
+      });
+  },
+};
 </script>
 
 <style>

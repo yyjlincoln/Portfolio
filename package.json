@@ -11,6 +11,7 @@
     "autoprefixer": "^9",
     "boxicons": "^2.0.9",
     "core-js": "^3.6.5",
+    "gsap": "^3.7.1",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11",

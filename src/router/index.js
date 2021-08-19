@@ -6,6 +6,9 @@ import Portfolio from '@/views/portfolio/portfolio.vue'
 import NotFound from '@/views/not-found.vue'
 import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
 import Connect from '@/views/connect/connect.vue'
+import Journey from '@/views/journey/journey.vue'
+import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
+
 
 Vue.use(VueRouter)
 
@@ -56,6 +59,32 @@ const MAIN_ROOTS = [
                 name: "Connect with me"
             },
             title: "Connect with me"
+        }
+
+    },
+    {
+        path: 'journey',
+        name: 'Journey',
+        component: Journey,
+        meta: {
+            nav: {
+                available: true,
+                name: "My Coding Journey"
+            },
+            title: "My Coding Journey"
+        }
+
+    },
+    {
+        path: 'acknowledgements',
+        name: 'Acknowledgements',
+        component: Acknowledgements,
+        meta: {
+            nav: {
+                available: true,
+                name: "Open-source Software Acknowledgements"
+            },
+            title: "Open-source Software Acknowledgements"
         }
 
     }

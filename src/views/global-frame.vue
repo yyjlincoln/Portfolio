@@ -10,7 +10,7 @@
             w-full
             flex flex-col
             justify-center
-            border border-solid
+            border-b border-solid
             shadow-sm
             transition-all
             ease-in-out
@@ -46,7 +46,9 @@
             >
               <div class="flex flex-col justify-center">
                 <!-- Center -->
-                <div>{{ nav.name }}</div>
+                <div class="flex flex-row">
+                  <div>{{ nav.name }}</div>
+                </div>
               </div>
             </div>
             <div class="flex-grow flex flex-row justify-end w-1/3">
@@ -92,6 +94,10 @@
         <a href="mailto:yyjlincoln@yyjlincoln.com" class="mx-1"
           ><box-icon name="paper-plane"></box-icon
         ></a>
+      </div>
+      <div class="my-2 flex flex-col">
+        <div class="text-md font-bold">Designed with ❤️ and with the help of open-source modules &amp; GSAP.</div>
+        <div class="text-md font-bold">All rights reserved | <router-link to="/acknowledgements"> Acknowledgements </router-link> </div>
       </div>
     </div>
   </div>
