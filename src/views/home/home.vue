@@ -237,14 +237,14 @@
                 ease-in-out
                 rounded-md
               "
-              style="background-color: #e2f3e8; color: #3fab52"
+              style="background-color: #3fab52; color: #e2f3e8"
               id="button-connect"
             >
               <div class="rounded-md flex px-5 py-3 font-extrabold">
                 <box-icon
                   type="solid"
                   name="right-arrow-circle"
-                  color="#3fab52"
+                  color="#e2f3e8"
                   class="mr-1"
                 ></box-icon
                 >My journey
@@ -282,20 +282,50 @@
         </div>
       </div>
     </div>
+    <div style="z-index: 2" class="">
+      <div
+        class="
+          flex flex-col
+          py-10
+          md:py-20
+          sm:mt-0
+          sm:flex-row
+          h-fit
+          justify-space-between
+          bg-gray-100
+        "
+      >
+        <div class="flex flex-col h-fit mx-auto ">
+          <div>
+            <div
+              class="text-4xl sm:text-5xl md:text-6xl font-extrabold"
+            >
+              <!-- Title -->
+              <text-styles class="text-center" type="secondary"
+                >"Code is the bridge between one's dream and
+                reality"</text-styles
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollToPlugin from "gsap/ScrollToPlugin"
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+import TextStyles from "../../components/text-styles.vue";
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin)
+gsap.registerPlugin(ScrollToPlugin);
 var gsap_timeline;
 export default {
   data: () => ({
     timeline: null,
   }),
+  components: { TextStyles },
   mounted() {
     gsap_timeline = gsap
       .timeline()
@@ -346,16 +376,24 @@ export default {
 
     this.timeline = gsap
       .timeline()
-      .from(".logo", {
-        opacity: 0,
-        duration: 1,
-        ease: "Power3.easeOut",
-      }, "<")
-      .from(".logo", {
-        rotate: 180,
-        duration: 4,
-        ease: "Power3.easeOut",
-      },"<")
+      .from(
+        ".logo",
+        {
+          opacity: 0,
+          duration: 1,
+          ease: "Power3.easeOut",
+        },
+        "<"
+      )
+      .from(
+        ".logo",
+        {
+          rotate: 180,
+          duration: 4,
+          ease: "Power3.easeOut",
+        },
+        "<"
+      )
       .from(
         ".title",
         {
@@ -399,12 +437,12 @@ export default {
     gsap.to(window, {
       scrollTo: 0,
       duration: 0.5,
-      ease: "Power3.easeOut"
-    })
+      ease: "Power3.easeOut",
+    });
     document.body.classList.add("cursor-wait");
-    this.timeline.eventCallback("onReverseComplete", ()=>{
+    this.timeline.eventCallback("onReverseComplete", () => {
       document.body.classList.remove("cursor-wait");
-      next()
+      next();
     });
     this.timeline.reverse();
   },
