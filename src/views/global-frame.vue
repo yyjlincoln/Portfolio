@@ -14,10 +14,12 @@
             shadow-sm
             transition-all
             ease-in-out
+            navbar
           "
           style="
             background-color: rgba(255, 255, 255, 0.72);
             backdrop-filter: saturate(180%) blur(20px);
+            z-index: 99999;
           "
           v-if="nav.available"
         >
@@ -58,9 +60,9 @@
           </div>
         </div>
       </div>
-      <transition :name="page_transition" mode="out-in">
-        <router-view></router-view>
-      </transition>
+      <!-- <transition :name="page_transition" mode="out-in"> -->
+      <router-view></router-view>
+      <!-- </transition> -->
     </div>
     <div class="bg-gray-100 px-8 py-8 text-gray-600">
       <!-- Footer -->
@@ -85,7 +87,8 @@
           href="https://www.linkedin.com/in/yyjlincoln/"
           class="mx-1"
           @click="ui.icons.linkedin = true"
-          ><box-icon
+        >
+          <box-icon
             name="linkedin"
             type="logo"
             :class="ui.icons.linkedin ? 'animate-pulse' : ''"
@@ -96,8 +99,13 @@
         ></a>
       </div>
       <div class="my-2 flex flex-col">
-        <div class="text-md font-bold">Designed with ❤️ and with the help of open-source modules &amp; GSAP.</div>
-        <div class="text-md font-bold">All rights reserved | <router-link to="/acknowledgements"> Acknowledgements </router-link> </div>
+        <div class="text-md font-bold">
+          Designed with ❤️ and with the help of open-source modules &amp; GSAP.
+        </div>
+        <div class="text-md font-bold">
+          All rights reserved |
+          <router-link to="/acknowledgements"> Acknowledgements </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -105,6 +113,7 @@
 
 <script>
 import Vue from "vue";
+import gsap from "gsap";
 export default {
   data: () => ({
     ui: {
@@ -115,6 +124,7 @@ export default {
     },
     nav: {},
     page_transition: "slide-left",
+    nav_timeline: null,
   }),
   watch: {
     $route: function (to, from) {
@@ -125,7 +135,16 @@ export default {
   methods: {
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
-      console.log(route.meta.nav.available);
+      if (this.nav.available) {
+        Vue.nextTick(() => {
+          gsap.timeline().from(".navbar", {
+            translateY: -300,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power3.easeOut",
+          });
+        });
+      }
     },
   },
   mounted() {

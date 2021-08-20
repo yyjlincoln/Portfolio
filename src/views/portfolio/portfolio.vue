@@ -1,13 +1,7 @@
 <template>
   <div>
     <page-frame>
-      <div class="flex flex-col">
-        <div class="mt-8 px-8 md:md-16 md:px-16">
-          <!-- Block 1 - Who am I? -->
-          <text-styles type="primary">Who am I?</text-styles>
-          <text-styles class="my-2" type="title">I'm Lincoln</text-styles>
-        </div>
-      </div>
+      <text-styles type="primary">Test</text-styles>
     </page-frame>
   </div>
 </template>
