@@ -2,13 +2,14 @@ import VueRouter from 'vue-router'
 import Vue from 'vue'
 import GlobalFrame from '@/views/global-frame.vue'
 import Home from '@/views/home/home.vue'
-import Portfolio from '@/views/portfolio/portfolio.vue'
+import Portfolio_Frame from '@/views/portfolio/portfolio-frame.vue'
 import NotFound from '@/views/not-found.vue'
 import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
 import Connect from '@/views/connect/connect.vue'
 import Journey from '@/views/journey/journey.vue'
 import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
-
+import Portfolio from '@/views/portfolio/portfolio.vue'
+import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 
 Vue.use(VueRouter)
 
@@ -27,15 +28,43 @@ const MAIN_ROOTS = [
     },
     {
         path: 'portfolio',
-        name: 'Portfolio',
-        component: Portfolio,
+        name: '_Portfolio-Frame',
+        component: Portfolio_Frame,
         meta: {
             nav: {
                 available: true,
                 name: "Portfolio"
             },
             title: "Portfolio"
-        }
+        },
+        children: [
+            {
+                path: '',
+                name: 'Portfolio',
+                component: Portfolio,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "Portfolio"
+                    },
+                    title: "Portfolio"
+                }
+            },
+            {
+                path: 'wishes',
+                name: 'COVID Wishes',
+                component: COVIDWishes,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "COVID Wishes",
+                        translucent: true
+                    },
+                    title: "COVID Wishes"
+                }
+            }
+        ]
+
     },
     {
         path: 'curriculum-vitae',

@@ -12,17 +12,29 @@ const font_styles = {
     class: "text-2xl sm:text-3xl md:text-4xl font-extrabold",
     style: "color: #157f1f;",
   },
+  primary_size: {
+    class: "text-2xl sm:text-3xl md:text-4xl font-extrabold",
+  },
   secondary: {
     class: "text-2xl sm:text-3xl md:text-4xl font-extrabold",
     style: "color: #4cb963;",
+  },
+  secondary_size: {
+    class: "text-2xl sm:text-3xl md:text-4xl font-extrabold",
   },
   title: {
     class: "text-xl sm:text-2xl md:text-3xl font-bold",
     style: "",
   },
+  title_size: {
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
+  },
   subtitle: {
     class: "text-xl sm:text-2xl md:text-3xl font-bold",
     style: "",
+  },
+  subtitle_size: {
+    class: "text-xl sm:text-2xl md:text-3xl font-bold",
   },
   title_color: {
     class: "text-xl sm:text-2xl md:text-3xl font-bold",

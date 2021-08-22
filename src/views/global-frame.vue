@@ -10,31 +10,39 @@
             w-full
             flex flex-col
             justify-center
-            border-b border-solid
             shadow-sm
             transition-all
             ease-in-out
             navbar
           "
-          style="
-            background-color: rgba(255, 255, 255, 0.72);
-            backdrop-filter: saturate(180%) blur(20px);
-            z-index: 99999;
+          :class="nav.translucent ? '' : 'border-b border-solid'"
+          :style="
+            (nav.translucent
+              ? ''
+              : 'background-color: rgba(255, 255, 255, 0.72);') +
+            'backdrop-filter: saturate(180%) blur(20px);z-index: 99999;'
           "
           v-if="nav.available"
         >
           <div
             class="relative w-full flex flex-row px-4 md:px-8 font-bold"
-            style="color: #11691a"
+            :style="'color: ' + (nav.translucent ? '#ffffff' : '#11691a')"
           >
             <div class="flex-grow flex flex-row justify-start w-1/3">
               <!-- Left -->
               <div
                 class="rounded-md flex py-1 px-1 cursor-pointer"
-                style="background-color: #e2f3e8"
+                :style="
+                  nav.translucent
+                    ? 'background-color: rgba(0,0,0,0.2)'
+                    : 'background-color: #e2f3e8'
+                "
                 @click="$router.go(-1)"
               >
-                <box-icon name="left-arrow-circle" color="#11691a"></box-icon>
+                <box-icon
+                  name="left-arrow-circle"
+                  :color="nav.translucent ? '#ffffff' : '#11691a'"
+                ></box-icon>
                 <div class="mx-1 hidden md:block">Back</div>
               </div>
             </div>
