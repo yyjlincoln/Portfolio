@@ -1,11 +1,7 @@
 <template>
-  <page-frame
-    :reserve_nav_bar_space="false"
-    :horizontal_margin="true"
-    class="pb-10"
-  >
+  <page-frame :reserve_nav_bar_space="false" :horizontal_margin="true">
     <!-- Main Section -->
-    <div class="mt-20 px-4 max-w-5xl">
+    <div class="my-20 px-4 max-w-5xl">
       <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
       <text-styles type="very_large extrabold" class="helloemoji"
         >👋</text-styles
@@ -266,10 +262,14 @@
         <text-styles type="subtitle"
           >Feel free to shoot me an email at any time.
           <router-link to="/connect" class="underline"
-            >Connect with me.</router-link
+            >Connect with me</router-link
+          >. You can also check out
+          <router-link to="/" class="underline"
+            >the entire website.</router-link
           >
         </text-styles>
       </div>
+      <text-styles>Note: This page is printer-friendly.</text-styles>
     </div>
   </page-frame>
 </template>
@@ -379,7 +379,6 @@ export default {
         },
         "-=50%"
       );
-
   },
   updated() {},
   beforeDestroy() {

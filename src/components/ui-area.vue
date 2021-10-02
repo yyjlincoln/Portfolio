@@ -25,7 +25,4 @@ export default {
 </script>
 
 <style>
-.pagebreak-prevent{
-  page-break-inside: avoid;
-}
 </style>

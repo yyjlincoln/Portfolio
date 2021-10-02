@@ -66,4 +66,7 @@ body {
   opacity: 0;
   transform: translate(-2em, 0);
 }
+.pagebreak-prevent{
+  page-break-inside: avoid;
+}
 </style>

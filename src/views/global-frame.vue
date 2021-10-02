@@ -72,7 +72,7 @@
       <router-view></router-view>
       <!-- </transition> -->
     </div>
-    <div class="bg-gray-100 px-8 py-8 text-gray-600">
+    <div class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent">
       <!-- Footer -->
       <div class="my-2 flex flex-row">
         <div class="text-xl font-bold">Lincoln Yan</div>

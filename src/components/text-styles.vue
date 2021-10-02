@@ -126,7 +126,6 @@ export default {
           }
         }
       }
-      console.log("Type " + type + " returns ", { pstyle, pclass });
       return { pstyle, pclass };
     },
   },

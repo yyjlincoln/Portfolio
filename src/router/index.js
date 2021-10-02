@@ -58,9 +58,9 @@ const MAIN_ROOTS = [
                 meta: {
                     nav: {
                         available: false,
-                        name: "The University of Sydney"
+                        name: "Additional Information & Supporting Evidence for the Schorlarship Application"
                     },
-                    title: "The University of Sydney"
+                    title: "YIJUN YAN - Additional Information & Supporting Evidence for the Schorlarship Application"
                 }
             }
         ]
