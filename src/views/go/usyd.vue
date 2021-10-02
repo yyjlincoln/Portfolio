@@ -166,7 +166,7 @@
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
             <text-styles type="small primary_color extrabold"
-              >TailwindCSS, VueSax and MongoDB joins the chat. DocumentX is
+              >TailwindCSS, VueSax and MongoDB joined the chat. DocumentX was
               born.</text-styles
             >
             <text-styles type="small bold gray">
@@ -187,7 +187,7 @@
               >HSC Major Work</text-styles
             >
             <text-styles type="small bold gray">
-              Nowask.me is born.
+              Nowask.me was born.
               <router-link class="underline" to="/protfolio/nowaskme"
                 >Learn more</router-link
               >
@@ -207,7 +207,7 @@
               >The era of Swift</text-styles
             >
             <text-styles type="small bold gray">
-              After enrolling in the Apple Developer Aademy, I started learning
+              After enrolling in the Apple Developer Program, I started learning
               Swift.
             </text-styles>
           </ui-area>
@@ -228,7 +228,7 @@
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
             <text-styles type="small primary_color extrabold"
-              >This website is born!
+              >This website was born!
               <a href="https://github.com/yyjlincoln/yyjlincoln.com">
                 <box-icon type="logo" name="github" class="mr-1"></box-icon>
               </a>

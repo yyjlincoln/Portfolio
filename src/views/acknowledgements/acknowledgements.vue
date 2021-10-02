@@ -14,7 +14,7 @@
           Download a copy
         </text-styles>
         <text-styles type="small bold secondary_color">
-          You can download a copy of the license <a class="underline" :href="LICENSE_URL">here</a>. (or copy {{LICENSE_URL}}).
+          You can download a copy of the acknowledgement <a class="underline" :href="LICENSE_URL">here</a>. (or copy {{LICENSE_URL}}).
         </text-styles>
       </ui-area>
     </page-frame>
