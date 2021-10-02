@@ -121,7 +121,7 @@
 
 <script>
 import Vue from "vue";
-import gsap from "gsap";
+// import gsap from "gsap";
 export default {
   data: () => ({
     ui: {
@@ -144,14 +144,13 @@ export default {
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
       if (this.nav.available) {
-        Vue.nextTick(() => {
-          gsap.timeline().from(".navbar", {
-            translateY: -300,
-            opacity: 0,
-            duration: 0.5,
-            ease: "power3.easeOut",
-          });
-        });
+          // gsap.timeline().from(".navbar", {
+          //   opacity: 0,
+          //   duration: 0.5,
+          //   ease: "power3.easeOut",
+          // });
+        // Vue.nextTick(() => {
+        // });
       }
     },
   },

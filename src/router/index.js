@@ -10,6 +10,8 @@ import Journey from '@/views/journey/journey.vue'
 import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
 import Portfolio from '@/views/portfolio/portfolio.vue'
 import COVIDWishes from '@/views/portfolio/covidwishes.vue'
+import GoFrame from '@/views/go/go-frame.vue'
+import GoUSYD from "@/views/go/usyd.vue"
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,43 @@ const MAIN_ROOTS = [
             },
             title: "Hi, I'm Lincoln Yan."
         }
+    },
+    {
+        path: 'go',
+        name: '_Go-Frame',
+        component: GoFrame,
+        meta: {
+            nav: {
+                available: false,
+                name: "Go:Frame"
+            },
+        },
+        children: [
+            {
+                path: '',
+                name: 'Go-Frame',
+                component: NotFound,
+                meta: {
+                    nav: {
+                        available: false,
+                        name: "Go:Frame"
+                    },
+                    title: "Go:Frame"
+                }
+            },
+            {
+                path: 'usyd',
+                name: 'usyd',
+                component: GoUSYD,
+                meta: {
+                    nav: {
+                        available: false,
+                        name: "The University of Sydney"
+                    },
+                    title: "The University of Sydney"
+                }
+            }
+        ]
     },
     {
         path: 'portfolio',

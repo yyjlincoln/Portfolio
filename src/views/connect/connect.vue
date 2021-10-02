@@ -5,13 +5,13 @@
         <div class="mt-8 px-8 md:md-16 md:px-16">
           <text-styles type="primary">Ways to connect</text-styles>
           <div class="mt-4 md:mt-8">
-            <text-styles class="" type="title_color"
+            <text-styles class="" type="title"
               >
               <box-icon name="chat" color="#157f1f" class="mr-2"></box-icon>Connect with me
               via:</text-styles
             >
             <a href="https://github.com/yyjlincoln">
-              <text-styles class="mt-4 text-hover" type="subtitle_color">
+              <text-styles class="mt-4 text-hover" type="subtitle">
                 <box-icon
                   type="logo"
                   name="github"
@@ -22,7 +22,7 @@
               >
             </a>
             <a href="https://linkedin.com/in/yyjlincoln">
-              <text-styles class="mt-4 text-hover" type="subtitle_color">
+              <text-styles class="mt-4 text-hover" type="subtitle">
                 <box-icon
                   type="logo"
                   name="linkedin"
@@ -33,7 +33,7 @@
               >
             </a>
             <a href="mailto:yyjlincoln@yyjlincoln.com">
-              <text-styles class="mt-4 text-hover" type="subtitle_color">
+              <text-styles class="mt-4 text-hover" type="subtitle">
                 <box-icon
                   name="paper-plane"
                   color="#3fab52"
@@ -44,12 +44,12 @@
             </a>
           </div>
           <div class="mt-4 md:mt-8">
-            <text-styles class="" type="title_color"
+            <text-styles class="" type="title"
               ><box-icon name="error" color="#157f1f" class="mr-2"></box-icon>
               Complaints and Legal issues:</text-styles
             >
             <a href="mailto:legal@yyjlincoln.com">
-              <text-styles class="mt-4 text-hover" type="subtitle_color">
+              <text-styles class="mt-4 text-hover" type="subtitle">
                 <box-icon
                   name="paper-plane"
                   color="#3fab52"
