@@ -5,7 +5,9 @@ import 'tailwindcss/dist/tailwind.css'
 import 'boxicons'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import VueTimeline from "@growthbunker/vuetimeline";
 
+Vue.use(VueTimeline);
 
 gsap.registerPlugin(ScrollTrigger)
 

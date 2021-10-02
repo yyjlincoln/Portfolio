@@ -47,6 +47,9 @@ const colors = {
   secondary_color: {
     style: "color: #4cb963;",
   },
+  gray: {
+    class: "text-gray-700",
+  },
 };
 
 const properties = {

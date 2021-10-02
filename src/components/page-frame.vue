@@ -5,7 +5,7 @@
       class="relative w-full h-full flex flex-col justify-center min-h-screen"
     >
       <div
-        :class="horizontal_margin ? 'mx-auto sm:mx-10 md:mx-15 lg:mx-20' : ''"
+        :class="horizontal_margin ? 'mx-auto text-center sm:text sm:text-left sm:mx-10 md:mx-15 lg:mx-20' : ''"
       >
         <slot></slot>
       </div>
@@ -15,7 +15,7 @@
       class="flex flex-row mx-auto text-center justify-center"
     >
       <div
-        :class="horizontal_margin ? 'mx-auto sm:mx-10 md:mx-15 lg:mx-20' : ''"
+        :class="horizontal_margin ? 'mx-auto text-center sm:text sm:text-left sm:mx-10 md:mx-15 lg:mx-20' : ''"
       >
         <slot></slot>
       </div>
@@ -26,7 +26,7 @@
     >
       <div class="mx-auto">
         <div
-          :class="horizontal_margin ? 'mx-auto sm:mx-10 md:mx-15 lg:mx-20' : ''"
+          :class="horizontal_margin ? 'mx-auto text-center sm:text sm:text-left sm:mx-10 md:mx-15 lg:mx-20' : ''"
         >
           <slot></slot>
         </div>
@@ -34,7 +34,7 @@
     </div>
     <div v-else>
       <div
-        :class="horizontal_margin ? 'mx-auto sm:mx-10 md:mx-15 lg:mx-20' : ''"
+        :class="horizontal_margin ? 'mx-auto text-center sm:text sm:text-left sm:mx-10 md:mx-15 lg:mx-20' : ''"
       >
         <slot></slot>
       </div>
