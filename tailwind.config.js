@@ -6,4 +6,12 @@ module.exports = {
       backgroundColor: ['active'],
     }
   },
+  theme: {
+    extend: {
+      screens: {
+        'print': {'raw': 'print'},
+      }
+    }
+  }
 }
+

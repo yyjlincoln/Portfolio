@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pagebreak-prevent">
     <div
       class="px-5 py-5 rounded-md w-fit flex flex-col mx-5 my-5 overflow-hidden"
       :class="bg"
@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style>
+.pagebreak-prevent{
+  page-break-inside: avoid;
+}
 </style>

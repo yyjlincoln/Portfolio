@@ -1,19 +1,33 @@
 <template>
-  <page-frame :reserve_nav_bar_space="false" :horizontal_margin="true" class="pb-10">
+  <page-frame
+    :reserve_nav_bar_space="false"
+    :horizontal_margin="true"
+    class="pb-10"
+  >
     <!-- Main Section -->
-    <div class="mt-20">
+    <div class="mt-20 px-4 max-w-5xl">
       <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
+      <text-styles type="very_large extrabold" class="helloemoji"
+        >👋</text-styles
+      >
       <text-styles
         type="y_spacing extra_large secondary_color extrabold"
-        id="titleText"
+        class="title"
       >
-        {{ greeting }} 👋</text-styles
+        {{ greeting }}!
+        <!-- <text-styles type="large secondary_color extrabold" class="title mt-3">
+          {{ secondary_greeting }}</text-styles
+        > -->
+      </text-styles>
+
+      <text-styles
+        type="y_spacing medium primary_color bold"
+        class="mainsubject"
+        >Additional Information &amp; Supporting Evidence for the Schorlarship
+        Application.</text-styles
       >
-      <text-styles type="y_spacing small primary_color bold" id="titleText"
-        >You've probably already read through my Application. I'll keep mine
-        nice and breif.</text-styles
-      >
-      <ui-area class="max-w-4xl">
+
+      <ui-area class="max-w-4xl tips">
         <text-styles type="bold small primary_color"
           >Who's Lincoln?</text-styles
         >
@@ -22,14 +36,24 @@
           I'll refer to myself as "Lincoln" throughout the text.</text-styles
         >
       </ui-area>
-      <div>
-        <text-styles type="bold medium primary_color"
-          >My Coding Journey</text-styles
-        >
+      <div class="my-10 projects">
+        <!-- Projects -->
+        <text-styles type="primary"> My Projects </text-styles>
+        <text-styles type="subtitle"
+          >You can check out my projects in
+          <router-link class="underline" to="/portfolio"
+            >my portfolio</router-link
+          >
+        </text-styles>
+      </div>
+
+      <div class="my-10 journey">
+        <!-- Coding Journey -->
+        <text-styles type="primary">My Coding Journey</text-styles>
         <text-styles type="bold small secondary_color"
           >A breif story.
           <router-link class="underline" to="/journey"
-            >Checkout the full story</router-link
+            >Check out the full story</router-link
           ></text-styles
         >
         <div class="border-l-8 border-gray-400 pl-1">
@@ -236,6 +260,16 @@
           <!-- - I taught myself how to code in Windows CMD (2013), "YiYuYan" language (Chinese version of Visual Basic; 2014-2015), Python 3 (with frameworks such as Flask; 2015-cont), Web (without frameworks, 2017-2018), Web PWA (Vue + Tailwind + Axios; 2019-cont), Swift (basics, actively learning; 2021-cont). -->
         </div>
       </div>
+
+      <div class="my-10 contact">
+        <text-styles type="primary">Questions? More about me?</text-styles>
+        <text-styles type="subtitle"
+          >Feel free to shoot me an email at any time.
+          <router-link to="/connect" class="underline"
+            >Connect with me.</router-link
+          >
+        </text-styles>
+      </div>
     </div>
   </page-frame>
 </template>
@@ -244,11 +278,15 @@
 import pageFrame from "../../components/page-frame.vue";
 import TextStyles from "../../components/text-styles.vue";
 import UiArea from "../../components/ui-area.vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default {
   components: { pageFrame, TextStyles, UiArea },
   data: () => ({
     greeting: "Welcome",
+    timeline: null,
+    secondary_greeting: "How's your day going?",
   }),
   methods: {
     getGreeting() {
@@ -265,6 +303,103 @@ export default {
   },
   mounted() {
     this.greeting = this.getGreeting();
+    gsap.registerPlugin(ScrollTrigger);
+    this.timeline = gsap
+      .timeline()
+      .from(".helloemoji", {
+        opacity: 0,
+        translateY: 20,
+        // skewY: 10,
+        duration: 1,
+        ease: "power3.out",
+      })
+      .from(
+        ".title",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=75%"
+      )
+      .from(
+        ".mainsubject",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=50%"
+      )
+      .from(
+        ".tips",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=50%"
+      )
+      .from(
+        ".projects",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=50%"
+      )
+      .from(
+        ".journey",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=50%"
+      )
+      .from(
+        ".contact",
+        {
+          opacity: 0,
+          translateY: 20,
+          // skewY: 10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=50%"
+      );
+
+  },
+  updated() {},
+  beforeDestroy() {
+    this.timeline.kill();
+    ScrollTrigger.getAll().forEach(function (trigger) {
+      trigger.kill();
+    });
+  },
+  beforeRouteLeave(to, from, next) {
+    gsap.to(window, {
+      scrollTo: 0,
+      duration: 0.5,
+      ease: "Power3.easeOut",
+    });
+    document.body.classList.add("cursor-wait");
+    this.timeline.eventCallback("onReverseComplete", () => {
+      document.body.classList.remove("cursor-wait");
+      next();
+    });
+    this.timeline.reverse();
   },
 };
 </script>
