@@ -8,14 +8,15 @@ import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
 import Connect from '@/views/connect/connect.vue'
 import Journey from '@/views/journey/journey.vue'
 import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
-import Portfolio from '@/views/portfolio/portfolio.vue'
-import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 import GoFrame from '@/views/go/go-frame.vue'
 import GoUSYD from "@/views/go/usyd.vue"
 
+import Portfolio from '@/views/portfolio/portfolio.vue'
 import DocumentX from "@/views/portfolio/documentx.vue"
 import DocumentXIOS from "@/views/portfolio/documentx-ios.vue"
+import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 import NowAskMe from "@/views/portfolio/nowaskme.vue"
+import yyjlincoln from "@/views/portfolio/yyjlincoln.vue"
 
 Vue.use(VueRouter)
 
@@ -135,6 +136,18 @@ const MAIN_ROOTS = [
                 path: 'nowaskme',
                 name: 'nowaskme',
                 component: NowAskMe,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "NowAsk.Me",
+                    },
+                    title: "NowAsk.Me"
+                }
+            },
+            {
+                path: 'yyjlincoln',
+                name: 'yyjlincoln',
+                component: yyjlincoln,
                 meta: {
                     nav: {
                         available: true,

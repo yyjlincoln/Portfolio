@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="project.link" class="">
+  <router-link :to="project.link">
     <div
-      class="rounded-md px-8 py-8 w-80 mx-auto my-4 md:mx-4 project-card"
+      class="rounded-md px-8 py-8 w-80 mx-auto my-4 py-4 md:mx-4 project-card pagebreak-prevent"
       :class="project.bg != undefined ? project.bg : 'bg-gray-100'"
       :style="project.bgstyle"
     >
@@ -18,7 +18,7 @@
           "
           >{{ project.name }}</text-styles
         >
-        <div class="my-4">
+        <div class="my-4" v-if="!brief">
           <div
             v-for="description in project.description"
             :key="description"
@@ -46,6 +46,9 @@ export default {
     project: {
       default: {},
     },
+    brief:{
+      default: false
+    }
   },
 };
 </script>

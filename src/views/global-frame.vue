@@ -14,7 +14,9 @@
             transition-all
             ease-in-out
             navbar
+            no-print
           "
+          id="navbar"
           :class="nav.translucent ? '' : 'border-b border-solid'"
           :style="
             (nav.translucent
@@ -73,7 +75,7 @@
       <router-view></router-view>
       <!-- </transition> -->
     </div>
-    <div class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent">
+    <div class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print">
       <!-- Footer -->
       <div class="my-2 flex flex-row">
         <div class="text-xl font-bold">Lincoln Yan</div>
@@ -169,4 +171,36 @@ export default {
 </script>
 
 <style>
+@media print {
+  .pagebreak-prevent {
+    page-break-inside: avoid;
+  }
+
+  .pagebreak-before {
+    page-break-before: always;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #no-print {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .print-only {
+    display: flex;
+  }
+}
+.print-only {
+  display: none;
+}
 </style>

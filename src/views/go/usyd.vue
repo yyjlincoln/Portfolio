@@ -1,52 +1,89 @@
 <template>
   <page-frame :reserve_nav_bar_space="false" :horizontal_margin="true">
     <!-- Main Section -->
-    <div class="my-20 px-4 max-w-5xl">
-      <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
-      <text-styles type="extra_large extrabold" class="helloemoji"
-        >👋</text-styles
-      >
-      <text-styles
-        type="y_spacing larger secondary_color extrabold"
-        class="title"
-      >
-        {{ greeting }}!
-        <!-- <text-styles type="large secondary_color extrabold" class="title mt-3">
-          {{ secondary_greeting }}</text-styles
-        > -->
-      </text-styles>
-
-      <text-styles
-        type="y_spacing medium primary_color bold"
-        class="mainsubject"
-        >Additional Information &amp; Supporting Evidence for the Schorlarship
-        Application.</text-styles
-      >
-
-      <ui-area class="max-w-4xl tips">
-        <text-styles type="bold smaller primary_color"
-          >Who's Lincoln?</text-styles
+    <div class="my-20 px-4">
+      <div class="max-w-5xl">
+        <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
+        <text-styles type="extra_large extrabold" class="helloemoji no-print"
+          >👋</text-styles
         >
-        <text-styles type="bold smaller gray"
-          >It's me! I'm Yijun Yan, and "Lincoln" is my preferred English name.
-          I'll refer to myself as "Lincoln" throughout the text.</text-styles
+        <text-styles
+          type="y_spacing larger secondary_color extrabold"
+          class="title no-print"
         >
-      </ui-area>
+          {{ greeting }}!
+        </text-styles>
+
+        <text-styles
+          type="y_spacing large primary_color bold"
+          class="mainsubject"
+          >Additional Information &amp; Supporting Evidence for the Schorlarship
+          Application</text-styles
+        >
+
+        <ui-area
+          innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
+          class="no-print tips"
+        >
+          <div class="flex flex-col justify-center">
+            <div class="mx-auto text-center pr-4">
+              <text-styles type="large"> 🖨️ </text-styles>
+            </div>
+          </div>
+          <div class="flex flex-col no-print">
+            <text-styles type="primary_color extrabold smaller"
+              >This page is printer-friendly</text-styles
+            >
+            <text-styles type="secondary_color bold extra_small"
+              >Feel free to print this document.
+            </text-styles>
+          </div>
+        </ui-area>
+        <ui-area class="max-w-4xl tips">
+          <text-styles type="bold smaller primary_color"
+            >Student Information</text-styles
+          >
+          <text-styles type="bold smaller gray"
+            >Name: Yijun YAN, known as "Lincoln YAN"</text-styles
+          >
+          <text-styles type="bold smaller gray"
+            >UAC Application ID: 134143277</text-styles
+          >
+        </ui-area>
+      </div>
       <div class="my-10 projects">
         <!-- Projects -->
-        <text-styles type="primary"> My Projects </text-styles>
-        <text-styles type="subtitle"
-          >You can check out my projects in
+        <text-styles type="primary"> Coding Projects </text-styles>
+        <text-styles type="secondary_color small bold"
+          >For more details, please open them in
           <router-link class="underline" to="/portfolio"
             >my portfolio</router-link
           >
+          <div class="my-5">
+            <!-- Project Cards -->
+            <div
+              class="flex flex-col justify-center md:flex-row flex-wrap w-full"
+            >
+              <div
+                v-for="project in $commondata.projects"
+                :key="project.name"
+                class="projectcard"
+              >
+                <project-card
+                  :project="project"
+                  class=""
+                  :brief="true"
+                ></project-card>
+              </div>
+            </div>
+          </div>
         </text-styles>
       </div>
 
       <div class="my-10 journey">
         <!-- Coding Journey -->
         <text-styles type="primary">My Coding Journey</text-styles>
-        <text-styles type="bold smaller secondary_color"
+        <text-styles type="bold small secondary_color"
           >A breif story.
           <router-link class="underline" to="/journey"
             >Check out the full story</router-link
@@ -269,7 +306,6 @@
           >
         </text-styles>
       </div>
-      <text-styles>Note: This page is printer-friendly.</text-styles>
     </div>
   </page-frame>
 </template>
@@ -280,9 +316,10 @@ import TextStyles from "../../components/text-styles.vue";
 import UiArea from "../../components/ui-area.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectCard from "../../components/project-card.vue";
 
 export default {
-  components: { pageFrame, TextStyles, UiArea },
+  components: { pageFrame, TextStyles, UiArea, ProjectCard },
   data: () => ({
     greeting: "Welcome",
     timeline: null,
@@ -322,7 +359,7 @@ export default {
           duration: 1,
           ease: "power3.out",
         },
-        "-=75%"
+        "<+75%"
       )
       .from(
         ".mainsubject",
@@ -343,6 +380,7 @@ export default {
           // skewY: 10,
           duration: 1,
           ease: "power3.out",
+          stagger: 0.2,
         },
         "-=50%"
       )
@@ -355,7 +393,17 @@ export default {
           duration: 1,
           ease: "power3.out",
         },
-        "-=50%"
+        "<"
+      )
+      .from(
+        ".projectcard",
+        {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          stagger: 0.2,
+        },
+        "<"
       )
       .from(
         ".journey",

@@ -57,7 +57,7 @@
             <ui-area bg="bg-gray-800">
               <text-styles type="medium bold white"> Notes </text-styles>
               <text-styles type="small bold light_gray">
-                The client app contains a critical key used for encryptio. For
+                The client app contains a critical key used for encryption. For
                 security reasons, you won't be able to access the repository on
                 GitHub. A redacted version of the repository is available for
                 download.

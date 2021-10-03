@@ -102,8 +102,24 @@ let data = {
       descriptiontype: "secondary_color",
       bg: "",
       bgstyle: "background-color: #e2f3e8",
+      image: "https://static.nowask.me/yyjlincoln/covidwishes-logo.png",
       fullimage: "https://static.nowask.me/covidwishes-bg.jpg",
       status: "In the planning & preperation phase.",
+    },
+    yyjlincoln: {
+      name: "yyjlincoln.com",
+      description: [
+        "This website.",
+        "Vue PWA",
+      ],
+      link: "/portfolio/yyjlincoln",
+      nametype: "primary_color",
+      descriptiontype: "secondary_color",
+      bg: "",
+      bgstyle: "background-color: #e2f3e8",
+      image: "https://static.nowask.me/yyjlincoln/yyjlincoln-logo.png",
+      fullimage: "https://static.nowask.me/yyjlincoln/yyjlincoln-logo.png",
+      status: "Activaly being developed",
     },
   }
 }
