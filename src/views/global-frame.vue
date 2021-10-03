@@ -23,6 +23,7 @@
             'backdrop-filter: saturate(180%) blur(20px);z-index: 99999;'
           "
           v-if="nav.available"
+          @click="jumpToTop"
         >
           <div
             class="relative w-full flex flex-row px-4 md:px-8 font-bold"
@@ -121,7 +122,7 @@
 
 <script>
 import Vue from "vue";
-// import gsap from "gsap";
+import gsap from "gsap";
 export default {
   data: () => ({
     ui: {
@@ -144,14 +145,21 @@ export default {
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
       if (this.nav.available) {
-          // gsap.timeline().from(".navbar", {
-          //   opacity: 0,
-          //   duration: 0.5,
-          //   ease: "power3.out",
-          // });
+        // gsap.timeline().from(".navbar", {
+        //   opacity: 0,
+        //   duration: 0.5,
+        //   ease: "power3.out",
+        // });
         // Vue.nextTick(() => {
         // });
       }
+    },
+    jumpToTop() {
+      gsap.to(window, {
+        scrollTo: 0,
+        duration: 0.5,
+        ease: "power3.out",
+      });
     },
   },
   mounted() {

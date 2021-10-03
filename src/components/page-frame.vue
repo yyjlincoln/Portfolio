@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen h-fit" :class="reserve_nav_bar_space ? 'mt-14' : ''">
+  <div class="min-h-screen h-fit overflow-hidden" :class="reserve_nav_bar_space ? 'mt-14' : ''">
     <div
       v-if="vertical_center"
       class="relative w-full h-full flex flex-col justify-center min-h-screen"
