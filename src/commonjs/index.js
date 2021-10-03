@@ -93,8 +93,8 @@ let data = {
     wishes: {
       name: "COVID Wishes",
       description: [
-        "Make a wish & Get it when COVID is over. Or simply write something to your future self.",
-        "Coming early 2021.",
+        "Make a wish & Get it emailed to you when COVID is over. Or simply write something to your future self.",
+        "Coming early 2022.",
       ],
       link: "/portfolio/wishes",
       github: "",

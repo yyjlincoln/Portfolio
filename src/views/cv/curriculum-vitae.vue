@@ -2,9 +2,9 @@
   <div>
     <page-frame :horizontal_margin="true">
       <div class="mt-10">
-        <text-styles type="primary">Curriculum Vitae</text-styles>
-        <text-styles type="secondary">Yijun "Lincoln" YAN</text-styles>
-        <text-styles type="secondary_color small bold"
+        <text-styles type="primary" class="title">Curriculum Vitae</text-styles>
+        <text-styles type="secondary" class="title">Yijun "Lincoln" YAN</text-styles>
+        <text-styles type="secondary_color small bold" class="title"
           >Accurate as of October 3rd, 2021.</text-styles
         >
         <ui-area
@@ -150,7 +150,7 @@ export default {
   mounted() {
     this.timeline = gsap
       .timeline({ defaults: { ease: "power3.out", stagger: 0.1 } })
-      .from(".text-styles", {
+      .from(".title", {
         y: 100,
         opacity: 0,
         duration: 1,

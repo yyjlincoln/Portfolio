@@ -1,5 +1,5 @@
 <template>
-  <div class="my-2 mx-auto md:mx-2 md:my-2 md:flex md:justify-center md:w-fit ui-button">
+  <div class="mx-3 ml-0 sm:ml-3 mt-3 sm:mt-0 sm:mx-3 sm:my-3 ui-button">
     <div
       :style="'background-color: ' + backgroundcolor"
       class="

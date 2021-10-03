@@ -56,94 +56,13 @@
               </div>
             </div>
           </div>
-          <div class="mt-8 flex flex-col sm:flex-row">
+          <ui-button-stack class="mt-8 max-w-2xl" :centered="false">
             <!-- Buttons -->
-            <router-link
-              to="/curriculum-vitae"
-              class="
-                ml-0
-                mx-3
-                transition-all
-                shadow-lg
-                hover:shadow-md
-                active:shadow-sm
-                ease-in-out
-                rounded-md
-                buttons
-              "
-              style="background-color: #3fab52; color: #e2f3e8"
-              id="button-curriculum-vitae"
-            >
-              <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
-                <box-icon
-                  type="solid"
-                  name="right-arrow-circle"
-                  color="#e2f3e8"
-                  class="mr-1"
-                ></box-icon
-                >Curriculum Vitae
-              </div>
-            </router-link>
-            <router-link
-              to="/portfolio"
-              class="
-                mx-3
-                ml-0
-                sm:ml-3
-                mt-3
-                sm:mt-0
-                transition-all
-                shadow-lg
-                hover:shadow-md
-                active:shadow-sm
-                ease-in-out
-                rounded-md
-                buttons
-              "
-              style="background-color: #3fab52; color: #e2f3e8"
-              id="button-portfolio"
-            >
-              <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
-                <box-icon
-                  type="solid"
-                  name="right-arrow-circle"
-                  color="#e2f3e8"
-                  class="mr-1"
-                ></box-icon
-                >My Portfolio
-              </div>
-            </router-link>
-
-            <router-link
-              to="/connect"
-              class="
-                mx-3
-                ml-0
-                sm:ml-3
-                mt-3
-                sm:mt-0
-                transition-all
-                shadow-lg
-                hover:shadow-md
-                active:shadow-sm
-                ease-in-out
-                rounded-md
-                buttons
-              "
-              style="background-color: #e2f3e8; color: #3fab52"
-              id="button-connect"
-            >
-              <div class="rounded-md flex px-5 py-3 font-extrabold">
-                <box-icon
-                  type="solid"
-                  name="right-arrow-circle"
-                  color="#3fab52"
-                  class="mr-1"
-                ></box-icon
-                >Connect
-              </div>
-            </router-link>
-          </div>
+            <ui-button to="/curriculum-vitae">Curriculum Vitae</ui-button>
+            <ui-button to="/portfolio">My Portfolio</ui-button>
+            <ui-button to="/connect" type="secondary">Connect</ui-button>
+            <!-- <ui-button to="/go/usyd" type="secondary">Scholarship Application</ui-button> -->
+          </ui-button-stack>
         </div>
         <div
           class="
@@ -302,8 +221,7 @@
             >
               <!-- Title -->
               <text-styles class="text-center" type="secondary"
-                >"Code is the bridge between one's dream and
-                reality"</text-styles
+                >"Coding transforms one's ideas to products."</text-styles
               >
             </div>
           </div>
@@ -318,13 +236,15 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import TextStyles from "../../components/text-styles.vue";
+import UiButton from '../../components/ui-button.vue';
+import UiButtonStack from '../../components/ui-button-stack.vue';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 export default {
   data: () => ({
     timeline: null,
   }),
-  components: { TextStyles },
+  components: { TextStyles, UiButton, UiButtonStack },
   mounted() {
     gsap
       .timeline()

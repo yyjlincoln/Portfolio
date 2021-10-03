@@ -49,7 +49,7 @@
             <text-styles class="mt-5" type="medium bold nam_secondary_color">
               Please register your own account using your email.
             </text-styles>
-            <ui-button-stack class="mt-10">
+            <ui-button-stack class="mt-10" :centered="false">
               <ui-button
                 :asRouterLink="false"
                 to="https://nowask.me/"
@@ -59,13 +59,13 @@
               <ui-button
                 :asRouterLink="false"
                 to="https://github.com/yyjlincoln/NowAskMe-Server"
-                type="github_primary"
+                type="github_secondary"
                 >Server Repository</ui-button
               >
               <ui-button
                 :asRouterLink="false"
                 to="https://github.com/yyjlincoln/NowAskMe-Frontend"
-                type="github_primary"
+                type="github_secondary"
                 >Client (Web) Repository</ui-button
               >
             </ui-button-stack>

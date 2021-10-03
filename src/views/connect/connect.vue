@@ -17,7 +17,7 @@
                   color="#3fab52"
                   class="mr-1"
                 ></box-icon>
-                Github</text-styles
+                Github (yyjlincoln)</text-styles
               >
             </a>
             <a href="https://linkedin.com/in/yyjlincoln">
@@ -28,7 +28,7 @@
                   color="#3fab52"
                   class="mr-1"
                 ></box-icon>
-                Linkedin</text-styles
+                Linkedin (yyjlincoln)</text-styles
               >
             </a>
             <a href="mailto:yyjlincoln@yyjlincoln.com">
@@ -38,7 +38,7 @@
                   color="#3fab52"
                   class="mr-1"
                 ></box-icon>
-                Email</text-styles
+                Email (yyjlincoln@yyjlincoln.com)</text-styles
               >
             </a>
           </div>
@@ -54,7 +54,7 @@
                   color="#3fab52"
                   class="mr-1"
                 ></box-icon>
-                Email</text-styles
+                Email (legal@yyjlincoln.com)</text-styles
               >
             </a>
             <div class="text">(I'll try to reply ASAP)</div>

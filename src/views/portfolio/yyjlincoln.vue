@@ -23,7 +23,6 @@
           <div>
             <text-styles type="primary">Source Code</text-styles>
             <ui-button-stack>
-                
               <ui-button
                 :asRouterLink="false"
                 type="github_primary"
@@ -39,6 +38,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import pageFrame from "../../components/page-frame.vue";
 import TextStyles from "../../components/text-styles.vue";
 import UiButtonStack from "../../components/ui-button-stack.vue";
@@ -46,6 +46,27 @@ import UiButton from "../../components/ui-button.vue";
 import ProjectCommon from "./project-common.vue";
 export default {
   components: { pageFrame, ProjectCommon, TextStyles, UiButton, UiButtonStack },
+  mounted() {
+    this.timeline = gsap
+      .timeline({ defaults: { ease: "power3.out", stagger: 0.2 } })
+      .from(".text-styles", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5
+      })
+      .from(".ui-button", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5
+      }, "<+25%");
+  },
+  data: () => ({
+    timeline: null,
+  }),
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this);
+    next();
+  },
 };
 </script>
 

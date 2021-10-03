@@ -47,10 +47,10 @@
               class="mt-5"
               type="medium bold documentx_secondary_color"
             >
-              You can use username: sample, password: sample to access the system.
+              You can use username: example, password: example to access the system.
 
             </text-styles>
-            <ui-button-stack class="mt-10">
+            <ui-button-stack class="mt-10" :centered="false">
               <ui-button
                 :asRouterLink="false"
                 to="https://mcsrv.icu/"
@@ -60,13 +60,13 @@
               <ui-button
                 :asRouterLink="false"
                 to="https://github.com/yyjlincoln/DocumentX-NG"
-                type="github_primary"
+                type="github_secondary"
                 >Server Repository</ui-button
               >
               <ui-button
                 :asRouterLink="false"
                 to="https://github.com/yyjlincoln/DocumentX-NG-UI"
-                type="github_primary"
+                type="github_secondary"
                 >Client (Web) Repository</ui-button
               >
             </ui-button-stack>

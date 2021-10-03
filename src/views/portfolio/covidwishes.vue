@@ -11,6 +11,9 @@
             <text-styles type="medium white bold" class="mt-20"
               >Coming early 2022.</text-styles
             >
+            <text-styles type="smaller white" class="mt-5"
+              >covidwishes.com</text-styles
+            >
           </div>
         </template>
       </project-common>

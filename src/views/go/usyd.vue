@@ -80,7 +80,7 @@
         </text-styles>
       </div>
 
-      <div class="my-10 journey">
+      <div class="my-10 journey pagebreak-before">
         <!-- Coding Journey -->
         <text-styles type="primary">My Coding Journey</text-styles>
         <text-styles type="bold small secondary_color"
@@ -293,18 +293,13 @@
           <!-- - I taught myself how to code in Windows CMD (2013), "YiYuYan" language (Chinese version of Visual Basic; 2014-2015), Python 3 (with frameworks such as Flask; 2015-cont), Web (without frameworks, 2017-2018), Web PWA (Vue + Tailwind + Axios; 2019-cont), Swift (basics, actively learning; 2021-cont). -->
         </div>
       </div>
-
       <div class="my-10 contact">
-        <text-styles type="primary">Questions? More about me?</text-styles>
-        <text-styles type="subtitle"
-          >Feel free to shoot me an email at any time.
-          <router-link to="/connect" class="underline"
-            >Connect with me</router-link
-          >. You can also check out
-          <router-link to="/" class="underline"
-            >the entire website.</router-link
-          >
-        </text-styles>
+        <text-styles type="primary"> Read more... </text-styles>
+        <ui-button-stack :centered="false" class="mt-5">
+          <ui-button to="/curriculum-vitae">Open my curriculum vitae</ui-button>
+          <ui-button to="/" type="secondary">Go to the homepage</ui-button>
+          <ui-button to="/connect" type="secondary">Connect with me</ui-button>
+        </ui-button-stack>
       </div>
     </div>
   </page-frame>
@@ -317,9 +312,18 @@ import UiArea from "../../components/ui-area.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectCard from "../../components/project-card.vue";
+import UiButton from "../../components/ui-button.vue";
+import UiButtonStack from "../../components/ui-button-stack.vue";
 
 export default {
-  components: { pageFrame, TextStyles, UiArea, ProjectCard },
+  components: {
+    pageFrame,
+    TextStyles,
+    UiArea,
+    ProjectCard,
+    UiButton,
+    UiButtonStack,
+  },
   data: () => ({
     greeting: "Welcome",
     timeline: null,

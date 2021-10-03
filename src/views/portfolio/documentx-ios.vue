@@ -63,7 +63,7 @@
                 download.
               </text-styles>
             </ui-area>
-            <ui-button-stack class="mt-10">
+            <ui-button-stack class="mt-10" :centered="false">
               <ui-button
                 :asRouterLink="false"
                 to="https://testflight.apple.com/join/aUScGGas"
@@ -79,13 +79,13 @@
               <ui-button
                 :asRouterLink="false"
                 to="https://github.com/yyjlincoln/DocumentX-NG"
-                type="github_primary"
+                type="github_secondary"
                 >Server Repository</ui-button
               >
               <ui-button
                 :asRouterLink="false"
                 to="https://static.nowask.me/yyjlincoln/DocumentXAccess-Redacted.zip"
-                type="external_primary"
+                type="external_secondary"
                 >Client Source Code (Download)</ui-button
               >
             </ui-button-stack>
