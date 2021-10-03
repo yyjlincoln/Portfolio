@@ -5,10 +5,13 @@ import 'tailwindcss/dist/tailwind.css'
 import 'boxicons'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import commonjs from "@/commonjs"
 
 gsap.registerPlugin(ScrollTrigger)
+Vue.use(commonjs)
 
 new Vue({
   render: h => h(App),
   router: router,
+  commonjs
 }).$mount('#app')

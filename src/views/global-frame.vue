@@ -147,7 +147,7 @@ export default {
           // gsap.timeline().from(".navbar", {
           //   opacity: 0,
           //   duration: 0.5,
-          //   ease: "power3.easeOut",
+          //   ease: "power3.out",
           // });
         // Vue.nextTick(() => {
         // });

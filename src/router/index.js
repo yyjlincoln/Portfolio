@@ -13,6 +13,10 @@ import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 import GoFrame from '@/views/go/go-frame.vue'
 import GoUSYD from "@/views/go/usyd.vue"
 
+import DocumentX from "@/views/portfolio/documentx.vue"
+import DocumentXIOS from "@/views/portfolio/documentx-ios.vue"
+import NowAskMe from "@/views/portfolio/nowaskme.vue"
+
 Vue.use(VueRouter)
 
 const MAIN_ROOTS = [
@@ -101,7 +105,44 @@ const MAIN_ROOTS = [
                     },
                     title: "COVID Wishes"
                 }
-            }
+            },
+            {
+                path: 'documentx',
+                name: 'documentx',
+                component: DocumentX,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "DocumentX",
+                    },
+                    title: "DocumentX"
+                }
+            },
+            {
+                path: 'documentx-ios',
+                name: 'documentx-ios',
+                component: DocumentXIOS,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "DocumentX for iOS, iPadOS & MacOS",
+                    },
+                    title: "DocumentX for iOS, iPadOS & MacOS"
+                }
+            },
+            {
+                path: 'nowaskme',
+                name: 'nowaskme',
+                component: NowAskMe,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "NowAsk.Me",
+                    },
+                    title: "NowAsk.Me"
+                }
+            },
+
         ]
 
     },

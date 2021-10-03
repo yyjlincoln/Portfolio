@@ -9,9 +9,19 @@
     >
       <page-frame
         style="background-color: rgba(0, 0, 0, 0.5)"
-        class="relative w-full h-full" :both_center="true"
+        class="relative w-full h-full"
+        :both_center="true"
+        :reserve_nav_bar_space="false"
       >
-            <text-styles class="text-white">Coming soon.</text-styles>
+        <div class="text-center">
+          <text-styles type="extra_large white bold">Make a wish.</text-styles>
+          <text-styles type="large white bold"
+            >It'll come true.</text-styles
+          >
+          <text-styles type="medium white bold" class="mt-20"
+            >Coming early 2022.</text-styles
+          >
+        </div>
       </page-frame>
     </div>
   </div>

@@ -6,14 +6,14 @@
         <text-styles type="secondary_color y_spacing medium extrabold">This website uses the following open-source softwares: </text-styles>
         <textarea v-if="loaded" v-model="license" disabled class="w-full h-screen rounded-md"></textarea>
         <div v-else>
-          <text-styles type="secondary_color y_spacing small bold">Loading...</text-styles>
+          <text-styles type="secondary_color y_spacing smaller bold">Loading...</text-styles>
         </div>
       </div>
       <ui-area>
-        <text-styles type="primary_color small bold">
+        <text-styles type="primary_color smaller bold">
           Download a copy
         </text-styles>
-        <text-styles type="small bold secondary_color">
+        <text-styles type="smaller bold secondary_color">
           You can download a copy of the acknowledgement <a class="underline" :href="LICENSE_URL">here</a>. (or copy {{LICENSE_URL}}).
         </text-styles>
       </ui-area>

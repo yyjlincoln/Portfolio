@@ -1,8 +1,8 @@
 <template>
   <div>
-    <page-frame>
-      <div class="flex flex-col">
-        <div class="mt-8 px-8 md:md-16 md:px-16">
+    <page-frame :horizontal_margin="true">
+      <div class="flex flex-col ">
+        <div class="mt-10">
           <text-styles type="primary">Ways to connect</text-styles>
           <div class="mt-4 md:mt-8">
             <text-styles class="" type="title"

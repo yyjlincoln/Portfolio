@@ -3,11 +3,11 @@
     <!-- Main Section -->
     <div class="my-20 px-4 max-w-5xl">
       <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
-      <text-styles type="very_large extrabold" class="helloemoji"
+      <text-styles type="extra_large extrabold" class="helloemoji"
         >👋</text-styles
       >
       <text-styles
-        type="y_spacing extra_large secondary_color extrabold"
+        type="y_spacing larger secondary_color extrabold"
         class="title"
       >
         {{ greeting }}!
@@ -24,10 +24,10 @@
       >
 
       <ui-area class="max-w-4xl tips">
-        <text-styles type="bold small primary_color"
+        <text-styles type="bold smaller primary_color"
           >Who's Lincoln?</text-styles
         >
-        <text-styles type="bold small gray"
+        <text-styles type="bold smaller gray"
           >It's me! I'm Yijun Yan, and "Lincoln" is my preferred English name.
           I'll refer to myself as "Lincoln" throughout the text.</text-styles
         >
@@ -46,7 +46,7 @@
       <div class="my-10 journey">
         <!-- Coding Journey -->
         <text-styles type="primary">My Coding Journey</text-styles>
-        <text-styles type="bold small secondary_color"
+        <text-styles type="bold smaller secondary_color"
           >A breif story.
           <router-link class="underline" to="/journey"
             >Check out the full story</router-link
@@ -55,29 +55,29 @@
         <div class="border-l-8 border-gray-400 pl-1">
           <!-- Coding Journey Block -->
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2013</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Windows CMD</text-styles
             >
-            <text-styles type="small bold gray"
+            <text-styles type="smaller bold gray"
               >By chance, I started learning Windows CMD Scripts in
               2013.</text-styles
             >
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2014</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >"YiYuYan" (Chinese version of Visual Basic)
             </text-styles>
-            <text-styles type="small bold gray"
+            <text-styles type="smaller bold gray"
               >CMD Script was too basic - it's never intended to be a
               <div class="italic inline">real</div>
               programming language. It can't even draw a window on the screen.
@@ -87,72 +87,72 @@
             >
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2015</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Python 3</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               As my English skills got more advanced, I decided to move on to an
               internationally-recognised high-level programming language. I
               chose Python 3.
             </text-styles>
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2016</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Source control became a thing</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               After accidentally deleting my entire project folder, I decided to
               learn Git. I registered a Github account, and started using it to
               manage my projects.
             </text-styles>
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2017</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Study in Australia</text-styles
             >
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >My first flask project</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               I started using Flask to create my first web application.
             </text-styles>
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Learning HTML + CSS + JavaScript</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               I started learning HTML, CSS, and JavaScript in order to make a UI
               for my Python application.
             </text-styles>
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2019</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >Progressive Web Apps (PWA) with Vue.js, axios</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               I designed my first PWA app using Vue - Teamer
               <div class="italics text-gray-400 inline">
                 (private collaboration).
@@ -160,21 +160,21 @@
             </text-styles>
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2020</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >TailwindCSS, VueSax and MongoDB joined the chat. DocumentX was
               born.</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               I started working digitally in 2019 - and by 2020, I had way too
               much documents residing in my Inbox with a random file name. I
               decided to change it by designing my own document management
               system - DocumentX. Read more about this project
-              <router-link class="underline" to="/protfolio/documentx"
+              <router-link class="underline" to="/portfolio/documentx"
                 >here</router-link
               >
               <div class="italics text-gray-400 inline">
@@ -183,12 +183,12 @@
             </text-styles>
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >HSC Major Work</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               Nowask.me was born.
-              <router-link class="underline" to="/protfolio/nowaskme"
+              <router-link class="underline" to="/portfolio/nowaskme"
                 >Learn more</router-link
               >
               <div class="italics text-gray-400 inline">
@@ -198,27 +198,27 @@
           </ui-area>
 
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >2021</text-styles
           >
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >The era of Swift</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               After enrolling in the Apple Developer Program, I started learning
               Swift.
             </text-styles>
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >DocumentX for iOS &amp; MacOS</text-styles
             >
-            <text-styles type="small bold gray">
+            <text-styles type="smaller bold gray">
               Using the same sets of APIs, as a way to learn Swift, I created
               DocumentX for iOS &amp; MacOS. Learn more about this project
-              <router-link class="underline" to="/protfolio/documentx-ios"
+              <router-link class="underline" to="/portfolio/documentx-ios"
                 >here</router-link
               >
               <div class="italics text-gray-400 inline">
@@ -227,7 +227,7 @@
             </text-styles>
           </ui-area>
           <ui-area bg="bg-gray-100 max-w-4xl">
-            <text-styles type="small primary_color extrabold"
+            <text-styles type="smaller primary_color extrabold"
               >This website was born!
               <a href="https://github.com/yyjlincoln/yyjlincoln.com">
                 <box-icon type="logo" name="github" class="mr-1"></box-icon>
@@ -235,7 +235,7 @@
             </text-styles>
           </ui-area>
           <text-styles
-            type="small secondary_color extrabold y_spacing"
+            type="smaller secondary_color extrabold y_spacing"
             class="pl-5"
             >The future</text-styles
           >
@@ -381,24 +381,10 @@ export default {
       );
   },
   updated() {},
-  beforeDestroy() {
-    this.timeline.kill();
-    ScrollTrigger.getAll().forEach(function (trigger) {
-      trigger.kill();
-    });
-  },
   beforeRouteLeave(to, from, next) {
-    gsap.to(window, {
-      scrollTo: 0,
-      duration: 0.5,
-      ease: "Power3.easeOut",
-    });
-    document.body.classList.add("cursor-wait");
-    this.timeline.eventCallback("onReverseComplete", () => {
-      document.body.classList.remove("cursor-wait");
+    this.$func.reverseAnimation(this).then(() => {
       next();
     });
-    this.timeline.reverse();
   },
 };
 </script>

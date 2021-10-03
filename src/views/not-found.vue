@@ -5,15 +5,15 @@
       :reserve_nav_bar_space="false"
       :horizontal_margin="true"
     >
-      <text-styles type="secondary_color extrabold extra_large"
+      <text-styles type="secondary_color extrabold larger" class="title"
         >We could not find the page "{{ $route.path }}"</text-styles
       >
-      <text-styles type="primary">Oops. That's an error.</text-styles>
+      <text-styles type="primary" class="subtitle">Oops. That's an error.</text-styles>
       <text-styles
-        type="small extrabold secondary_color y_spacing flex flex-col"
+        type="smaller extrabold secondary_color y_spacing flex flex-col"
       >
         <div>
-          <router-link to="/" class="">
+          <router-link to="/" class="button">
             <box-icon
               type="solid"
               name="right-arrow-circle"
@@ -24,7 +24,7 @@
           </router-link>
         </div>
         <div>
-          <a href="#" @click.prevent="$router.go(-1)">
+          <a href="#" @click.prevent="$router.go(-1)" class="button">
             <box-icon
               type="solid"
               name="right-arrow-circle"
@@ -43,11 +43,33 @@
 import pageFrame from "../components/page-frame.vue";
 import TextStyles from "../components/text-styles.vue";
 
+import gsap from "gsap";
+
 export default {
   components: { pageFrame, TextStyles },
-  // mounted() {
-  //   this.$router.push("/");
-  // },
+  data:()=>({
+    timeline: null
+  }),
+  mounted() {
+    this.timeline = gsap.timeline({ defaults: { ease: "power3.out" } }).from(".title",{
+      translateY: "100%",
+      opacity: 0,
+      duration: 0.5
+    }).from(".subtitle",{
+      translateY: "100%",
+      opacity: 0,
+      duration: 1
+    }, "-=50%")
+    .from(".button",{
+      translateY: "100%",
+      opacity: 0,
+      duration: 1
+    }, "<")
+  },
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this)
+    next();
+  }
 };
 </script>
 

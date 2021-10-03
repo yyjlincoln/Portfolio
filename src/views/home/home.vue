@@ -320,14 +320,13 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import TextStyles from "../../components/text-styles.vue";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
-var gsap_timeline;
 export default {
   data: () => ({
     timeline: null,
   }),
   components: { TextStyles },
   mounted() {
-    gsap_timeline = gsap
+    gsap
       .timeline()
       .to(".previous-top", {
         scrollTrigger: {
@@ -381,7 +380,7 @@ export default {
         {
           opacity: 0,
           duration: 1,
-          ease: "Power3.easeOut",
+          ease: "power3.out",
         },
         "<"
       )
@@ -390,7 +389,7 @@ export default {
         {
           rotate: 180,
           duration: 4,
-          ease: "Power3.easeOut",
+          ease: "power3.out",
         },
         "<"
       )
@@ -400,7 +399,7 @@ export default {
           yPercent: 100,
           opacity: 0,
           duration: 2,
-          ease: "Expo.easeInOut",
+          ease: "power3.out",
           stagger: 0.5,
         },
         "<"
@@ -411,10 +410,10 @@ export default {
           yPercent: 100,
           opacity: 0,
           duration: 0.5,
-          ease: "Power2.easeOut",
+          ease: "power3.out",
           stagger: 0.25,
         },
-        ">-=0.5"
+        "<+1"
       )
       .from(
         ".buttons",
@@ -427,24 +426,9 @@ export default {
       );
   },
   updated() {},
-  beforeDestroy() {
-    gsap_timeline.kill();
-    ScrollTrigger.getAll().forEach(function (trigger) {
-      trigger.kill();
-    });
-  },
-  beforeRouteLeave(to, from, next) {
-    gsap.to(window, {
-      scrollTo: 0,
-      duration: 0.5,
-      ease: "Power3.easeOut",
-    });
-    document.body.classList.add("cursor-wait");
-    this.timeline.eventCallback("onReverseComplete", () => {
-      document.body.classList.remove("cursor-wait");
-      next();
-    });
-    this.timeline.reverse();
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this)
+    next();
   },
 };
 </script>

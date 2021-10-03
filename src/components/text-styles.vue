@@ -9,9 +9,12 @@
 <script>
 const sizes = {
   very_large: {
-    class: "text-4xl sm:text-5xl md:text-6xl",
+    class: "text-5xl sm:text-6xl md:text-7xl",
   },
   extra_large: {
+    class: "text-4xl sm:text-5xl md:text-6xl",
+  },
+  larger: {
     class: "text-3xl sm:text-4xl md:text-5xl",
   },
   large: {
@@ -21,7 +24,16 @@ const sizes = {
     class: "text-xl sm:text-2xl md:text-3xl",
   },
   small: {
-    class: "text-md sm:text-xl md:text-2xl",
+    class: "text-lg sm:text-xl md:text-2xl",
+  },
+  smaller: {
+    class: "text-md sm:text-lg md:text-xl",
+  },
+  extra_small: {
+    class: "text-sm sm:text-md md:text-lg",
+  },
+  very_small: {
+    class: "text-xs sm:text-sm md:text-md",
   },
 };
 
@@ -47,9 +59,24 @@ const colors = {
   secondary_color: {
     style: "color: #4cb963;",
   },
+  documentx_primary_color: {
+    style: "color: #3872D3;",
+  },
+  documentx_secondary_color: {
+    style: "color: #5595FF;",
+  },
+  nam_primary_color: {
+    style: "color: black; background: linear-gradient(90deg,#4e46e5,#9c2f9e); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
+  },
+  nam_secondary_color: {
+    style: "color: black; background: linear-gradient(90deg,#837dec,#C646C8); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
+  },
   gray: {
     class: "text-gray-700",
   },
+  white:{
+    class: "text-white",
+  }
 };
 
 const properties = {
