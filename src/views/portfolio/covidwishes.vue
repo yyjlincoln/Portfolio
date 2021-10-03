@@ -13,13 +13,13 @@
             >
           </div>
         </template>
-        
       </project-common>
     </page-frame>
   </div>
 </template>
 
 <script>
+import gsap from "gsap";
 import PageFrame from "../../components/page-frame.vue";
 import TextStyles from "../../components/text-styles.vue";
 import ProjectCommon from "./project-common.vue";
@@ -28,6 +28,19 @@ export default {
     PageFrame,
     TextStyles,
     ProjectCommon,
+  },
+  mounted() {
+    this.timeline = gsap
+      .timeline({
+        defaults: { duration: 0.5, ease: "power3.out", stagger: 0.1 },
+      })
+      .from(".frame", { opacity: 0 })
+      .from(".text-styles", { opacity: 0, y: "50" })
+      .from(".ui-button", { opacity: 0, y: "25" }, "<+=50%");
+  },
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this);
+    next();
   },
 };
 </script>

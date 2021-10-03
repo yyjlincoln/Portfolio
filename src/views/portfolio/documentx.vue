@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-frame :reserve_nav_bar_space="false" class="frame">
-      <project-common :project="project" class="display">
+      <project-common :project="project" class="display" framestyle="background-color: rgba(0,49,140,0.5)">
         <template slot="title">
           <div class="text-center flex flex-col">
             <text-styles type="extra_large white extrabold"

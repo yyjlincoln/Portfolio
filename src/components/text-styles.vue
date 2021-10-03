@@ -74,6 +74,9 @@ const colors = {
   gray: {
     class: "text-gray-700",
   },
+  light_gray: {
+    class: "text-gray-400",
+  },
   white:{
     class: "text-white",
   }

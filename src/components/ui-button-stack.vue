@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row md:justify-center w-full">
+  <div class="flex flex-col md:flex-row md:justify-center w-full flex-wrap">
     <slot></slot>
   </div>
 </template>

@@ -13,7 +13,8 @@
           >
         </div>
         <ui-area
-          innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"  class="infoarea"
+          innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
+          class="infoarea"
         >
           <div class="flex flex-col justify-center">
             <div class="mx-auto text-center pr-4">
@@ -35,11 +36,18 @@
       </div>
       <div>
         <!-- Project Cards -->
-        <text-styles type="secondary" class="text-center my-8 md:my-20 projectcard">
+        <text-styles
+          type="secondary"
+          class="text-center my-8 md:my-20 projectcards"
+        >
           My Projects
         </text-styles>
         <div class="flex flex-col justify-center md:flex-row flex-wrap w-full">
-          <div v-for="project in $commondata.projects" :key="project.name" class="projectcard">
+          <div
+            v-for="project in $commondata.projects"
+            :key="project.name"
+            class="projectcard"
+          >
             <project-card :project="project" class=""></project-card>
           </div>
         </div>
@@ -58,38 +66,60 @@ import UiArea from "../../components/ui-area.vue";
 export default {
   components: { PageFrame, TextStyles, UiArea, ProjectCard },
   data: () => ({
-    timeline: null
+    timeline: null,
   }),
   mounted() {
-    this.timeline = gsap.timeline({
-      defaults: {
-        ease: "power3.out",
-      },
-    })
-    .from(".heading", {
-      opacity: 0,
-      translateY: 100,
-      duration: 0.5,
-      stagger: 0.2,
-    }, "")
-    .from(".infoarea", {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.5,
-      stagger: 0.2,
-    }, "-=50%")
-    .from(".projectcard", {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.5,
-      stagger: 0.2,
-    }, "-=50%");
+    this.timeline = gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+        },
+      })
+      .from(
+        ".heading",
+        {
+          opacity: 0,
+          translateY: 100,
+          duration: 0.5,
+          stagger: 0.2,
+        },
+        ""
+      )
+      .from(
+        ".infoarea",
+        {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          stagger: 0.2,
+        },
+        "-=50%"
+      )
+      .from(
+        ".projectcards",
+        {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          stagger: 0.2,
+        },
+        "-=50%"
+      )
+      .from(
+        ".projectcard",
+        {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          stagger: 0.2,
+        },
+        "-=50%"
+      )
   },
   async beforeRouteLeave(to, from, next) {
-    await this.$func.reverseAnimation(this)
+    await this.$func.reverseAnimation(this);
     next();
   },
-
 };
 </script>
 

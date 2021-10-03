@@ -1,7 +1,7 @@
 <template>
   <router-link :to="project.link" class="">
     <div
-      class="rounded-md px-8 py-8 w-80 mx-auto my-4 md:mx-4"
+      class="rounded-md px-8 py-8 w-80 mx-auto my-4 md:mx-4 project-card"
       :class="project.bg != undefined ? project.bg : 'bg-gray-100'"
       :style="project.bgstyle"
     >

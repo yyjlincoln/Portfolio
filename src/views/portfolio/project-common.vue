@@ -5,7 +5,7 @@
       :style="'background-image: url(\'' + project.fullimage + '\');'"
     >
       <page-frame
-        style="background-color: rgba(0, 0, 0, 0.5)"
+        :style="framestyle"
         class="relative w-full h-full"
         :both_center="true"
         :reserve_nav_bar_space="false"
@@ -94,6 +94,9 @@ export default {
     project: {
       type: Object,
       required: true,
+    },
+    framestyle: {
+      default: "background-color: rgba(0, 0, 0, 0.5)",
     },
   },
 };
