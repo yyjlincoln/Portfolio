@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-fit ui-button">
+  <div class="my-2 mx-auto md:mx-2 md:my-2 md:flex md:justify-center md:w-fit ui-button">
     <div
       :style="'background-color: ' + backgroundcolor"
       class="
@@ -10,6 +10,7 @@
         transition-all
         shadow-lg
         ease-in-out
+        w-full
       "
     >
       <router-link
@@ -22,8 +23,8 @@
       >
         <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
           <box-icon
-            type="solid"
-            name="right-arrow-circle"
+            :type="icon ? icon.type : 'solid'"
+            :name="icon ? icon.name : 'right-arrow-circle'"
             :color="textcolor"
             class="mr-1"
           ></box-icon
@@ -41,8 +42,8 @@
       >
         <div class="rounded-md flex px-5 py-3 max-w-xl font-extrabold">
           <box-icon
-            type="solid"
-            name="right-arrow-circle"
+            :type="icon ? icon.type : 'solid'"
+            :name="icon ? icon.name : 'right-arrow-circle'"
             :color="textcolor"
             class="mr-1"
           ></box-icon
@@ -62,6 +63,52 @@ let colors = {
   secondary: {
     textcolor: "#3fab52",
     backgroundcolor: "#e2f3e8",
+  },
+  external_primary: {
+    textcolor: "#e2f3e8",
+    backgroundcolor: "#3fab52",
+    icon: {
+      name: "link-external",
+    },
+  },
+  external_secondary: {
+    textcolor: "#3fab52",
+    backgroundcolor: "#e2f3e8",
+    icon: {
+      name: "link-external",
+    },
+  },
+  github_primary: {
+    textcolor: "#e2f3e8",
+    backgroundcolor: "#3fab52",
+    icon: {
+      type: "logo",
+      name: "github",
+    },
+  },
+  github_secondary: {
+    textcolor: "#3fab52",
+    backgroundcolor: "#e2f3e8",
+    icon: {
+      type: "logo",
+      name: "github",
+    },
+  },
+  docs_primary: {
+    textcolor: "#e2f3e8",
+    backgroundcolor: "#3fab52",
+    icon: {
+      type: "solid",
+      name: "book",
+    },
+  },
+  docs_secondary: {
+    textcolor: "#3fab52",
+    backgroundcolor: "#e2f3e8",
+    icon: {
+      type: "solid",
+      name: "book",
+    },
   },
 };
 
@@ -108,6 +155,10 @@ export default {
     backgroundcolor() {
       this.updateColors();
       return this.internalcolorset.backgroundcolor;
+    },
+    icon() {
+      this.updateColors();
+      return this.internalcolorset.icon;
     },
     linkClick() {
       return (event) => {

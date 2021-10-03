@@ -1,6 +1,7 @@
 import axios from "axios"
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Vue from 'vue'
 
 let endpoint = "https://apis.yyjlincoln.com"
 
@@ -9,7 +10,7 @@ let common = {
     axios.get(`${endpoint}${path}`).then(res => {
       console.log(res)
     })
-  }
+  },
 
 }
 
@@ -29,6 +30,20 @@ let func = {
       that.timeline.reverse();
     })
   },
+  utils: {
+    scrollTo(destination) {
+      gsap.to(window, {
+        scrollTo: destination,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    },
+    inlineScrollTo(destination) {
+      return function () {
+        Vue.prototype.$func.utils.scrollTo(destination)
+      }
+    }
+  }
 }
 
 let data = {
@@ -43,11 +58,12 @@ let data = {
       descriptiontype: "nam_secondary_color",
       bg: "",
       bgstyle: "background: linear-gradient(90deg,#DBDAF9,#EBD5EB)",
+      status: "Developement stopped (Good enough for a HSC major work)",
     },
     documentx: {
       name: "DocumentX DMS",
       description: [
-        "A document management system. Manages scanned documents.",
+        "A document management system.",
         "Python3 & Vue PWA",
       ],
       link: "/portfolio/documentx",
@@ -58,6 +74,7 @@ let data = {
       descriptiontype: "documentx_secondary_color",
       bg: "",
       bgstyle: "background-color: #EBF2FF",
+      status: "Activitely being developed. Looking to rewrite it in the future.",
     },
     documentxios: {
       name: "DocumentX for iOS, iPadOS & MacOS",
@@ -69,6 +86,7 @@ let data = {
       descriptiontype: "white",
       bg: "",
       bgstyle: "background-color: #0e141b",
+      status: "Actively being developed.",
     },
     wishes: {
       name: "COVID Wishes",
@@ -83,6 +101,7 @@ let data = {
       bg: "",
       bgstyle: "background-color: #e2f3e8",
       fullimage: "https://static.nowask.me/covidwishes-bg.jpg",
+      status: "In the planning & preperation phase.",
     },
   }
 }
