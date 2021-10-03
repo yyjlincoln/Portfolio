@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-fit">
+  <div class="flex justify-center w-fit ui-button">
     <div
       :style="'background-color: ' + backgroundcolor"
       class="

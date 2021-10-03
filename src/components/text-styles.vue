@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :class="parsed_class" :style="parsed_style">
+    <div :class="parsed_class" :style="parsed_style" class="text-styles">
       <slot></slot>
     </div>
   </div>

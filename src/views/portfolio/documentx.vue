@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-frame :reserve_nav_bar_space="false" class="frame">
-      <project-common :project="project">
+      <project-common :project="project" class="display">
         <template slot="title">
           <div class="text-center flex flex-col">
             <text-styles type="extra_large white extrabold"
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import pageFrame from "../../components/page-frame.vue";
 import TextStyles from "../../components/text-styles.vue";
 import uiButton from "../../components/ui-button.vue";
@@ -32,7 +33,7 @@ import ProjectCommon from "./project-common.vue";
 export default {
   components: { pageFrame, ProjectCommon, TextStyles, uiButton },
   data: () => ({
-    timeline: null
+    timeline: null,
   }),
   computed: {
     project() {
@@ -40,6 +41,19 @@ export default {
     },
   },
   methods: {},
+  mounted() {
+    this.timeline = gsap
+      .timeline({
+        defaults: { duration: 0.5, ease: "power3.out", stagger: 0.1 },
+      })
+      .from(".frame", { opacity: 0 })
+      .from(".text-styles", { opacity: 0, y: "-50" })
+      .from(".ui-button", { opacity: 0, y: "-25" }, "-=50%")
+  },
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this);
+    next();
+  },
 };
 </script>
 
