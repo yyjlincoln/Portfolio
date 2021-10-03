@@ -126,6 +126,7 @@ const MAIN_ROOTS = [
                     nav: {
                         available: true,
                         name: "DocumentX for iOS, iPadOS & MacOS",
+                        translucent: true
                     },
                     title: "DocumentX for iOS, iPadOS & MacOS"
                 }
