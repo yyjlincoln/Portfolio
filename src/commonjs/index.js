@@ -136,7 +136,7 @@ let data = {
       bgstyle: "background-color: #e2f3e8",
       image: "https://static.nowask.me/yyjlincoln/yyjlincoln-logo.png",
       fullimage: "https://static.nowask.me/yyjlincoln/yyjlincoln-logo.png",
-      status: "Activaly being developed",
+      status: "Actively being developed",
     },
   }
 }
