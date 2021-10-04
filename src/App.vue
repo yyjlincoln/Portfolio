@@ -14,12 +14,15 @@ export default {
       document.title = to.meta.title
         ? to.meta.title
         : "Lincoln Yan - @yyjlincoln";
+      this.$func.processPath(to.path);
     },
   },
   mounted() {
     document.title = this.$route.meta.title
       ? this.$route.meta.title
       : "Lincoln Yan - @yyjlincoln";
+
+    this.$func.processPath(this.$route.path);
   },
 };
 </script>

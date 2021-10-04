@@ -4,13 +4,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Vue from 'vue'
 
 let endpoint = "https://apis.yyjlincoln.com"
+let version = "1.3.0@" + String(new Date().getTime())
+
+let LAST_PATH = ""
 
 let common = {
-  getEndpoint: (path) => {
-    axios.get(`${endpoint}${path}`).then(res => {
-      console.log(res)
+  getEndpoint: async (path, params) => {
+    let res = await axios.get(`${endpoint}${path}`, {
+      params: params
     })
+    return res.data
   },
+  getPageUpdate(currentPage) {
+    this.getEndpoint("/getPageUpdates", {
+      page: currentPage,
+      version: version
+    })
+    // TODO
+  }
 
 }
 
@@ -29,6 +40,12 @@ let func = {
       });
       that.timeline.reverse();
     })
+  },
+  processPath(path) {
+    if (path != LAST_PATH) {
+      LAST_PATH = path
+      Vue.prototype.$api.getPageUpdate(path)
+    }
   },
   utils: {
     scrollTo(destination) {
@@ -53,7 +70,7 @@ let data = {
       description: ["Anonymous Q&A Platform", "SDD HSC Major Work", "Python3 & Vue PWA"],
       link: "/portfolio/nowaskme",
       image: "https://static.nowask.me/yyjlincoln/nam-logo.png",
-      fullimage:"https://static.nowask.me/yyjlincoln/nam-stream.png",
+      fullimage: "https://static.nowask.me/yyjlincoln/nam-stream.png",
       github: "",
       nametype: "nam_primary_color",
       descriptiontype: "nam_secondary_color",
@@ -143,6 +160,8 @@ function install(Vue) {
       ScrollTrigger.getAll().forEach(function (trigger) {
         trigger.kill();
       });
+    },
+    watch: {
     }
   })
 }
