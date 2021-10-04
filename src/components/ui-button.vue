@@ -110,6 +110,38 @@ let colors = {
       name: "book",
     },
   },
+  alert_primary: {
+    textcolor: "#F9EEB6",
+    backgroundcolor: "#f0932b",
+    icon: {
+      type: "solid",
+      name: "error",
+    },
+  },
+  alert_secondary: {
+    textcolor: "#f0932b",
+    backgroundcolor: "#F9EEB6",
+    icon: {
+      type: "solid",
+      name: "error",
+    },
+  },
+  info_primary: {
+    textcolor: "#E3E4FE",
+    backgroundcolor: "#1e90ff",
+    icon: {
+      type: "solid",
+      name: "info-circle",
+    },
+  },
+  info_secondary: {
+    textcolor: "#1e90ff",
+    backgroundcolor: "#E3E4FE",
+    icon: {
+      type: "solid",
+      name: "info-circle",
+    },
+  },
 };
 
 export default {

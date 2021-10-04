@@ -9,7 +9,10 @@ import Connect from '@/views/connect/connect.vue'
 import Journey from '@/views/journey/journey.vue'
 import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
 import GoFrame from '@/views/go/go-frame.vue'
-import GoUSYD from "@/views/go/usyd.vue"
+import GoUSYD from "@/views/scholarship/scholarship.vue"
+
+import Scholarships from "@/views/scholarship/scholarship.vue"
+import ScholarshipsFrame from "@/views/scholarship/scholarship-frame.vue"
 
 import Portfolio from '@/views/portfolio/portfolio.vue'
 import DocumentX from "@/views/portfolio/documentx.vue"
@@ -210,6 +213,32 @@ const MAIN_ROOTS = [
             title: "Open-source Software Acknowledgements"
         }
 
+    },
+    {
+        path: 'scholarship',
+        name: 'scholarship-frame',
+        component: ScholarshipsFrame,
+        meta: {
+            nav: {
+                available: true,
+                name: "Scholarship:Frame"
+            },
+            title: "Scholarship:Frame"
+        },
+        children: [
+            {
+                path: '',
+                name: 'scholarship',
+                component: Scholarships,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "Scholarship"
+                    },
+                    title: "Scholarship"
+                }
+            }
+        ]
     }
 ]
 

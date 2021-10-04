@@ -60,8 +60,8 @@
             <!-- Buttons -->
             <ui-button to="/curriculum-vitae">Curriculum Vitae</ui-button>
             <ui-button to="/portfolio">My Portfolio</ui-button>
+            <ui-button to="/scholarship" type="info_secondary">Scholarship Information</ui-button>
             <ui-button to="/connect" type="secondary">Connect</ui-button>
-            <!-- <ui-button to="/go/usyd" type="secondary">Scholarship Application</ui-button> -->
           </ui-button-stack>
         </div>
         <div
