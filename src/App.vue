@@ -26,19 +26,24 @@ export default {
 
 <style>
 html {
-  font-family: "-apple-system, BlinkMacSystemFont, " Segoe UI ", Roboto, "
-    Helvetica Neue ", Arial, sans-serif, " Apple Color Emoji ", " Segoe UI Emoji
-    ", " Segoe UI Symbol "";
+  font-family: "Inter", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   padding: 0;
   margin: 0;
 }
 body {
   padding: 0;
   margin: 0;
+  font-family: "Inter", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 #app {
-  overflow-x: hidden;
+  font-family: "Inter", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .slide-left-leave-active,
@@ -66,7 +71,7 @@ body {
   opacity: 0;
   transform: translate(-2em, 0);
 }
-.pagebreak-prevent{
+.pagebreak-prevent {
   page-break-inside: avoid;
 }
 </style>
