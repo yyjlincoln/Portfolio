@@ -3,7 +3,7 @@
     <page-frame
       :vertical_center="true"
       :reserve_nav_bar_space="false"
-      :horizontal_margin="true"
+      :horizontal_spacing="true"
     >
       <text-styles type="secondary_color extrabold larger" class="title"
         >We could not find the page "{{ $route.path }}"</text-styles

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-frame :horizontal_margin="true">
+    <page-frame :horizontal_spacing="true">
       <div class="my-20">
         <text-styles type="primary">Open-source Software Acknowledgements</text-styles>
         <text-styles type="secondary_color y_spacing medium extrabold">This website uses the following open-source softwares: </text-styles>

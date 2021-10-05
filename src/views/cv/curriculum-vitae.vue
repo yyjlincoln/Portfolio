@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-frame :horizontal_margin="true">
+    <page-frame :horizontal_spacing="true">
       <div class="mt-10">
         <text-styles type="primary" class="title">Curriculum Vitae</text-styles>
         <text-styles type="secondary" class="title">Yijun "Lincoln" YAN</text-styles>

@@ -8,8 +8,10 @@ import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
 import Connect from '@/views/connect/connect.vue'
 import Journey from '@/views/journey/journey.vue'
 import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
+
 import GoFrame from '@/views/go/go-frame.vue'
 import GoUSYD from "@/views/scholarship/scholarship.vue"
+import GoEALD from "@/views/go/hsc-eald.vue"
 
 import Scholarships from "@/views/scholarship/scholarship.vue"
 import ScholarshipsFrame from "@/views/scholarship/scholarship-frame.vue"
@@ -69,6 +71,18 @@ const MAIN_ROOTS = [
                         name: "Additional Information & Supporting Evidence for the Schorlarship Application"
                     },
                     title: "YIJUN YAN - Additional Information & Supporting Evidence for the Schorlarship Application"
+                }
+            },
+            {
+                path: 'eald',
+                name: 'eald',
+                component: GoEALD,
+                meta: {
+                    nav: {
+                        available: false,
+                        name: "HSC English EAL/D "
+                    },
+                    title: "Lincoln's HSC English EAL/D - Essays"
                 }
             }
         ]

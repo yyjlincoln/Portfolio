@@ -1,5 +1,5 @@
 <template>
-  <page-frame :reserve_nav_bar_space="false" :horizontal_margin="true">
+  <page-frame :reserve_nav_bar_space="false" :horizontal_spacing="true">
     <!-- Main Section -->
     <div class="my-20 px-4">
       <div class="max-w-5xl">

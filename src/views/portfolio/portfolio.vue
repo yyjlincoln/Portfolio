@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-frame :horizontal_margin="true" :reserve_nav_bar_space="true">
+    <page-frame :horizontal_spacing="true" :reserve_nav_bar_space="true">
       <!-- background-image: url('https://static.nowask.me/yyjlincoln/documentx-logo.png') -->
       <div class="mt-28">
         <div>

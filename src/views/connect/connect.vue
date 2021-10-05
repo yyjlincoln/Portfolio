@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-frame :horizontal_margin="true">
+    <page-frame :horizontal_spacing="true">
       <div class="flex flex-col">
         <div class="mt-10">
           <text-styles type="primary" class="text">Connect with me</text-styles>

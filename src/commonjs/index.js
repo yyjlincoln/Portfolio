@@ -59,6 +59,14 @@ let func = {
       return function () {
         Vue.prototype.$func.utils.scrollTo(destination)
       }
+    },
+    openInNewWindow(url) {
+      window.open(url, '_blank').focus();
+    },
+    inlineOpenInNewWindow(url) {
+      return function () {
+        Vue.prototype.$func.utils.openInNewWindow(url)
+      }
     }
   }
 }
