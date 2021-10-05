@@ -68,9 +68,9 @@ const MAIN_ROOTS = [
                 meta: {
                     nav: {
                         available: false,
-                        name: "Additional Information & Supporting Evidence for the Schorlarship Application"
+                        name: "Additional Information & Supporting Evidence for the Scholarship Application"
                     },
-                    title: "YIJUN YAN - Additional Information & Supporting Evidence for the Schorlarship Application"
+                    title: "YIJUN YAN - Additional Information & Supporting Evidence for the Scholarship Application"
                 }
             },
             {

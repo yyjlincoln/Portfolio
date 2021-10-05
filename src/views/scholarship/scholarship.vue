@@ -3,7 +3,7 @@
     <!-- Main Section -->
     <div class="my-20 px-4">
       <div class="max-w-5xl">
-        <!-- <text-styles type="primary" id="titleText">USYD Schorlarship Application</text-styles>  -->
+        <!-- <text-styles type="primary" id="titleText">USYD Scholarship Application</text-styles>  -->
         <text-styles type="extra_large extrabold" class="helloemoji no-print"
           >👋</text-styles
         >
@@ -17,7 +17,7 @@
         <text-styles
           type="y_spacing large primary_color bold"
           class="mainsubject"
-          >Additional Information &amp; Supporting Evidence for the Schorlarship
+          >Additional Information &amp; Supporting Evidence for the Scholarship
           Application</text-styles
         >
 
