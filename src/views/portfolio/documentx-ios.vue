@@ -23,7 +23,7 @@
               >
               <ui-button
                 :asRouterLink="false"
-                to="https://static.nowask.me/documentx/mac-1.14.1.zip"
+                to="https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/documentx/mac-1.14.1.zip"
                 type="external_primary"
                 >MacOS Download</ui-button
               >
@@ -72,7 +72,7 @@
               >
               <ui-button
                 :asRouterLink="false"
-                to="https://static.nowask.me/documentx/mac-1.14.1.zip"
+                to="https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/documentx/mac-1.14.1.zip"
                 type="external_primary"
                 >MacOS Version (download)</ui-button
               >
@@ -84,7 +84,7 @@
               >
               <ui-button
                 :asRouterLink="false"
-                to="https://static.nowask.me/yyjlincoln/DocumentXAccess-Redacted.zip"
+                to="https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/yyjlincoln/DocumentXAccess-Redacted.zip"
                 type="external_secondary"
                 >Client Source Code (Download)</ui-button
               >
