@@ -82,10 +82,14 @@ export default {
         translateY: 100,
         opacity: 0,
       })
-      .from(".ui-button", {
-        translateY: 100,
-        opacity: 0,
-      }, "<+40%");
+      .from(
+        ".ui-button",
+        {
+          translateY: 100,
+          opacity: 0,
+        },
+        "<+40%"
+      );
   },
   computed: {
     greeting() {
@@ -100,6 +104,10 @@ export default {
         return "Good Evening";
       }
     },
+  },
+  async beforeRouteLeave(to, from, next) {
+    await this.$func.reverseAnimation(this);
+    next();
   },
 };
 </script>
