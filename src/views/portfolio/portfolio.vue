@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-frame :horizontal_spacing="true" :reserve_nav_bar_space="true">
-      <!-- background-image: url('https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/yyjlincoln/documentx-logo.png') -->
+      <!-- background-image: url('https://static.yyjlincoln.com/yyjlincoln/documentx-logo.png') -->
       <div class="mt-28">
         <div>
           <!-- Heading -->

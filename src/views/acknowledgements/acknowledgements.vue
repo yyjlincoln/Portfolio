@@ -35,7 +35,7 @@ export default {
   data: ()=>({
     license: "",
     loaded: false,
-    LICENSE_URL: "https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/yyjlincoln-disclaimer.txt"
+    LICENSE_URL: "https://static.yyjlincoln.com/yyjlincoln-disclaimer.txt"
   }),
   mounted(){
     axios.get(this.LICENSE_URL).then((res)=>{

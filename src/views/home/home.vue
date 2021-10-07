@@ -84,7 +84,7 @@
     </div>
     <div
       style="
-        background: url('https://yyjlincoln-public-assets.nyc3.cdn.digitaloceanspaces.com/yyjlincoln-background.jpg');
+        background: url('https://static.yyjlincoln.com/yyjlincoln-background.jpg');
         background-position: center;
         background-size: cover;
         z-index: -1;
