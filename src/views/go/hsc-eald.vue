@@ -63,9 +63,15 @@ export default {
         },
         c: {
           url: "https://docs.google.com/document/d/1qPhNXCBs79emVGggr5JSmE9-oLVFqkVtDjb-smHtEqQ/edit",
-          name: "Module C: The Truman Show",
+          name: "Module C: The Truman Show (2020 HSC)",
           title:
             "“Memorable characters are best conveyed through the composer's craft of representing their settings and how characters function within them” \n\nTo what extent is this true for TWO characters in your prescribed text?",
+        },
+        c2: {
+          url: "https://docs.google.com/document/d/1WGB5J2ZGS0224A9OOcnRwj8Jl-5SchGK6EQ6c3jWDwI/edit",
+          name: "Module C: The Truman Show (2019 HSC)",
+          title:
+            "What is your personal response to Weir’s exploration of control in The Truman Show?\n\nIn your response, make detailed reference to your prescribed text",
         },
       },
     },
