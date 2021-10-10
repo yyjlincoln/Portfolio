@@ -63,7 +63,7 @@ export default {
         },
         c: {
           url: "https://docs.google.com/document/d/1qPhNXCBs79emVGggr5JSmE9-oLVFqkVtDjb-smHtEqQ/edit",
-          name: "Module C: The Truman Show (2020 HSC)",
+          name: "Module C: The Truman Show",
           title:
             "“Memorable characters are best conveyed through the composer's craft of representing their settings and how characters function within them” \n\nTo what extent is this true for TWO characters in your prescribed text?",
         },
