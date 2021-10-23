@@ -275,4 +275,16 @@ const router = new VueRouter({
     scrollBehavior: () => ({ y: 0 })
 })
 
+// function listRoutes(children, base = "https://yyjlincoln.com/") {
+//     for(var item in children) {
+//         console.log(base + children[item].path)
+//         if(children[item].children) {
+//             listRoutes(children[item].children, base= base + children[item].path + "/")
+//         }
+//     }
+// }
+
+// listRoutes(MAIN_ROOTS)
+// A function to list all routes for the sitemap.
+
 export default router
