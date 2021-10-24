@@ -146,6 +146,28 @@ let data = {
       fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
       status: "Actively being developed",
     },
+    khhspsn: {
+      name: "PushNotification",
+      description: [
+        "A smart notice board system for school TVs.",
+        "Vue (non-PWA), Python3",
+      ],
+      link: "/portfolio/khhs-psn",
+      nametype: "khhspsn_primary_color",
+      descriptiontype: "khhspsn_secondary_color",
+      bg: "",
+      bgstyle: "background-color: #ebf2ff",
+      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      status: "Discontinued due to maintenance concerns",
+      photos: [
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
+      ]
+    },
   }
 }
 

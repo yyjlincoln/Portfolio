@@ -22,6 +22,7 @@ import DocumentXIOS from "@/views/portfolio/documentx-ios.vue"
 import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 import NowAskMe from "@/views/portfolio/nowaskme.vue"
 import yyjlincoln from "@/views/portfolio/yyjlincoln.vue"
+import khhspsn from "@/views/portfolio/khhs-psn.vue"
 
 Vue.use(VueRouter)
 
@@ -171,6 +172,19 @@ const MAIN_ROOTS = [
                         name: "NowAsk.Me",
                     },
                     title: "NowAsk.Me"
+                }
+            },
+            {
+                path: 'khhs-psn',
+                name: 'PushNotification (discontinued)',
+                component: khhspsn,
+                meta: {
+                    nav: {
+                        available: true,
+                        name: "PushNotification",
+                        translucent: true
+                    },
+                    title: "PushNotification"
                 }
             },
 

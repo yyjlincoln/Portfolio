@@ -65,6 +65,12 @@ const colors = {
   documentx_secondary_color: {
     style: "color: #5595FF;",
   },
+  khhspsn_primary_color: {
+    style: "color: #3872D3;",
+  },
+  khhspsn_secondary_color: {
+    style: "color: #5595FF;",
+  },
   nam_primary_color: {
     style: "color: black; background: linear-gradient(90deg,#4e46e5,#9c2f9e); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
   },

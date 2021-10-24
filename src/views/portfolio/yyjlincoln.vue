@@ -22,7 +22,7 @@
         <template slot="info">
           <div>
             <text-styles type="primary">Source Code</text-styles>
-            <ui-button-stack>
+            <ui-button-stack class="mt-5" :centered="false">
               <ui-button
                 :asRouterLink="false"
                 type="github_primary"
