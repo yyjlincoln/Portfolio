@@ -26,6 +26,106 @@ import khhspsn from "@/views/portfolio/khhs-psn.vue"
 
 Vue.use(VueRouter)
 
+function productInPortfolio(products) {
+    var Prod = []
+    Prod = products
+    for (let i = 0; i < Prod.length; i++) {
+        Prod[i].name = Prod[i].name + '-portfolio'
+    }
+    return Prod
+}
+
+const Products = [
+    {
+        path: '',
+        name: 'Portfolio',
+        component: Portfolio,
+        meta: {
+            nav: {
+                available: true,
+                name: "Portfolio"
+            },
+            title: "Portfolio"
+        }
+    },
+    {
+        path: 'wishes',
+        name: 'COVID Wishes',
+        component: COVIDWishes,
+        meta: {
+            nav: {
+                available: true,
+                name: "COVID Wishes",
+                translucent: true
+            },
+            title: "COVID Wishes"
+        }
+    },
+    {
+        path: 'documentx',
+        name: 'documentx',
+        component: DocumentX,
+        meta: {
+            nav: {
+                available: true,
+                name: "DocumentX",
+            },
+            title: "DocumentX"
+        }
+    },
+    {
+        path: 'documentx-ios',
+        name: 'documentx-ios',
+        component: DocumentXIOS,
+        meta: {
+            nav: {
+                available: true,
+                name: "DocumentX for iOS, iPadOS & MacOS",
+                translucent: true
+            },
+            title: "DocumentX for iOS, iPadOS & MacOS"
+        }
+    },
+    {
+        path: 'nowaskme',
+        name: 'nowaskme',
+        component: NowAskMe,
+        meta: {
+            nav: {
+                available: true,
+                name: "NowAsk.Me",
+            },
+            title: "NowAsk.Me"
+        }
+    },
+    {
+        path: 'yyjlincoln',
+        name: 'yyjlincoln',
+        component: yyjlincoln,
+        meta: {
+            nav: {
+                available: true,
+                name: "NowAsk.Me",
+            },
+            title: "NowAsk.Me"
+        }
+    },
+    {
+        path: 'khhs-psn',
+        name: 'PushNotification (discontinued)',
+        component: khhspsn,
+        meta: {
+            nav: {
+                available: true,
+                name: "PushNotification",
+                translucent: true
+            },
+            title: "PushNotification"
+        }
+    },
+
+]
+
 const MAIN_ROOTS = [
     {
         path: '',
@@ -99,96 +199,7 @@ const MAIN_ROOTS = [
             },
             title: "Portfolio"
         },
-        children: [
-            {
-                path: '',
-                name: 'Portfolio',
-                component: Portfolio,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "Portfolio"
-                    },
-                    title: "Portfolio"
-                }
-            },
-            {
-                path: 'wishes',
-                name: 'COVID Wishes',
-                component: COVIDWishes,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "COVID Wishes",
-                        translucent: true
-                    },
-                    title: "COVID Wishes"
-                }
-            },
-            {
-                path: 'documentx',
-                name: 'documentx',
-                component: DocumentX,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "DocumentX",
-                    },
-                    title: "DocumentX"
-                }
-            },
-            {
-                path: 'documentx-ios',
-                name: 'documentx-ios',
-                component: DocumentXIOS,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "DocumentX for iOS, iPadOS & MacOS",
-                        translucent: true
-                    },
-                    title: "DocumentX for iOS, iPadOS & MacOS"
-                }
-            },
-            {
-                path: 'nowaskme',
-                name: 'nowaskme',
-                component: NowAskMe,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "NowAsk.Me",
-                    },
-                    title: "NowAsk.Me"
-                }
-            },
-            {
-                path: 'yyjlincoln',
-                name: 'yyjlincoln',
-                component: yyjlincoln,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "NowAsk.Me",
-                    },
-                    title: "NowAsk.Me"
-                }
-            },
-            {
-                path: 'khhs-psn',
-                name: 'PushNotification (discontinued)',
-                component: khhspsn,
-                meta: {
-                    nav: {
-                        available: true,
-                        name: "PushNotification",
-                        translucent: true
-                    },
-                    title: "PushNotification"
-                }
-            },
-
-        ]
+        children: productInPortfolio(Products)
 
     },
     {
@@ -267,7 +278,8 @@ const MAIN_ROOTS = [
                 }
             }
         ]
-    }
+    },
+    ...Products
 ]
 
 
