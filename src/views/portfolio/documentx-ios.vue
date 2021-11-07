@@ -47,6 +47,33 @@
             <text-styles type="medium bold light_gray">
               This is my first Swift project.
             </text-styles>
+            <text-styles class="mt-5" type="large extrabold white">
+              App Privacy Policy
+            </text-styles>
+            <text-styles class="mt-5" type="medium bold light_gray">
+              Your credentials are securely stored in our server. While
+              authenticating, your password is first hashed using SHA-256, and
+              the resultant hash is sent to the server which is hashed again
+              with a random 256-bit salt using SHA-256. The server only stores
+              the final hash and the salt. At no point is your password sent to
+              the server.
+            </text-styles>
+            <text-styles class="mt-5" type="medium bold light_gray">
+              All documents uploaded to DocumentX are stored on our servers,
+              backed up using DigitalOcean Object Storage. It will not be
+              visible to any other users on this platform unless you share it
+              with them or make it public. You have the option to delete them at
+              any time by visiting the mcsrv.icu.
+            </text-styles>
+            <text-styles class="mt-5" type="medium bold light_gray">
+              If you would like to delete your account, request a copy for your
+              data (including documents you own), please contact us at
+              legal@yyjlincoln.com
+            </text-styles>
+            <text-styles class="mt-5" type="medium bold light_gray">
+              Want to learn more about this? Check out the source code.
+            </text-styles>
+
             <hr class="my-5" />
             <text-styles class="mt-5" type="large extrabold white">
               Demo
