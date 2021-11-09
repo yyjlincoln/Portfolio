@@ -17,9 +17,9 @@
             <ui-button-stack class="mt-10">
               <ui-button
                 :asRouterLink="false"
-                to="https://testflight.apple.com/join/aUScGGas"
+                to="https://apps.apple.com/us/app/id1574456295"
                 type="external_primary"
-                >Join iOS/iPadOS Beta</ui-button
+                >Available on the App Store</ui-button
               >
               <ui-button
                 :asRouterLink="false"
@@ -40,6 +40,9 @@
                 >Read More</ui-button
               >
             </ui-button-stack>
+            <text-styles type="very_small white bold" class="my-3">
+              Designed for iPad. Works on iPhone, iPad and MacOS.
+            </text-styles>
           </div>
         </template>
         <template slot="info">
@@ -93,9 +96,15 @@
             <ui-button-stack class="mt-10" :centered="false">
               <ui-button
                 :asRouterLink="false"
+                to="https://apps.apple.com/us/app/id1574456295"
+                type="external_primary"
+                >View it on the App Store</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
                 to="https://testflight.apple.com/join/aUScGGas"
                 type="external_primary"
-                >Access via Apple TestFlight</ui-button
+                >Join the TestFlight (Beta)</ui-button
               >
               <ui-button
                 :asRouterLink="false"
