@@ -175,6 +175,18 @@ const MAIN_ROOTS = [
                 }
             },
             {
+                path: 'unsw',
+                name: 'unsw',
+                component: Scholarships,
+                meta: {
+                    nav: {
+                        available: false,
+                        name: "Additional Information & Supporting Evidence for the Scholarship Application"
+                    },
+                    title: "YIJUN YAN - Additional Information & Supporting Evidence for the Scholarship Application"
+                }
+            },
+            {
                 path: 'eald',
                 name: 'eald',
                 component: GoEALD,
