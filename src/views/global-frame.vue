@@ -40,13 +40,13 @@
                     ? 'background-color: rgba(0,0,0,0.2)'
                     : 'background-color: #e2f3e8'
                 "
-                @click="$router.go(-1)"
+                @click="backButtonClicked"
               >
                 <box-icon
                   name="left-arrow-circle"
                   :color="nav.translucent ? '#ffffff' : '#11691a'"
                 ></box-icon>
-                <div class="mx-1 hidden md:block">Back</div>
+                <div class="mx-1 hidden md:block">{{ backButtonName }}</div>
               </div>
             </div>
             <div
@@ -137,24 +137,26 @@ export default {
     page_transition: "slide-left",
     nav_timeline: null,
   }),
+  computed: {
+    backButtonName() {
+      if (this.$runtime.firstLaunch) {
+        return "Home";
+      } else {
+        return "Back";
+      }
+    },
+  },
   watch: {
     $route: function (to, from) {
       to, from;
+      Vue.set(this.$runtime, "firstLaunch", false);
+      console.log(this.$runtime);
       this.handle_route_change(to);
     },
   },
   methods: {
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
-      if (this.nav.available) {
-        // gsap.timeline().from(".navbar", {
-        //   opacity: 0,
-        //   duration: 0.5,
-        //   ease: "power3.out",
-        // });
-        // Vue.nextTick(() => {
-        // });
-      }
     },
     jumpToTop() {
       gsap.to(window, {
@@ -162,6 +164,13 @@ export default {
         duration: 0.5,
         ease: "power3.out",
       });
+    },
+    backButtonClicked() {
+      if (this.$runtime.firstLaunch) {
+        this.$router.push("/");
+      } else {
+        this.$router.go(-1);
+      }
     },
   },
   mounted() {

@@ -171,6 +171,10 @@ let data = {
   }
 }
 
+let runtime = {
+  firstLaunch: true,
+}
+
 function install(Vue) {
   Vue.prototype.$api = {
     ...common
@@ -180,6 +184,9 @@ function install(Vue) {
   }
   Vue.prototype.$commondata = {
     ...data
+  }
+  Vue.prototype.$runtime = {
+    ...runtime
   }
 
   Vue.mixin({
