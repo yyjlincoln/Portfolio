@@ -23,6 +23,12 @@
               >
               <ui-button
                 :asRouterLink="false"
+                to="https://docs.yyjlincoln.com/nowaskme"
+                type="docs_secondary"
+                >Project Report, Docs &amp; More</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
                 to=""
                 :linkClickPrevent="
                   $func.utils.inlineScrollTo({
@@ -67,7 +73,7 @@
                 to="https://github.com/yyjlincoln/NowAskMe-Frontend"
                 type="github_secondary"
                 >Client (Web) Repository</ui-button
-              >
+              >              
             </ui-button-stack>
           </div>
         </template>
