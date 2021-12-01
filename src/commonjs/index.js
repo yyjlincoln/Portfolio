@@ -168,8 +168,77 @@ let data = {
         'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
       ]
     },
+  },
+  utilities: {
+    lincolnScript: {
+      name: "LincolnScript",
+      description: [
+        "A simple script.",
+        "Vue (non-PWA), Python3",
+      ],
+      link: "/portfolio/khhs-psn",
+      nametype: "khhspsn_primary_color",
+      descriptiontype: "khhspsn_secondary_color",
+      bg: "",
+      bgstyle: "background-color: #ebf2ff",
+      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      status: "Discontinued due to maintenance concerns",
+      photos: [
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
+      ]
+    },
+    vueAlerts: {
+      name: "LincolnScript",
+      description: [
+        "A simple script.",
+        "Vue (non-PWA), Python3",
+      ],
+      link: "/portfolio/khhs-psn",
+      nametype: "khhspsn_primary_color",
+      descriptiontype: "khhspsn_secondary_color",
+      bg: "",
+      bgstyle: "background-color: #ebf2ff",
+      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      status: "Discontinued due to maintenance concerns",
+      photos: [
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
+      ]
+    },
+    requestMap: {
+      name: "LincolnScript",
+      description: [
+        "A simple script.",
+        "Vue (non-PWA), Python3",
+      ],
+      link: "/portfolio/khhs-psn",
+      nametype: "khhspsn_primary_color",
+      descriptiontype: "khhspsn_secondary_color",
+      bg: "",
+      bgstyle: "background-color: #ebf2ff",
+      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      status: "Discontinued due to maintenance concerns",
+      photos: [
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
+        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
+      ]
+    },
   }
 }
+
 
 let runtime = {
   firstLaunch: true,

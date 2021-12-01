@@ -23,6 +23,9 @@ import COVIDWishes from '@/views/portfolio/covidwishes.vue'
 import NowAskMe from "@/views/portfolio/nowaskme.vue"
 import yyjlincoln from "@/views/portfolio/yyjlincoln.vue"
 import khhspsn from "@/views/portfolio/khhs-psn.vue"
+import lincolnScript from "@/views/portfolio/lincolnscript.vue"
+import vueAlerts from "@/views/portfolio/vuealerts.vue"
+import requestMap from "@/views/portfolio/requestmap.vue"
 
 Vue.use(VueRouter)
 
@@ -121,6 +124,45 @@ const Products = [
                 translucent: true
             },
             title: "PushNotification"
+        }
+    },
+    {
+        path: 'lincolnscript',
+        name: 'LincolnScript',
+        component: lincolnScript,
+        meta: {
+            nav: {
+                available: true,
+                name: "LincolnScript",
+                translucent: false
+            },
+            title: "LincolnScript"
+        }
+    },
+    {
+        path: 'vuealerts',
+        name: 'vue-alerts',
+        component: vueAlerts,
+        meta: {
+            nav: {
+                available: true,
+                name: "vue-alerts",
+                translucent: false
+            },
+            title: "vue-alerts"
+        }
+    },
+    {
+        path: 'requestMap',
+        name: 'RequestMap',
+        component: requestMap,
+        meta: {
+            nav: {
+                available: true,
+                name: "RequestMap",
+                translucent: false
+            },
+            title: "RequestMap"
         }
     },
 

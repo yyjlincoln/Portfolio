@@ -35,22 +35,7 @@
         </ui-area>
       </div>
       <div>
-        <!-- Project Cards -->
-        <text-styles
-          type="secondary"
-          class="text-center my-8 md:my-20 projectcards"
-        >
-          My Projects
-        </text-styles>
-        <div class="flex flex-col justify-center md:flex-row flex-wrap w-full">
-          <div
-            v-for="project in $commondata.projects"
-            :key="project.name"
-            class="projectcard"
-          >
-            <project-card :project="project" class=""></project-card>
-          </div>
-        </div>
+        <work-demo></work-demo>
       </div>
     </page-frame>
   </div>
@@ -59,12 +44,13 @@
 <script>
 import gsap from "gsap";
 import PageFrame from "../../components/page-frame.vue";
-import ProjectCard from "../../components/project-card.vue";
+// import ProjectCard from "../../components/project-card.vue";
 import TextStyles from "../../components/text-styles.vue";
 import UiArea from "../../components/ui-area.vue";
+import WorkDemo from "../../components/work-demo.vue";
 // import UiPageBlock from "../../components/ui-page-block.vue";
 export default {
-  components: { PageFrame, TextStyles, UiArea, ProjectCard },
+  components: { PageFrame, TextStyles, UiArea, WorkDemo },
   data: () => ({
     timeline: null,
   }),
@@ -114,7 +100,7 @@ export default {
           stagger: 0.2,
         },
         "-=50%"
-      )
+      );
   },
   async beforeRouteLeave(to, from, next) {
     await this.$func.reverseAnimation(this);

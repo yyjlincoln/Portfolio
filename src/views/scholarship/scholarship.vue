@@ -51,33 +51,16 @@
           >
         </ui-area>
       </div>
-      <div class="my-10 projects">
-        <!-- Projects -->
+
+      <div class="mt-10 projects">
         <text-styles type="primary"> Coding Projects </text-styles>
         <text-styles type="secondary_color small bold"
           >For more details, please open them in
           <router-link class="underline" to="/portfolio"
             >my portfolio</router-link
           >
-          <div class="my-5">
-            <!-- Project Cards -->
-            <div
-              class="flex flex-col justify-center md:flex-row flex-wrap w-full"
-            >
-              <div
-                v-for="project in $commondata.projects"
-                :key="project.name"
-                class="projectcard"
-              >
-                <project-card
-                  :project="project"
-                  class=""
-                  :brief="true"
-                ></project-card>
-              </div>
-            </div>
-          </div>
         </text-styles>
+        <work-demo :brief="true"></work-demo>
       </div>
 
       <div class="my-10 journey pagebreak-before">
@@ -311,18 +294,18 @@ import TextStyles from "../../components/text-styles.vue";
 import UiArea from "../../components/ui-area.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ProjectCard from "../../components/project-card.vue";
 import UiButton from "../../components/ui-button.vue";
 import UiButtonStack from "../../components/ui-button-stack.vue";
+import WorkDemo from "../../components/work-demo.vue";
 
 export default {
   components: {
     pageFrame,
     TextStyles,
     UiArea,
-    ProjectCard,
     UiButton,
     UiButtonStack,
+    WorkDemo,
   },
   data: () => ({
     greeting: "Welcome",
