@@ -88,9 +88,8 @@
               <text-styles type="medium bold white"> Notes </text-styles>
               <text-styles type="small bold light_gray">
                 The client app contains a critical key used for encryption. For
-                security reasons, you won't be able to access the repository on
-                GitHub. A redacted version of the repository is available for
-                download.
+                security reasons, you will only be able to access a redacted
+                copy of the original repository.
               </text-styles>
             </ui-area>
             <ui-button-stack class="mt-10" :centered="false">
@@ -120,9 +119,9 @@
               >
               <ui-button
                 :asRouterLink="false"
-                to="https://static.yyjlincoln.com/yyjlincoln/DocumentXAccess-Redacted.zip"
-                type="external_secondary"
-                >Client Source Code (Download)</ui-button
+                to="https://github.com/yyjlincoln/DocumentX-iOS-Redacted"
+                type="github_secondary"
+                >Client Repository</ui-button
               >
             </ui-button-stack>
           </div>
