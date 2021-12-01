@@ -40,7 +40,7 @@ let common = {
             type: "cancel"
           }
         ], {
-          defaultAction: 1
+          defaultAction: 0
         })
       }
     }).catch(err => {
