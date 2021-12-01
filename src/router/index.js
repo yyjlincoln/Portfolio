@@ -140,7 +140,7 @@ const Products = [
         }
     },
     {
-        path: 'vuealerts',
+        path: 'vue-alerts',
         name: 'vue-alerts',
         component: vueAlerts,
         meta: {

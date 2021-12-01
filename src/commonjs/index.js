@@ -10,17 +10,36 @@ let LAST_PATH = ""
 
 let common = {
   getEndpoint: async (path, params) => {
-    let res = await axios.get(`${endpoint}${path}`, {
+    return axios.get(`${endpoint}${path}`, {
       params: params
-    })
-    return res.data
+    }).then(res => res.data)
   },
   getPageUpdate(currentPage) {
     this.getEndpoint("/getPageUpdates", {
       page: currentPage,
       version: version
+    }).then(data => {
+      console.log(data.message)
+      if (data.code < 0) {
+        this.$alert.present(data.title, data.message, [
+          {
+            title: "Cancel",
+            type: "cancel"
+          },
+          {
+            title: "Refresh",
+            type: "destructive",
+            handler: () => {
+              location.reload(true);
+            },
+          }
+        ], {
+          defaultAction: 1
+        })
+      }
+    }).catch(err => {
+      console.warn("Could not fetch for page updates. The current content may not be up to date.", err)
     })
-    // TODO
   }
 
 }
@@ -173,68 +192,44 @@ let data = {
     lincolnScript: {
       name: "LincolnScript",
       description: [
-        "A simple script.",
-        "Vue (non-PWA), Python3",
+        "Page under development.",
       ],
-      link: "/portfolio/khhs-psn",
-      nametype: "khhspsn_primary_color",
-      descriptiontype: "khhspsn_secondary_color",
+      link: "/portfolio/lincolnscript",
+      nametype: "primary_color",
+      descriptiontype: "secondary_color",
       bg: "",
-      bgstyle: "background-color: #ebf2ff",
-      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      bgstyle: "background-color: #e2f3e8",
+      image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
       status: "Discontinued due to maintenance concerns",
-      photos: [
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
-      ]
     },
     vueAlerts: {
-      name: "LincolnScript",
+      name: "Vue-Alerts",
       description: [
-        "A simple script.",
-        "Vue (non-PWA), Python3",
+        "Page under development.",
       ],
-      link: "/portfolio/khhs-psn",
-      nametype: "khhspsn_primary_color",
-      descriptiontype: "khhspsn_secondary_color",
+      link: "/portfolio/vue-alerts",
+      nametype: "primary_color",
+      descriptiontype: "secondary_color",
       bg: "",
-      bgstyle: "background-color: #ebf2ff",
-      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      bgstyle: "background-color: #e2f3e8",
+      image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
       status: "Discontinued due to maintenance concerns",
-      photos: [
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
-      ]
     },
     requestMap: {
-      name: "LincolnScript",
+      name: "RequestMap",
       description: [
-        "A simple script.",
-        "Vue (non-PWA), Python3",
+        "Page under development.",
       ],
-      link: "/portfolio/khhs-psn",
-      nametype: "khhspsn_primary_color",
-      descriptiontype: "khhspsn_secondary_color",
+      link: "/portfolio/requestmap",
+      nametype: "primary_color",
+      descriptiontype: "secondary_color",
       bg: "",
-      bgstyle: "background-color: #ebf2ff",
-      image: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+      bgstyle: "background-color: #e2f3e8",
+      image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
       status: "Discontinued due to maintenance concerns",
-      photos: [
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png',
-        'https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png',
-      ]
     },
   }
 }

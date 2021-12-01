@@ -6,9 +6,11 @@ import 'boxicons'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import commonjs from "@/commonjs"
+import vueAlerts from "vue-alerts"
 
 gsap.registerPlugin(ScrollTrigger)
 Vue.use(commonjs)
+Vue.use(vueAlerts)
 
 new Vue({
   render: h => h(App),
