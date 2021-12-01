@@ -19,19 +19,25 @@ let common = {
       page: currentPage,
       version: version
     }).then(data => {
-      console.log(data.message)
       if (data.code < 0) {
-        this.$alert.present(data.title, data.message, [
-          {
-            title: "Cancel",
-            type: "cancel"
-          },
+        window.app.$alert.present(data.title, data.message, [ // Using window as otherwise this would have 
           {
             title: "Refresh",
             type: "destructive",
             handler: () => {
               location.reload(true);
             },
+          },
+          {
+            title: "Home",
+            type: "normal",
+            handler: () => {
+              window.app.$router.push("/")
+            }
+          },
+          {
+            title: "Cancel",
+            type: "cancel"
           }
         ], {
           defaultAction: 1

@@ -23,6 +23,7 @@ export default {
       ? this.$route.meta.title
       : "Lincoln Yan - @yyjlincoln";
 
+    window.app = this; // for the commonjs module
     this.$func.processPath(this.$route.path);
   },
 };
