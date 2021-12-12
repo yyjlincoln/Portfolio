@@ -1,38 +1,41 @@
 <template>
   <div>
     <page-frame :reserve_nav_bar_space="false">
-      <project-common :project="$commondata.projects.khhspsn">
+      <project-common :project="$commondata.utilities.requestMap">
         <template slot="title">
           <text-styles type="white extra_large extrabold"
-            >PushNotification (KHHS)</text-styles
+            >RequestMap</text-styles
           >
-          <text-styles type="white large extrabold y_spacing"
-            >Making announcements, simplified.</text-styles
+          <text-styles type="white medium bold" class="mt-10"
+            >Write once, run via multiple protocols.</text-styles
+          >
+          <text-styles type="white small extrabold" class="mt-2"
+            >A micro framework.</text-styles
           >
           <ui-button-stack class="mt-10">
             <ui-button
               :asRouterLink="false"
-              type="github_secondary"
-              to="https://github.com/yyjlincoln/KHHS-PushNotifications"
-              >Github (Initial prototype, written in 6 hours)</ui-button
+              type="github_primary"
+              to="https://github.com/yyjlincoln/requestmap"
+              >Source Code</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
+              type="github_primary"
+              to="https://github.com/time2meet/time2meet-server"
+              >See it in action: The Time2Meet Project</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
+              type="external_secondary"
+              to="https://time2meetapis.yyjlincoln.app/dev/endpoint-info"
+              >Take a deeper look: Endpoint Map Structure</ui-button
             >
           </ui-button-stack>
         </template>
         <template slot="info">
           <div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Images</text-styles
-            >
-            <div
-              class="my-5"
-              v-for="image in $commondata.projects.khhspsn.photos"
-              :key="image"
-            >
-              <img :src="image" />
-            </div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Source Code</text-styles
-            >
+            <text-styles type="primary">Documentation</text-styles>
             <ui-area
               innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
               class="no-print"
@@ -44,30 +47,11 @@
               </div>
               <div class="flex flex-col no-print">
                 <text-styles type="primary_color extrabold smaller"
-                  >This is a prototype done in the shortest amount of time
-                  possible.
+                  >Docs are coming soon
                 </text-styles>
                 <text-styles type="secondary_color bold smallerer"
-                  >The code quality is quite bad.
-                </text-styles>
-              </div>
-            </ui-area>
-            <ui-area
-              innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
-              class="no-print"
-            >
-              <div class="flex flex-col justify-center">
-                <div class="mx-auto text-center pr-4">
-                  <text-styles type="large"> ⚠️ </text-styles>
-                </div>
-              </div>
-              <div class="flex flex-col no-print">
-                <text-styles type="primary_color extrabold smaller"
-                  >This is not the latest version.</text-styles
-                >
-                <text-styles type="secondary_color bold smallerer"
-                  >The latest version (which produced above screenshots) was
-                  lost as the project was discontineud.
+                  >The project is actively being developed and there might be
+                  frequent changes to the framework.
                 </text-styles>
               </div>
             </ui-area>
@@ -75,8 +59,20 @@
               <ui-button
                 :asRouterLink="false"
                 type="github_primary"
-                to="https://github.com/yyjlincoln/KHHS-PushNotifications"
-                >Github</ui-button
+                to="https://github.com/yyjlincoln/requestmap"
+                >Source Code</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="github_primary"
+                to="https://github.com/time2meet/time2meet-server"
+                >See it in action: The Time2Meet Project</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="external_secondary"
+                to="https://time2meetapis.yyjlincoln.app/dev/endpoint-info"
+                >Take a deeper look: Endpoint Map Structure</ui-button
               >
             </ui-button-stack>
           </div>

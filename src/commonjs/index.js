@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Vue from 'vue'
 
 let endpoint = "https://apis.yyjlincoln.com"
-let version = "1.3.0@" + String(new Date().getTime())
+let version = "1.4.0@" + String(new Date().getTime())
 
 let LAST_PATH = ""
 
@@ -20,21 +20,7 @@ let common = {
       version: version
     }).then(data => {
       if (data.code < 0) {
-        window.app.$alert.present(data.title, data.message, [ // Using window as otherwise this would have 
-          {
-            title: "Continue",
-            type: "normal",
-            handler: () => {
-              window.location = data.link
-            },
-          },
-          // {
-          //   title: "Refresh",
-          //   type: "destructive",
-          //   handler: () => {
-          //     location.reload(true);
-          //   },
-          // },
+        let actions = [
           {
             title: "Home",
             type: "normal",
@@ -49,7 +35,26 @@ let common = {
               // Do nothing
             }
           }
-        ], {
+        ]
+        if (data.link) {
+          actions.splice(0, 0, {
+            title: "Continue",
+            type: "normal",
+            handler: () => {
+              window.location = data.link
+            },
+          })
+        } else {
+          actions.splice(0, 0, {
+            title: "Refresh",
+            type: "destructive",
+            handler: () => {
+              location.reload(true);
+            },
+          })
+        }
+
+        window.app.$alert.present(data.title, data.message, actions, {
           defaultAction: 0,
           defaultEscapeAction: 2
         })
@@ -209,7 +214,7 @@ let data = {
     lincolnScript: {
       name: "LincolnScript",
       description: [
-        "Page under development.",
+        "A simple, asynchronous and event-driven script implemented in Swift.",
       ],
       link: "/portfolio/lincolnscript",
       nametype: "primary_color",
@@ -217,13 +222,13 @@ let data = {
       bg: "",
       bgstyle: "background-color: #e2f3e8",
       image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
-      status: "Discontinued due to maintenance concerns",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/lincolnscript-main.png",
+      status: "Under development. Coming soon.",
     },
     vueAlerts: {
       name: "Vue-Alerts",
       description: [
-        "Page under development.",
+        "Vue-Alerts is a Vue 2.x plugin that delivers UIViewController-like alerts with customisable alert actions and more.",
       ],
       link: "/portfolio/vue-alerts",
       nametype: "primary_color",
@@ -231,13 +236,13 @@ let data = {
       bg: "",
       bgstyle: "background-color: #e2f3e8",
       image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
-      status: "Discontinued due to maintenance concerns",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/vue-alerts-main.png",
+      status: "Version 0.2.0 is now available on npm.",
     },
     requestMap: {
       name: "RequestMap",
       description: [
-        "Page under development.",
+        "RequestMap is a micro framework for API developments. Write once, run with multiple protocols (HTTPViaFlask, BatchRequestViaFlask, Socket and Websocket [coming soon])"
       ],
       link: "/portfolio/requestmap",
       nametype: "primary_color",
@@ -245,8 +250,8 @@ let data = {
       bg: "",
       bgstyle: "background-color: #e2f3e8",
       image: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
-      fullimage: "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-demo.png",
-      status: "Discontinued due to maintenance concerns",
+      fullimage: "https://static.yyjlincoln.com/yyjlincoln/requestmap-main.png",
+      status: "Under development.",
     },
   }
 }

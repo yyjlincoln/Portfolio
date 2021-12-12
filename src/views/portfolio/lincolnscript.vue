@@ -1,38 +1,26 @@
 <template>
   <div>
     <page-frame :reserve_nav_bar_space="false">
-      <project-common :project="$commondata.projects.khhspsn">
+      <project-common :project="$commondata.utilities.lincolnScript">
         <template slot="title">
           <text-styles type="white extra_large extrabold"
             >The LincolnScript</text-styles
           >
           <text-styles type="white large extrabold y_spacing"
-            >A simple, asynchronous and event-driven script implemented in Swift.</text-styles
+            >A simple, asynchronous and event-driven script implemented in
+            Swift.</text-styles
           >
           <ui-button-stack class="mt-10">
             <ui-button
               :asRouterLink="false"
-              type="github_secondary"
-              to="https://github.com/yyjlincoln/KHHS-PushNotifications"
-              >Github (Initial prototype, written in 6 hours)</ui-button
+              type="github_primary"
+              to="https://github.com/yyjlincoln/DocumentX-iOS-Redacted/blob/master/DocumentX-Access/Instructions.swift"
+              >Check it out in action</ui-button
             >
           </ui-button-stack>
         </template>
         <template slot="info">
           <div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Images</text-styles
-            >
-            <div
-              class="my-5"
-              v-for="image in $commondata.projects.khhspsn.photos"
-              :key="image"
-            >
-              <img :src="image" />
-            </div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Source Code</text-styles
-            >
             <ui-area
               innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
               class="no-print"
@@ -44,41 +32,14 @@
               </div>
               <div class="flex flex-col no-print">
                 <text-styles type="primary_color extrabold smaller"
-                  >This is a prototype done in the shortest amount of time
-                  possible.
+                  >This is a part of the DocumentX-iOS Project
                 </text-styles>
                 <text-styles type="secondary_color bold smallerer"
-                  >The code quality is quite bad.
+                  >The module will be isolated from the main project when it's
+                  ready.
                 </text-styles>
               </div>
             </ui-area>
-            <ui-area
-              innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
-              class="no-print"
-            >
-              <div class="flex flex-col justify-center">
-                <div class="mx-auto text-center pr-4">
-                  <text-styles type="large"> ⚠️ </text-styles>
-                </div>
-              </div>
-              <div class="flex flex-col no-print">
-                <text-styles type="primary_color extrabold smaller"
-                  >This is not the latest version.</text-styles
-                >
-                <text-styles type="secondary_color bold smallerer"
-                  >The latest version (which produced above screenshots) was
-                  lost as the project was discontineud.
-                </text-styles>
-              </div>
-            </ui-area>
-            <ui-button-stack :centered="false">
-              <ui-button
-                :asRouterLink="false"
-                type="github_primary"
-                to="https://github.com/yyjlincoln/KHHS-PushNotifications"
-                >Github</ui-button
-              >
-            </ui-button-stack>
           </div>
         </template>
       </project-common>

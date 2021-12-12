@@ -1,82 +1,95 @@
 <template>
   <div>
     <page-frame :reserve_nav_bar_space="false">
-      <project-common :project="$commondata.projects.khhspsn">
+      <project-common :project="$commondata.utilities.vueAlerts">
         <template slot="title">
           <text-styles type="white extra_large extrabold"
-            >PushNotification (KHHS)</text-styles
+            >Vue-Alerts</text-styles
           >
           <text-styles type="white large extrabold y_spacing"
-            >Making announcements, simplified.</text-styles
+            >Get that iOS feel in your Vue 2.x project.</text-styles
           >
           <ui-button-stack class="mt-10">
             <ui-button
               :asRouterLink="false"
+              type="github_primary"
+              to="https://github.com/yyjlincoln/Vue-Alerts"
+              >Source Code</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
+              type="docs_primary"
+              to="https://github.com/yyjlincoln/Vue-Alerts#readme"
+              >Check out the docs</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
+              type="external_primary"
+              to="https://www.npmjs.com/package/vue-alerts"
+              >npm</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
               type="github_secondary"
-              to="https://github.com/yyjlincoln/KHHS-PushNotifications"
-              >Github (Initial prototype, written in 6 hours)</ui-button
+              to="https://yyjlincoln.github.io/vue-alerts-demo"
+              >Demo</ui-button
+            >
+            <ui-button
+              :asRouterLink="false"
+              type="secondary"
+              :linkClickPrevent="
+                () => {
+                  $alert.present(
+                    'Hello from Vue-Alerts',
+                    'This is a quick demo'
+                  );
+                }
+              "
+              to=""
+              >Another Demo</ui-button
             >
           </ui-button-stack>
         </template>
         <template slot="info">
           <div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Images</text-styles
-            >
-            <div
-              class="my-5"
-              v-for="image in $commondata.projects.khhspsn.photos"
-              :key="image"
-            >
-              <img :src="image" />
-            </div>
-            <text-styles type="primary khhspsn_primary_color"
-              >Source Code</text-styles
-            >
-            <ui-area
-              innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
-              class="no-print"
-            >
-              <div class="flex flex-col justify-center">
-                <div class="mx-auto text-center pr-4">
-                  <text-styles type="large"> ⚠️ </text-styles>
-                </div>
-              </div>
-              <div class="flex flex-col no-print">
-                <text-styles type="primary_color extrabold smaller"
-                  >This is a prototype done in the shortest amount of time
-                  possible.
-                </text-styles>
-                <text-styles type="secondary_color bold smallerer"
-                  >The code quality is quite bad.
-                </text-styles>
-              </div>
-            </ui-area>
-            <ui-area
-              innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
-              class="no-print"
-            >
-              <div class="flex flex-col justify-center">
-                <div class="mx-auto text-center pr-4">
-                  <text-styles type="large"> ⚠️ </text-styles>
-                </div>
-              </div>
-              <div class="flex flex-col no-print">
-                <text-styles type="primary_color extrabold smaller"
-                  >This is not the latest version.</text-styles
-                >
-                <text-styles type="secondary_color bold smallerer"
-                  >The latest version (which produced above screenshots) was
-                  lost as the project was discontineud.
-                </text-styles>
-              </div>
-            </ui-area>
             <ui-button-stack :centered="false">
               <ui-button
                 :asRouterLink="false"
                 type="github_primary"
-                to="https://github.com/yyjlincoln/KHHS-PushNotifications"
+                to="https://github.com/yyjlincoln/Vue-Alerts"
                 >Github</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="docs_primary"
+                to="https://github.com/yyjlincoln/Vue-Alerts#readme"
+                >Check out the docs</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="external_primary"
+                to="https://www.npmjs.com/package/vue-alerts"
+                >npm</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="github_secondary"
+                to="https://yyjlincoln.github.io/vue-alerts-demo"
+                >Demo</ui-button
+              >
+              <ui-button
+                :asRouterLink="false"
+                type="secondary"
+                :linkClickPrevent="
+                  () => {
+                    $alert.present(
+                      'Hello from Vue-Alerts',
+                      'This is a quick demo'
+                    );
+                  }
+                "
+                to=""
+                >Another Demo</ui-button
               >
             </ui-button-stack>
           </div>
@@ -93,7 +106,6 @@ import TextStyles from "../../components/text-styles.vue";
 import UiButtonStack from "../../components/ui-button-stack.vue";
 import UiButton from "../../components/ui-button.vue";
 import ProjectCommon from "./project-common.vue";
-import UiArea from "../../components/ui-area.vue";
 export default {
   components: {
     pageFrame,
@@ -101,7 +113,6 @@ export default {
     TextStyles,
     UiButton,
     UiButtonStack,
-    UiArea,
   },
   mounted() {
     this.timeline = gsap
