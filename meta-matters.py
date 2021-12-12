@@ -28,7 +28,7 @@ def onPath(path: str = '') -> Any:
                 return '<replace-meta></replace-meta>'.join(content)
 
         except:
-            return 'NOT FOUND.'
+            return 'NOT FOUND. We might be building the latest version of the page - please refresh the page in around a minute.'
 
 
 def getMeta(path: str) -> Union[str, None]:
