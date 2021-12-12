@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Vue from 'vue'
 
 let endpoint = "https://apis.yyjlincoln.com"
-let version = "1.4.1@" + String(new Date().getTime())
+let version = "1.4.2@" + String(new Date().getTime())
 
 let LAST_PATH = ""
 

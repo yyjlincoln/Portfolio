@@ -264,7 +264,7 @@
             class="pl-5 text-center"
             type="primary_color medium extrabold"
           >
-            The future's going to exciting.</text-styles
+            The future is exciting.</text-styles
           >
           <text-styles
             class="pl-5 text-center"
