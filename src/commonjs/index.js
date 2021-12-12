@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Vue from 'vue'
 
 let endpoint = "https://apis.yyjlincoln.com"
-let version = "1.4.0@" + String(new Date().getTime())
+let version = "1.4.1@" + String(new Date().getTime())
 
 let LAST_PATH = ""
 
@@ -30,7 +30,7 @@ let common = {
           },
           {
             title: "Cancel",
-            type: "destructive",
+            type: "cancel",
             handler: () => {
               // Do nothing
             }
@@ -55,8 +55,7 @@ let common = {
         }
 
         window.app.$alert.present(data.title, data.message, actions, {
-          defaultAction: 0,
-          defaultEscapeAction: 2
+          defaultAction: 0
         })
       }
     }).catch(err => {
