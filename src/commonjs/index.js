@@ -22,12 +22,19 @@ let common = {
       if (data.code < 0) {
         window.app.$alert.present(data.title, data.message, [ // Using window as otherwise this would have 
           {
-            title: "Refresh",
-            type: "destructive",
+            title: "Continue",
+            type: "normal",
             handler: () => {
-              location.reload(true);
+              window.location = data.link
             },
           },
+          // {
+          //   title: "Refresh",
+          //   type: "destructive",
+          //   handler: () => {
+          //     location.reload(true);
+          //   },
+          // },
           {
             title: "Home",
             type: "normal",
@@ -37,10 +44,14 @@ let common = {
           },
           {
             title: "Cancel",
-            type: "cancel"
+            type: "destructive",
+            handler: () => {
+              // Do nothing
+            }
           }
         ], {
-          defaultAction: 0
+          defaultAction: 0,
+          defaultEscapeAction: 2
         })
       }
     }).catch(err => {

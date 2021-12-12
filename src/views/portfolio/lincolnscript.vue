@@ -4,10 +4,10 @@
       <project-common :project="$commondata.projects.khhspsn">
         <template slot="title">
           <text-styles type="white extra_large extrabold"
-            >PushNotification (KHHS)</text-styles
+            >The LincolnScript</text-styles
           >
           <text-styles type="white large extrabold y_spacing"
-            >Making announcements, simplified.</text-styles
+            >A simple, asynchronous and event-driven script implemented in Swift.</text-styles
           >
           <ui-button-stack class="mt-10">
             <ui-button
