@@ -139,11 +139,11 @@ export default {
   }),
   computed: {
     backButtonName() {
-      if (this.$runtime.firstLaunch) {
-        return "Home";
-      } else {
-        return "Back";
-      }
+      // if (this.$runtime.firstLaunch) {
+      // return "Home";
+      // } else {
+      return "Back";
+      // }
     },
   },
   watch: {
