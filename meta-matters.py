@@ -14,6 +14,9 @@ app = Flask(__name__)
 def onPath(path: str = '') -> Any:
     print('PATH', path)
     distDir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'dist')
+    staticDir = os.path.join(os.path.dirname(
+        os.path.realpath(__file__)), 'static')
+
     try:
         if path == '/':
             return send_file(distDir, 'index.html')
@@ -31,11 +34,12 @@ def onPath(path: str = '') -> Any:
                 return '<replace-meta></replace-meta>'.join(content)
         except FileNotFoundError:
             try:
-                with open('building.html') as f:
+                with open(os.path.join(staticDir, 'building.html')) as f:
                     return f.read()
             except FileNotFoundError:
                 return '''<p>Something went wrong. Please try again in a few minutes or contact us on <a href="mailto:lincoln@yyjlincoln.com">lincoln@yyjlincoln.com</a></p>'''
         except Exception:
+            # Don't care about meta.
             return send_file(distDir, 'index.html')
 
 
@@ -70,8 +74,10 @@ def getMeta(path: str) -> Union[str, None]:
 
 
 def getProduct(route) -> dict:
+    srcDir = os.path.join(os.path.dirname(
+        os.path.realpath(__file__)), 'static')
     try:
-        with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'src', 'product-data.json')) as f:
+        with open(os.path.join(srcDir, 'product-data.json')) as f:
             allProducts = json.load(f)
             for category, product in allProducts.items():
                 for productName, productData in product.items():
