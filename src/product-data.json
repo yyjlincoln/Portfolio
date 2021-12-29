@@ -1,0 +1,186 @@
+{
+    "projects": {
+        "nowaskme": {
+            "routes": [
+                "/nowaskme",
+                "/portfolio/nowaskme"
+            ],
+            "name": "Nowask.me",
+            "description": [
+                "Anonymous Q&A Platform",
+                "SDD HSC Major Work",
+                "Python3 & Vue PWA"
+            ],
+            "link": "/portfolio/nowaskme",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/nam-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/nam-stream.png",
+            "github": "",
+            "nametype": "nam_primary_color",
+            "descriptiontype": "nam_secondary_color",
+            "bg": "",
+            "bgstyle": "background: linear-gradient(90deg,#DBDAF9,#EBD5EB)",
+            "status": "Developement stopped (Good enough for a HSC major work)"
+        },
+        "documentx": {
+            "routes": [
+                "/documentx",
+                "/portfolio/documentx"
+            ],
+            "name": "DocumentX DMS",
+            "description": [
+                "A document management system.",
+                "Python3 & Vue PWA"
+            ],
+            "link": "/portfolio/documentx",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/documentx-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/documentx-dashboard.png",
+            "github": "",
+            "nametype": "documentx_primary_color",
+            "descriptiontype": "documentx_secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #EBF2FF",
+            "status": "Activitely being developed. Looking to rewrite it in the future."
+        },
+        "documentxios": {
+            "routes": [
+                "/documentx-ios",
+                "/portfolio/documentx-ios"
+            ],
+            "name": "DocumentX for iOS, iPadOS & MacOS",
+            "description": [
+                "Manage your document on the move. Securely distribute App-Only documents.",
+                "Python3 & Swift"
+            ],
+            "link": "/portfolio/documentx-ios",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/documentx-ios-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/documentx-ios-main.png",
+            "github": "",
+            "nametype": "white",
+            "descriptiontype": "light_gray",
+            "bg": "",
+            "bgstyle": "background-color: #0e141b",
+            "status": "Actively being developed."
+        },
+        "wishes": {
+            "routes": [
+                "/wishes",
+                "/portfolio/wishes"
+            ],
+            "name": "COVID Wishes",
+            "description": [
+                "Make a wish & Get it emailed to you when COVID is over. Or simply write something to your future self.",
+                "Coming early 2022."
+            ],
+            "link": "/portfolio/wishes",
+            "github": "",
+            "nametype": "primary_color",
+            "descriptiontype": "secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #e2f3e8",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/covidwishes-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/covidwishes-bg.jpg",
+            "status": "In the planning & preperation phase."
+        },
+        "yyjlincoln": {
+            "routes": [
+                "/yyjlincoln",
+                "/portfolio/yyjlincoln"
+            ],
+            "name": "yyjlincoln.com",
+            "description": [
+                "This website.",
+                "Vue PWA"
+            ],
+            "link": "/portfolio/yyjlincoln",
+            "nametype": "primary_color",
+            "descriptiontype": "secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #e2f3e8",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+            "status": "Actively being developed"
+        },
+        "khhspsn": {
+            "routes": [
+                "/khhs-psn",
+                "/portfolio/khhs-psn"
+            ],
+            "name": "PushNotification",
+            "description": [
+                "A smart notice board system for school TVs.",
+                "Vue (non-PWA), Python3"
+            ],
+            "link": "/portfolio/khhs-psn",
+            "nametype": "khhspsn_primary_color",
+            "descriptiontype": "khhspsn_secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #ebf2ff",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo.png",
+            "status": "Discontinued due to maintenance concerns",
+            "photos": [
+                "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-1.png",
+                "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-2.png",
+                "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-3.png",
+                "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-4.png",
+                "https://static.yyjlincoln.com/yyjlincoln/khhspsn-demo-5.png"
+            ]
+        }
+    },
+    "utilities": {
+        "lincolnScript": {
+            "routes": [
+                "/lincolnscript",
+                "/portfolio/lincolnscript"
+            ],
+            "name": "LincolnScript",
+            "description": [
+                "A simple, asynchronous and event-driven script implemented in Swift."
+            ],
+            "link": "/portfolio/lincolnscript",
+            "nametype": "primary_color",
+            "descriptiontype": "secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #e2f3e8",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/lincolnscript-main.png",
+            "status": "Under development. Coming soon."
+        },
+        "vueAlerts": {
+            "routes": [
+                "/vue-alerts",
+                "/portfolio/vue-alerts"
+            ],
+            "name": "Vue-Alerts",
+            "description": [
+                "Vue-Alerts is a Vue 2.x plugin that delivers UIViewController-like alerts with customisable alert actions and more."
+            ],
+            "link": "/portfolio/vue-alerts",
+            "nametype": "primary_color",
+            "descriptiontype": "secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #e2f3e8",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/vue-alerts-main.png",
+            "status": "Version 0.2.0 is now available on npm."
+        },
+        "requestMap": {
+            "routes": [
+                "/requestmap",
+                "/portfolio/requestmap"
+            ],
+            "name": "RequestMap",
+            "description": [
+                "RequestMap is a micro framework for API developments. Write once, run with multiple protocols (HTTPViaFlask, BatchRequestViaFlask, Socket and Websocket [coming soon])"
+            ],
+            "link": "/portfolio/requestmap",
+            "nametype": "primary_color",
+            "descriptiontype": "secondary_color",
+            "bg": "",
+            "bgstyle": "background-color: #e2f3e8",
+            "image": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
+            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/requestmap-main.png",
+            "status": "Under development."
+        }
+    }
+}

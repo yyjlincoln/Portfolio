@@ -1,10 +1,13 @@
 # All requests should be proxied through this flask server to dynamically replace OpenGraph Metadata.
 
-from typing import Any, Union
-from flask import Flask, send_from_directory, send_file, render_template
 import os
+from typing import Any, Union
+from flask import Flask, send_from_directory, send_file
+import json
 from werkzeug.exceptions import NotFound
+
 app = Flask(__name__)
+
 
 @app.route('/')
 @app.route('/<path:path>')
@@ -26,12 +29,16 @@ def onPath(path: str = '') -> Any:
                     content[1] = meta
                     # Preserves <replace-meta> in case if it's a text within the html.
                 return '<replace-meta></replace-meta>'.join(content)
-
-        except:
-            return 'NOT FOUND. We might be building the latest version of the page - please refresh the page in around a minute.'
+        except FileNotFoundError:
+            try:
+                with open('building.html') as f:
+                    return f.read()
+            except FileNotFoundError:
+                return '''<p>Something went wrong. Please try again in a few minutes or contact us on <a href="mailto:lincoln@yyjlincoln.com">lincoln@yyjlincoln.com</a></p>'''
 
 
 def getMeta(path: str) -> Union[str, None]:
+    newline = '\n'
     path = path.lower()
     # Remove the last '/'
     if path.endswith('/'):
@@ -43,6 +50,32 @@ def getMeta(path: str) -> Union[str, None]:
             send_meta += f'''<meta property="{property}" content="{Meta[path][property]}"/>'''
         return send_meta
     else:
+        product = getProduct('/' + path)
+        if product:
+            return {
+                'og:title': f'''yyjlincoln > {product['category']} > {product['name']}''',
+                'og:url': '''https://yyjlincoln.com''' + product['link'],
+                'og:image': f'''{product['image']}''',
+                'og:description': f'''{newline.join(product['description'])}''',
+                'description': f'''{newline.join(product['description'])}''',
+            }
+        else:
+            return None
+
+
+def getProduct(route) -> dict:
+    try:
+        with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'src', 'product-data.json')) as f:
+            allProducts = json.load(f)
+            for category, product in allProducts.items():
+                for productName, productData in product.items():
+                    if route.lower() in productData['routes']:
+                        return {
+                            **productData,
+                            'category': category
+                        }
+            return None
+    except Exception:
         return None
 
 
@@ -53,48 +86,6 @@ Meta: dict = {
         'og:image': '''https://yyjlincoln.com/logo.png''',
         'og:description': '''A list of Lincoln's projects. @yyjlincoln''',
         'description': '''A list of Lincoln's projects. @yyjlincoln''',
-    },
-    'portfolio/wishes': {
-        'og:title': '''Lincoln's Portfolio > COVID Wishes''',
-        'og:url': '''https://yyjlincoln.com/portfolio/wishes''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/covidwishes-logo.png''',
-        'og:description': '''Make a wish & Get it emailed to you when COVID is over. Or simply write something to your future self. Coming early 2022.''',
-        'description': '''Make a wish & Get it emailed to you when COVID is over. Or simply write something to your future self. Coming early 2022.''',
-    },
-    'portfolio/documentx': {
-        'og:title': '''Lincoln's Portfolio > DocumentX''',
-        'og:url': '''https://yyjlincoln.com/portfolio/documentx''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/documentx-logo.png''',
-        'og:description': '''A document management system.''',
-        'description': '''A document management system.''',
-    },
-    'portfolio/documentx-ios': {
-        'og:title': '''Lincoln's Portfolio > DocumentX for Apple Platforms''',
-        'og:url': '''https://yyjlincoln.com/portfolio/documentx-ios''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/documentx-ios-logo.png''',
-        'og:description': '''Manage your document on the move. Securely distribute App-Only documents.''',
-        'description': '''Manage your document on the move. Securely distribute App-Only documents.''',
-    },
-    'portfolio/nowaskme': {
-        'og:title': '''Lincoln's Portfolio > Nowask.me''',
-        'og:url': '''https://yyjlincoln.com/portfolio/nowaskme''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/nam-logo.png''',
-        'og:description': '''Anonymous Q&A Platform''',
-        'description': '''Anonymous Q&A Platform''',
-    },
-    'portfolio/yyjlincoln': {
-        'og:title': '''Lincoln's Portfolio > About this site''',
-        'og:url': '''https://yyjlincoln.com/portfolio/yyjlincoln''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png''',
-        'og:description': '''About this site''',
-        'description': '''About this site''',
-    },
-    'portfolio/khhs-psn': {
-        'og:title': '''Lincoln's Portfolio > PushNotification''',
-        'og:url': '''https://yyjlincoln.com/portfolio/khhs-psn''',
-        'og:image': '''https://static.yyjlincoln.com/yyjlincoln/khhspsn-logo.png''',
-        'og:description': '''A smart notice board system for school TVs.''',
-        'description': '''A smart notice board system for school TVs.''',
     },
     'curriculum-vitae': {
         'og:title': '''Lincoln's Curriculum Vitae''',

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="main">
+        <div class="horizontal-split">
+            <div class="vertical-stack padding">
+                <div class="max-width vcenter">
+                    <div>
+                        <div class="font secondary">
+                            Please wait...
+                        </div>
+                        <div class="font primary">
+                            We are currently building the latest version of this website.
+                        </div>
+                        <div class="font tertiary margin-top">
+                            This usually lasts less than 3 minutes. This page will automatically refresh every 10
+                            seconds.
+                        </div>
+                        <div class="font margin-top tertiary margin-top">
+                            If we're not back in 10 minutes, please contact us.
+                        </div>
+                        <div class="margin-top">
+                            <div class="font tertiary clickable" id="toggleRefresh" onclick="toggleAutoRefresh()">
+                                Disable auto refresh
+                            </div>
+                            <div class="font tertiary clickable"
+                                onclick="window.location='mailto:lincoln@yyjlincoln.com'">Contact us
+                                (lincoln@yyjlincoln.com)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical-stack">
+                <div class="vcenter">
+                    <!-- Logo as Background -->
+                    <div class="logo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .vcenter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+    }
+
+    .horizontal-split {
+        padding-bottom: 2em;
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .vertical-stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        position: relative;
+        background: url("https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 18rem;
+        width: 18rem;
+        min-width: 150px;
+    }
+
+    .font {
+        font-family: 'Inter';
+    }
+
+    .margin-top {
+        margin-top: 2rem;
+    }
+
+    .tertiary {
+        font-size: 1.5rem;
+        color: #b2e1bc;
+        font-weight: 800;
+    }
+
+    .secondary {
+        font-size: 2rem;
+        color: #4cb963;
+        font-weight: 800;
+    }
+
+    .primary {
+        font-size: 2.5rem;
+        color: #157f1f;
+        font-weight: 800;
+    }
+
+    .padding {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .automargin {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .max-width {
+        max-width: 48rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        .logo {
+            display: none;
+        }
+
+        .padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .tertiary {
+            font-size: 1rem;
+        }
+
+        .secondary {
+            font-size: 1.5rem;
+        }
+
+        .primary {
+            font-size: 2rem;
+            ;
+        }
+
+        .margin-top {
+            margin-top: 1rem;
+        }
+    }
+
+    .clickable {
+        cursor: pointer;
+        font-style: italic;
+    }
+</style>
+
+<script>
+    var autoRefresh = true;
+    function updateState() {
+        let refreshButton = document.getElementById("toggleRefresh");
+        refreshButton.innerHTML = autoRefresh ? "Disable auto refresh" : "Refresh now";
+    }
+
+    function toggleAutoRefresh() {
+        if (!autoRefresh) {
+            location.reload(true);
+        } else {
+            autoRefresh = false;
+        }
+        updateState()
+    }
+    setTimeout(() => {
+        if (autoRefresh) {
+            location.reload(true)
+        }
+    }, 10000);
+</script>
