@@ -39,10 +39,7 @@ def onPath(path: str = '') -> Any:
                 with open(os.path.join(staticDir, 'building.html')) as f:
                     return f.read()
             except FileNotFoundError:
-                return '''<p>Something went wrong. Please try again in a few \
-                    minutes or contact us on \
-                        <a href="mailto:lincoln@yyjlincoln.com">lincoln@\
-                            yyjlincoln.com</a></p>'''
+                return '''<p>Something went wrong. Please try again in a few minutes or contact us on <a href="mailto:lincoln@yyjlincoln.com">lincoln@yyjlincoln.com</a></p>'''
         except Exception:
             # Don't care about meta.
             return send_file(distDir, 'index.html')
@@ -63,8 +60,7 @@ def getMeta(path: str) -> Union[str, None]:
         product = getProduct('/' + path)
         if product:
             metadata = {
-                'og:title': f'''yyjlincoln > {product['category']} > \
-                    {product['name']}''',
+                'og:title': f'''yyjlincoln > {product['category']} > {product['name']}''',
                 'og:url': '''https://yyjlincoln.com''' + product['link'],
                 'og:image': f'''{product['image']}''',
                 'og:description': f'''{' '.join(product['description'])}''',
@@ -72,8 +68,7 @@ def getMeta(path: str) -> Union[str, None]:
             }
     if metadata:
         for property in metadata:
-            send_meta += f'''<meta property="{property}" \
-                content="{metadata[property]}"/>'''
+            send_meta += f'''<meta property="{property}" content="{metadata[property]}"/>'''
         return send_meta
     else:
         return None
@@ -110,17 +105,14 @@ Meta: dict = {
         'og:url': '''https://yyjlincoln.com/curriculum-vitae''',
         'og:image': '''https://yyjlincoln.com/logo.png''',
         'og:description': '''Find out more about me. @yyjlincoln''',
-        'description': '''Find out more about me and my projects. \
-            @yyjlincoln''',
+        'description': '''Find out more about me and my projects. @yyjlincoln''',
     },
     'connect': {
         'og:title': '''Connect with me''',
         'og:url': '''https://yyjlincoln.com/connect''',
         'og:image': '''https://yyjlincoln.com/logo.png''',
-        'og:description': '''Connect with me via GitHub, Linkedin or more. \
-            @yyjlincoln''',
-        'description': '''Connect with me via GitHub, Linkedin or more. \
-            @yyjlincoln''',
+        'og:description': '''Connect with me via GitHub, Linkedin or more. @yyjlincoln''',
+        'description': '''Connect with me via GitHub, Linkedin or more. @yyjlincoln''',
     },
     'journey': {
         'og:title': '''My Coding Journey''',
@@ -133,18 +125,14 @@ Meta: dict = {
         'og:title': '''Open-Source Software Acknowledgements''',
         'og:url': '''https://yyjlincoln.com/acknowledgements''',
         'og:image': '''https://yyjlincoln.com/logo.png''',
-        'og:description': '''This website was designed with ❤️ and with the \
-            help of open-source modules & GSAP.''',
-        'description': '''This website was designed with ❤️ and with the \
-            help of open-source modules & GSAP.''',
+        'og:description': '''This website was designed with ❤️ and with the help of open-source modules & GSAP.''',
+        'description': '''This website was designed with ❤️ and with the help of open-source modules & GSAP.''',
     },
     'scholarship': {
         'og:title': '''Scholarship Information''',
         'og:url': '''https://yyjlincoln.com/scholarship''',
         'og:image': '''https://yyjlincoln.com/logo.png''',
-        'og:description': '''Additional Information & Supporting Evidence \
-            for the Scholarship Application.''',
-        'description': '''Additional Information & Supporting Evidence \
-            for the Scholarship Application.''',
+        'og:description': '''Additional Information & Supporting Evidence for the Scholarship Application.''',
+        'description': '''Additional Information & Supporting Evidence for the Scholarship Application.''',
     },
 }
