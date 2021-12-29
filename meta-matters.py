@@ -75,7 +75,7 @@ def getMeta(path: str) -> Union[str, None]:
 
 def getProduct(route) -> dict:
     srcDir = os.path.join(os.path.dirname(
-        os.path.realpath(__file__)), 'static')
+        os.path.realpath(__file__)), 'src')
     try:
         with open(os.path.join(srcDir, 'product-data.json')) as f:
             allProducts = json.load(f)
