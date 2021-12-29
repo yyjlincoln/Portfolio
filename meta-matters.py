@@ -35,6 +35,8 @@ def onPath(path: str = '') -> Any:
                     return f.read()
             except FileNotFoundError:
                 return '''<p>Something went wrong. Please try again in a few minutes or contact us on <a href="mailto:lincoln@yyjlincoln.com">lincoln@yyjlincoln.com</a></p>'''
+        except Exception:
+            return send_file(distDir, 'index.html')
 
 
 def getMeta(path: str) -> Union[str, None]:
@@ -45,22 +47,26 @@ def getMeta(path: str) -> Union[str, None]:
         path = path[:-1]
 
     send_meta = ''
+    metadata = None
+
     if path in Meta:
-        for property in Meta[path]:
-            send_meta += f'''<meta property="{property}" content="{Meta[path][property]}"/>'''
-        return send_meta
+        metadata = Meta[path]
     else:
         product = getProduct('/' + path)
         if product:
-            return {
+            metadata = {
                 'og:title': f'''yyjlincoln > {product['category']} > {product['name']}''',
                 'og:url': '''https://yyjlincoln.com''' + product['link'],
                 'og:image': f'''{product['image']}''',
                 'og:description': f'''{newline.join(product['description'])}''',
                 'description': f'''{newline.join(product['description'])}''',
             }
-        else:
-            return None
+    if metadata:
+        for property in metadata:
+            send_meta += f'''<meta property="{property}" content="{metadata[property]}"/>'''
+            return send_meta
+    else:
+        return None
 
 
 def getProduct(route) -> dict:
