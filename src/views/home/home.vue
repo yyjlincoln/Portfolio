@@ -45,14 +45,20 @@
                 max-w-4xl
               "
             >
-              <div class="md:mt-4 subtitle" style="color: #84cf95">
-                A Year 12 student at Killarney Heights High School, Australia
+              <div style="color: #84cf95" class="subtitle md:mt-4 ">
+                MLH Fellow
+              </div>
+              <div class="subtitle" style="color: #84cf95">
+                High School Graduate from
+              </div>
+              <div style="color: #84cf95" class="subtitle">
+                Killarney Heights High School, Australia
+              </div>
+              <div style="color: #84cf95" class="subtitle">
+                First in State for Software Design &amp; Development
               </div>
               <div style="color: #84cf95" class="subtitle">
                 Python &amp; Javascript Developer
-              </div>
-              <div style="color: #84cf95" class="subtitle">
-                Technology Enthusiast
               </div>
             </div>
           </div>

@@ -3,7 +3,9 @@
     <page-frame :horizontal_spacing="true">
       <div class="mt-10">
         <text-styles type="primary" class="title">Curriculum Vitae</text-styles>
-        <text-styles type="secondary" class="title">Yijun "Lincoln" YAN</text-styles>
+        <text-styles type="secondary" class="title"
+          >Yijun "Lincoln" YAN</text-styles
+        >
         <text-styles type="secondary_color small bold" class="title"
           >Accurate as of October 3rd, 2021.</text-styles
         >
@@ -63,6 +65,16 @@
                 <text-styles type="smaller bold"
                   >National Computer Science School (NCSS) 2020, Embedded
                   Stream</text-styles
+                >
+              </ui-cv-entry>
+              <ui-cv-entry label="HSC &amp; ATAR">
+                <text-styles type="smaller bold"
+                  >First in Course (FIC) in Software Design &amp;
+                  Development</text-styles
+                >
+                <text-styles type="smaller bold"
+                  >All rounder: Maths Extension 1, Maths Extension 2, Physics,
+                  Chemistry, Software Design &amp; Development</text-styles
                 >
               </ui-cv-entry>
               <ui-cv-entry label="Academic Achievements">
@@ -168,6 +180,15 @@ export default {
   data: () => ({
     timeline: null,
     achievements: [
+      "Year 12, 2021:",
+      "- First Place in English EAL/D",
+      "- First Place in Mathematics Advanced",
+      "- First Place in Mathematics Extension 2",
+      "- First Place in Software Design & Development",
+      "- Second Place in Chemistry",
+      "- Second Place in Physics",
+      "- Second Place in Mathematics Extension 1",
+      "Note: Year 12 awards are not finalised. Expecting more from the award ceremony on 13/Dec/2021.",
       "Year 11, 2020:",
       "- Student Excellence",
       "- Lions Club of Frenchs Forest Award for Outstanding Achievement in Science",
@@ -179,15 +200,6 @@ export default {
       "- Second in Software Design and Development",
       "- Second in Advanced Mathematics",
       "- Second in Mathematics Extension 1",
-      "Year 12, 2021:",
-      "- First Place in English EAL/D",
-      "- First Place in Mathematics Advanced",
-      "- First Place in Mathematics Extension 2",
-      "- First Place in Software Design & Development",
-      "- Second Place in Chemistry",
-      "- Second Place in Physics",
-      "- Second Place in Mathematics Extension 1",
-      "Note: Year 12 awards are finalised. Expecting more from the award ceremony on 13/Dec/2021.",
     ],
     leaderships: [
       "- SRC (2018-2020)",
