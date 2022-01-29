@@ -8,7 +8,9 @@
       <text-styles type="secondary_color extrabold larger" class="title"
         >We could not find the page "{{ $route.path }}"</text-styles
       >
-      <text-styles type="primary" class="subtitle">Oops. That's an error.</text-styles>
+      <text-styles type="primary" class="subtitle"
+        >Oops. That's an error.</text-styles
+      >
       <text-styles
         type="smaller extrabold secondary_color y_spacing flex flex-col"
       >
@@ -42,34 +44,44 @@
 <script>
 import pageFrame from "../components/page-frame.vue";
 import TextStyles from "../components/text-styles.vue";
-
 import gsap from "gsap";
 
 export default {
   components: { pageFrame, TextStyles },
-  data:()=>({
-    timeline: null
+  data: () => ({
+    timeline: null,
   }),
   mounted() {
-    this.timeline = gsap.timeline({ defaults: { ease: "power3.out" } }).from(".title",{
-      translateY: "100%",
-      opacity: 0,
-      duration: 0.5
-    }).from(".subtitle",{
-      translateY: "100%",
-      opacity: 0,
-      duration: 1
-    }, "-=50%")
-    .from(".button",{
-      translateY: "100%",
-      opacity: 0,
-      duration: 1
-    }, "<")
+    this.timeline = gsap
+      .timeline({ defaults: { ease: "power3.out" } })
+      .from(".title", {
+        translateY: "100%",
+        opacity: 0,
+        duration: 0.5,
+      })
+      .from(
+        ".subtitle",
+        {
+          translateY: "100%",
+          opacity: 0,
+          duration: 1,
+        },
+        "-=50%"
+      )
+      .from(
+        ".button",
+        {
+          translateY: "100%",
+          opacity: 0,
+          duration: 1,
+        },
+        "<"
+      );
   },
   async beforeRouteLeave(to, from, next) {
-    await this.$func.reverseAnimation(this)
+    await this.$func.reverseAnimation(this);
     next();
-  }
+  },
 };
 </script>
 

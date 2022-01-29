@@ -4,12 +4,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Vue from 'vue'
 import ProductData from "../product-data.json"
 
-let endpoint = "https://apis.yyjlincoln.com"
-let version = "1.4.2@" + String(new Date().getTime())
+const endpoint = "https://apis.yyjlincoln.com"
+const version = "1.5.0"
+const downloaded = new Date().getTime()
+const versionIdentifier = `${version}@${String(downloaded)}`
 
 let LAST_PATH = ""
 
-let common = {
+const common = {
   getEndpoint: async (path, params) => {
     return axios.get(`${endpoint}${path}`, {
       params: params
@@ -18,7 +20,7 @@ let common = {
   getPageUpdate(currentPage) {
     this.getEndpoint("/getPageUpdates", {
       page: currentPage,
-      version: version
+      version: versionIdentifier
     }).then(data => {
       if (data.code < 0) {
         let actions = [
@@ -66,7 +68,7 @@ let common = {
 
 }
 
-let func = {
+const func = {
   reverseAnimation(that) {
     return new Promise((resolve) => {
       gsap.to(window, {
@@ -112,12 +114,12 @@ let func = {
   }
 }
 
-let data = {
+const data = {
   ...ProductData
 }
 
 
-let runtime = {
+const runtime = {
   firstLaunch: true,
 }
 
@@ -149,7 +151,43 @@ function install(Vue) {
   })
 }
 
+function stringifyTimeDifference(timestamp, full = false) {
+  let ts = Date.now() // current timestamp
+  let tso = new Date(ts) // current timestamp as an object
+  let td = (ts - timestamp) / 1000 // time difference in seconds
+  let tx = new Date(timestamp) // timestamp as an object
+  if (td < 0) {
+    full = true
+  }
+  if (!full) {
+    if (td < 60) {
+      return `${String(Math.floor(td))} seconds ago`
+    }
+    else if (td / 60 <= 60) {
+      return Math.floor(td / 60) + ' minutes ago'
+    }
+    else if (td / 3600 <= 5) {
+      return Math.floor(td / 3600) + ' hours ago'
+    }
+    else if (td / 3600 <= 24 && tso.getDate() == tx.getDate()) {
+      return (tx.getHours() < 10 ? '0' : '') + tx.getHours() + ':' + (tx.getMinutes() < 10 ? '0' : '') + tx.getMinutes()
+    } else if (tx.getFullYear() == tso.getFullYear()) {
+      return tx.getDate() + '/' + (tx.getMonth() + 1) + ' ' + (tx.getHours() < 10 ? '0' : '') + tx.getHours() + ':' + (tx.getMinutes() < 10 ? '0' : '') + tx.getMinutes()
+    } else {
+      return tx.getDate() + '/' + (tx.getMonth() + 1) + '/' + tx.getFullYear() + ' ' + (tx.getHours() < 10 ? '0' : '') + tx.getHours() + ':' + (tx.getMinutes() < 10 ? '0' : '') + tx.getMinutes()
+    }
+  } else {
+    return tx.getDate() + '/' + (tx.getMonth() + 1) + '/' + tx.getFullYear() + ' ' + (tx.getHours() < 10 ? '0' : '') + tx.getHours() + ':' + (tx.getMinutes() < 10 ? '0' : '') + tx.getMinutes()
+  }
+}
+
 
 export default {
   install
+}
+
+export {
+  version,
+  downloaded,
+  stringifyTimeDifference
 }

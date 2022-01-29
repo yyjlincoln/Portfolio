@@ -1,13 +1,12 @@
 <template>
   <div>
     <!-- Root -->
-    <div class="previous-top" style="z-index: 0">
+    <div class="" style="z-index: 0">
       <div
         class="
           flex flex-col
           pt-20
-          sm:mt-0
-          sm:flex-row
+          sm:mt-0 sm:flex-row
           min-h-screen
           h-fit
           justify-space-between
@@ -45,29 +44,33 @@
                 max-w-4xl
               "
             >
-              <div style="color: #84cf95" class="subtitle md:mt-4 ">
-                MLH Fellow
-              </div>
-              <div class="subtitle" style="color: #84cf95">
-                High School Graduate from
+              <div style="color: #84cf95" class="subtitle md:mt-4">
+                A UNSW BCom + BSc (Computer Science) Student
               </div>
               <div style="color: #84cf95" class="subtitle">
-                Killarney Heights High School, Australia
+                Python &amp; Javascript (Web) Developer
               </div>
-              <div style="color: #84cf95" class="subtitle">
-                First in State for Software Design &amp; Development
-              </div>
-              <div style="color: #84cf95" class="subtitle">
-                Python &amp; Javascript Developer
-              </div>
+              <div class="subtitle" style="color: #84cf95">MLH Fellow</div>
             </div>
           </div>
           <ui-button-stack class="mt-8 max-w-2xl" :centered="false">
             <!-- Buttons -->
-            <ui-button to="/curriculum-vitae">Curriculum Vitae</ui-button>
             <ui-button to="/portfolio">My Portfolio</ui-button>
-            <ui-button to="/scholarship" type="info_secondary">Scholarship Information</ui-button>
-            <ui-button to="/connect" type="secondary">Connect</ui-button>
+            <!-- <ui-button to="/curriculum-vitae">Curriculum Vitae</ui-button> -->
+            <ui-button
+              :asRouterLink="false"
+              to="https://redirect.yyjlincoln.com/resume"
+              type="external_primary"
+              :linkClickPrevent="
+                $func.utils.inlineOpenInNewWindow(
+                  'https://redirect.yyjlincoln.com/resume'
+                )
+              "
+              >Download Resume</ui-button
+            >
+            <ui-button to="/connect" type="secondary"
+              >Connect with me</ui-button
+            >
           </ui-button-stack>
         </div>
         <div
@@ -88,152 +91,6 @@
         </div>
       </div>
     </div>
-    <div
-      style="
-        background: url('https://static.yyjlincoln.com/yyjlincoln-background.jpg');
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-      "
-      class="section-top"
-    >
-      <div
-        class="w-full h-full min-h-screen"
-        style="background: rgba(0, 0, 0, 0.4); z-index: 10; opacity: 0"
-        id="black_cover"
-      ></div>
-    </div>
-    <div style="z-index: 1" class="text-top min-h-screen">
-      <div
-        class="
-          flex flex-col
-          pt-20
-          md:pt-40
-          sm:mt-0
-          sm:flex-row
-          min-h-screen
-          h-fit
-          justify-space-between
-        "
-      >
-        <div class="flex flex-col h-fit ml-10 sm:ml-20 md:ml-40 mr-10">
-          <div>
-            <div
-              class="text-4xl sm:text-5xl md:text-6xl font-extrabold max-w-4xl"
-            >
-              <!-- Title -->
-              <div style="color: #e2f3e8">I write code,</div>
-              <div style="color: #84cf95">to turn my ideas into reality.</div>
-            </div>
-
-            <div
-              class="
-                text-lg
-                sm:text-xl
-                md:text-2xl
-                font-extrabold
-                mt-4
-                md:mt-0
-                max-w-4xl
-              "
-              style="color: #e2f3e8"
-            >
-              <div class="md:mt-8">
-                Ever since I was a kid, I've always had lots of ideas --
-              </div>
-              <div>and I've always wanted to turn them into reality.</div>
-              <div class="mt-4">And that's why I've chosen to code --</div>
-              <div class="mt-4">To make something new &amp; unique.</div>
-            </div>
-          </div>
-          <div class="mt-8 flex flex-col sm:flex-row">
-            <!-- Buttons -->
-            <router-link
-              to="/journey"
-              class="
-                mx-3
-                ml-0
-                mt-3
-                sm:mt-0
-                transition-all
-                shadow-lg
-                hover:shadow-md
-                active:shadow-sm
-                ease-in-out
-                rounded-md
-              "
-              style="background-color: #3fab52; color: #e2f3e8"
-              id="button-connect"
-            >
-              <div class="rounded-md flex px-5 py-3 font-extrabold">
-                <box-icon
-                  type="solid"
-                  name="right-arrow-circle"
-                  color="#e2f3e8"
-                  class="mr-1"
-                ></box-icon
-                >My journey
-              </div>
-            </router-link>
-            <router-link
-              to="/portfolio"
-              class="
-                mx-3
-                ml-0
-                mt-3
-                md:ml-3
-                sm:mt-0
-                transition-all
-                shadow-lg
-                hover:shadow-md
-                active:shadow-sm
-                ease-in-out
-                rounded-md
-              "
-              style="background-color: #e2f3e8; color: #3fab52"
-              id="button-connect"
-            >
-              <div class="rounded-md flex px-5 py-3 font-extrabold">
-                <box-icon
-                  type="solid"
-                  name="right-arrow-circle"
-                  color="#3fab52"
-                  class="mr-1"
-                ></box-icon
-                >Check out my portfolio
-              </div>
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="z-index: 2" class="">
-      <div
-        class="
-          flex flex-col
-          py-10
-          md:py-20
-          sm:mt-0
-          sm:flex-row
-          h-fit
-          justify-space-between
-          bg-gray-100
-        "
-      >
-        <div class="flex flex-col h-fit mx-auto ">
-          <div>
-            <div
-              class="text-4xl sm:text-5xl md:text-6xl font-extrabold"
-            >
-              <!-- Title -->
-              <text-styles class="text-center" type="secondary"
-                >"Coding transforms one's ideas to products."</text-styles
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -241,64 +98,34 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import TextStyles from "../../components/text-styles.vue";
-import UiButton from '../../components/ui-button.vue';
-import UiButtonStack from '../../components/ui-button-stack.vue';
+import UiButton from "../../components/ui-button.vue";
+import UiButtonStack from "../../components/ui-button-stack.vue";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 export default {
   data: () => ({
     timeline: null,
   }),
-  components: { TextStyles, UiButton, UiButtonStack },
+  components: { UiButton, UiButtonStack },
+  methods: {},
   mounted() {
     gsap
-      .timeline()
-      .to(".previous-top", {
+      .timeline({
+        defaults: {
+          ease: "none",
+        },
         scrollTrigger: {
-          id: "previous-top-parallex",
-          trigger: ".previous-top",
-          scrub: true,
-          invalidateOnRefresh: true,
+          trigger: ".content-wrapper",
           start: "bottom bottom",
-          end: "bottom top",
-          snap: {
-            duration: 0.5,
-            snapTo: 1,
-          },
-        },
-        yPercent: 20,
-        opacity: 0,
-        zIndex: -3,
-      })
-      .to(".section-top", {
-        scrollTrigger: {
-          id: "section-top-pin",
-          trigger: ".section-top",
+          endTrigger: "",
+          end: "max bottom",
           scrub: true,
-          pin: true,
-          pinSpacing: false,
-          invalidateOnRefresh: true,
-          start: "top top",
-          endTrigger: ".text-top",
-          end: "bottom bottom",
-          pinType: "transform",
         },
       })
-      .to("#black_cover", {
-        scrollTrigger: {
-          id: "section-top-mask",
-          trigger: ".section-top",
-          scrub: true,
-          invalidateOnRefresh: true,
-          start: "top top",
-          endTrigger: ".text-top",
-          end: "top center",
-        },
-        opacity: 1,
+      .to(".content-wrapper", {
+        yPercent: +7,
+        opacity: 0.3,
       });
-    // this.timeline.play()
-
     this.timeline = gsap
       .timeline()
       .from(
@@ -353,7 +180,7 @@ export default {
   },
   updated() {},
   async beforeRouteLeave(to, from, next) {
-    await this.$func.reverseAnimation(this)
+    await this.$func.reverseAnimation(this);
     next();
   },
 };

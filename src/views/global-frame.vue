@@ -72,50 +72,53 @@
         </div>
       </div>
       <!-- <transition :name="page_transition" mode="out-in"> -->
-      <router-view></router-view>
+      <div class="content-wrapper">
+        <router-view></router-view>
+      </div>
       <!-- </transition> -->
-    </div>
-    <div class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print">
-      <!-- Footer -->
-      <div class="my-2 flex flex-row">
-        <div class="text-xl font-bold">Lincoln Yan</div>
-        <div class="mx-1">|</div>
-        <div class="text-xl font-bold">@yyjlincoln</div>
-      </div>
-      <div class="text-md font-bold flex flex-row">
-        <a
-          href="https://github.com/yyjlincoln/"
-          class="mx-1"
-          @click="ui.icons.github = true"
-        >
-          <box-icon
-            type="logo"
-            name="github"
-            :class="ui.icons.github ? 'animate-pulse' : ''"
-          ></box-icon>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/yyjlincoln/"
-          class="mx-1"
-          @click="ui.icons.linkedin = true"
-        >
-          <box-icon
-            name="linkedin"
-            type="logo"
-            :class="ui.icons.linkedin ? 'animate-pulse' : ''"
-          ></box-icon
-        ></a>
-        <a href="mailto:yyjlincoln@yyjlincoln.com" class="mx-1"
-          ><box-icon name="paper-plane"></box-icon
-        ></a>
-      </div>
-      <div class="my-2 flex flex-col">
-        <div class="text-md font-bold">
-          Designed with ❤️ and with the help of open-source modules &amp; GSAP.
+      <div
+        class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print"
+        style="z-index: 10000000"
+      >
+        <!-- Footer -->
+        <div class="my-2 flex flex-row">
+          <div class="text-xl font-bold">Lincoln Yan</div>
+          <div class="mx-1">|</div>
+          <div class="text-xl font-bold">@yyjlincoln</div>
         </div>
-        <div class="text-md font-bold">
-          All rights reserved |
-          <router-link to="/acknowledgements"> Acknowledgements </router-link>
+        <div class="text-md font-bold flex flex-row">
+          <a href="https://github.com/yyjlincoln/" class="mx-1" target="_blank">
+            <box-icon type="logo" name="github" target="_blank"></box-icon>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yyjlincoln/"
+            class="mx-1"
+            target="_blank"
+          >
+            <box-icon type="logo" name="linkedin-square"></box-icon
+          ></a>
+          <a href="mailto:yyjlincoln@yyjlincoln.com" class="mx-1"
+            ><box-icon name="mail-send"></box-icon
+          ></a>
+        </div>
+        <div class="my-2 flex flex-col">
+          <div class="text-md font-bold">
+            Designed with ❤️ and with the help of open-source modules &amp;
+            GSAP.
+          </div>
+          <div class="text-md font-bold">
+            All rights reserved |
+            <router-link to="/acknowledgements"> Acknowledgements </router-link>
+          </div>
+          <div
+            class="text-md font-bold text-gray-400"
+            @click="() => (this.timeDifferenceString = `at ${downloaded}`)"
+          >
+            Version {{ version }} - Downloaded {{ timeDifferenceString }}
+          </div>
+          <div class="text-md font-bold text-gray-400">
+            Diagnostic purposes only. We don't track you.
+          </div>
         </div>
       </div>
     </div>
@@ -125,6 +128,7 @@
 <script>
 import Vue from "vue";
 import gsap from "gsap";
+import { version, downloaded, stringifyTimeDifference } from "@/commonjs";
 export default {
   data: () => ({
     ui: {
@@ -133,9 +137,12 @@ export default {
         linkedin: false,
       },
     },
+    timeDifferenceString: "",
     nav: {},
     page_transition: "slide-left",
     nav_timeline: null,
+    version,
+    downloaded,
   }),
   computed: {
     backButtonName() {
@@ -150,11 +157,14 @@ export default {
     $route: function (to, from) {
       to, from;
       Vue.set(this.$runtime, "firstLaunch", false);
-      console.log(this.$runtime);
       this.handle_route_change(to);
     },
   },
   methods: {
+    stringifyTimeDifference,
+    refreshTimeDifference() {
+      this.timeDifferenceString = stringifyTimeDifference(downloaded);
+    },
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
     },
@@ -175,6 +185,10 @@ export default {
   },
   mounted() {
     this.handle_route_change(this.$route);
+    this.refreshTimeDifference();
+    setInterval(() => {
+      this.refreshTimeDifference();
+    }, 10000);
   },
 };
 </script>
