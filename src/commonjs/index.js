@@ -5,7 +5,7 @@ import Vue from 'vue'
 import ProductData from "../product-data.json"
 
 const endpoint = "https://apis.yyjlincoln.com"
-const version = "1.5.0"
+const version = "1.6.0"
 const downloaded = new Date().getTime()
 const versionIdentifier = `${version}@${String(downloaded)}`
 
@@ -75,13 +75,19 @@ const func = {
         scrollTo: 0,
         duration: 0.5,
         ease: "power3.out",
-      });
-      document.body.classList.add("cursor-wait");
-      that.timeline.eventCallback("onReverseComplete", () => {
-        document.body.classList.remove("cursor-wait");
-        resolve();
-      });
-      that.timeline.reverse();
+      }).then(() => {
+        document.body.classList.add("cursor-wait");
+        if (!that.timeline) {
+          document.body.classList.remove("cursor-wait");
+          resolve();
+        } else {
+          that.timeline.eventCallback("onReverseComplete", () => {
+            document.body.classList.remove("cursor-wait");
+            resolve();
+          });
+          that.timeline.reverse();
+        }
+      })
     })
   },
   processPath(path) {

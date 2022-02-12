@@ -55,8 +55,8 @@
           </div>
           <ui-button-stack class="mt-8 max-w-2xl" :centered="false">
             <!-- Buttons -->
+            <ui-button to="/about-me">About Me</ui-button>
             <ui-button to="/portfolio">My Portfolio</ui-button>
-            <!-- <ui-button to="/curriculum-vitae">Curriculum Vitae</ui-button> -->
             <ui-button
               :asRouterLink="false"
               to="https://redirect.yyjlincoln.com/resume"
@@ -80,7 +80,6 @@
             sm:mx-10
             flex flex-col
             justify-center
-            flex
             sm:hidden
             md:flex
           "
@@ -124,7 +123,7 @@ export default {
       })
       .to(".content-wrapper", {
         yPercent: +7,
-        opacity: 0.3,
+        autoAlpha: 0.3,
       });
     this.timeline = gsap
       .timeline()

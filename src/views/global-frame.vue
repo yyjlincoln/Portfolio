@@ -83,6 +83,7 @@
         <!-- Footer -->
         <div class="my-2 flex flex-row">
           <div class="text-xl font-bold">Lincoln Yan</div>
+          <div class="text-xl font-bold text-gray-400 ml-1">aka Yijun Yan</div>
           <div class="mx-1">|</div>
           <div class="text-xl font-bold">@yyjlincoln</div>
         </div>

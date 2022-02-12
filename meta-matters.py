@@ -107,6 +107,13 @@ Meta: dict = {
         'og:description': '''Find out more about me. @yyjlincoln''',
         'description': '''Find out more about me and my projects. @yyjlincoln''',
     },
+    'about-me': {
+        'og:title': '''About me''',
+        'og:url': '''https://yyjlincoln.com/about-me''',
+        'og:image': '''https://static.yyjlincoln.com/yyjlincoln-background.jpg''',
+        'og:description': '''Hi, I'm Lincoln, aka Yijun Yan. @yyjlincoln''',
+        'description': '''Find out more about me and my projects. @yyjlincoln''',
+    },
     'connect': {
         'og:title': '''Connect with me''',
         'og:url': '''https://yyjlincoln.com/connect''',

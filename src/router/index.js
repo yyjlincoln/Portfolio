@@ -1,31 +1,28 @@
-import VueRouter from 'vue-router'
-import Vue from 'vue'
-import GlobalFrame from '@/views/global-frame.vue'
-import Home from '@/views/home/home.vue'
-import Portfolio_Frame from '@/views/portfolio/portfolio-frame.vue'
-import NotFound from '@/views/not-found.vue'
-import CurriculumVitae from '@/views/cv/curriculum-vitae.vue'
-import Connect from '@/views/connect/connect.vue'
-import Journey from '@/views/journey/journey.vue'
-import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue'
-
-import GoFrame from '@/views/go/go-frame.vue'
-import GoUSYD from "@/views/scholarship/scholarship.vue"
-import GoEALD from "@/views/go/hsc-eald.vue"
-
-import Scholarships from "@/views/scholarship/scholarship.vue"
-import ScholarshipsFrame from "@/views/scholarship/scholarship-frame.vue"
-
-import Portfolio from '@/views/portfolio/portfolio.vue'
-import DocumentX from "@/views/portfolio/documentx.vue"
-import DocumentXIOS from "@/views/portfolio/documentx-ios.vue"
-import COVIDWishes from '@/views/portfolio/covidwishes.vue'
-import NowAskMe from "@/views/portfolio/nowaskme.vue"
-import yyjlincoln from "@/views/portfolio/yyjlincoln.vue"
-import khhspsn from "@/views/portfolio/khhs-psn.vue"
-import lincolnScript from "@/views/portfolio/lincolnscript.vue"
-import vueAlerts from "@/views/portfolio/vuealerts.vue"
-import requestMap from "@/views/portfolio/requestmap.vue"
+import AboutMe from '@/views/about-me/about-me.vue';
+import Acknowledgements from '@/views/acknowledgements/acknowledgements.vue';
+import Connect from '@/views/connect/connect.vue';
+import CurriculumVitae from '@/views/cv/curriculum-vitae.vue';
+import GlobalFrame from '@/views/global-frame.vue';
+import GoFrame from '@/views/go/go-frame.vue';
+import GoEALD from '@/views/go/hsc-eald.vue';
+import Home from '@/views/home/home.vue';
+import Journey from '@/views/journey/journey.vue';
+import NotFound from '@/views/not-found.vue';
+import COVIDWishes from '@/views/portfolio/covidwishes.vue';
+import DocumentXIOS from '@/views/portfolio/documentx-ios.vue';
+import DocumentX from '@/views/portfolio/documentx.vue';
+import khhspsn from '@/views/portfolio/khhs-psn.vue';
+import lincolnScript from '@/views/portfolio/lincolnscript.vue';
+import NowAskMe from '@/views/portfolio/nowaskme.vue';
+import Portfolio_Frame from '@/views/portfolio/portfolio-frame.vue';
+import Portfolio from '@/views/portfolio/portfolio.vue';
+import requestMap from '@/views/portfolio/requestmap.vue';
+import vueAlerts from '@/views/portfolio/vuealerts.vue';
+import yyjlincoln from '@/views/portfolio/yyjlincoln.vue';
+import ScholarshipsFrame from '@/views/scholarship/scholarship-frame.vue';
+import Scholarships from '@/views/scholarship/scholarship.vue';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
@@ -207,7 +204,7 @@ const MAIN_ROOTS = [
             {
                 path: 'usyd',
                 name: 'usyd',
-                component: GoUSYD,
+                component: Scholarships,
                 meta: {
                     nav: {
                         available: false,
@@ -266,6 +263,17 @@ const MAIN_ROOTS = [
                 name: "Curriculum Vitae"
             },
             title: "My Curriculum Vitae"
+        }
+    },
+    {
+        path: 'about-me',
+        name: 'About Me',
+        component: AboutMe,
+        meta: {
+            nav: {
+                available: true,
+                name: "About Me"
+            }
         }
     },
     {

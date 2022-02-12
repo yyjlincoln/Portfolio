@@ -2,7 +2,7 @@
   <div>
     <page-frame :horizontal_spacing="true" :reserve_nav_bar_space="true">
       <!-- background-image: url('https://static.yyjlincoln.com/yyjlincoln/documentx-logo.png') -->
-      <div class="mt-28">
+      <div class="mt-20">
         <div>
           <!-- Heading -->
           <text-styles type="larger primary_color extrabold" class="heading"
