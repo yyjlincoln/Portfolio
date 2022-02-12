@@ -18,9 +18,12 @@
           type="solid"
           flip="horizontal"
           color="#4cb963"
+          size="md"
+          class="cursor-pointer"
+          @click="scrollToAboutMe"
         ></box-icon>
       </div>
-      <div class="my-16">
+      <div class="my-16" id="scroll-top">
         <div class="flex flex-col lg:flex-row justify-center">
           <text-styles type="primary extra_large">I'm a coder.</text-styles>
           <text-styles type="secondary extra_large" class="mx-2"
@@ -266,6 +269,11 @@ export default {
           },
           "<"
         );
+    },
+    scrollToAboutMe() {
+      this.$func.utils.scrollTo({
+        y: 1,
+      });
     },
   },
   async beforeRouteLeave(to, from, next) {
