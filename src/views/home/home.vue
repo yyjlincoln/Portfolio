@@ -50,7 +50,9 @@
               <div style="color: #84cf95" class="subtitle">
                 Python &amp; Javascript (Web) Developer
               </div>
-              <div class="subtitle" style="color: #84cf95">MLH Fellow</div>
+              <div class="subtitle" style="color: #84cf95">
+                Intern Software Engineer at Learnable
+              </div>
             </div>
           </div>
           <ui-button-stack class="mt-8 max-w-2xl" :centered="false">
