@@ -51,7 +51,7 @@
                 Python &amp; Javascript (Web) Developer
               </div>
               <div class="subtitle" style="color: #84cf95">
-                Intern Software Engineer at Learnable
+                Software Engineer at Learnable
               </div>
             </div>
           </div>

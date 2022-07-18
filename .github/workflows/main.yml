@@ -1,0 +1,31 @@
+name: Deploy to Prod
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test and Deploy
+        run: |
+          git clone https://github.com/yyjlincoln/yyjlincoln.com
+          cd yyjlincoln.com
+          git checkout master
+          git status
+          yarn
+          yarn build
+          echo "Copying files to the server"
+          echo "${{ secrets.KEY }}" > privkey
+          chmod 600 privkey
+          mkdir -p ~/.ssh/
+          ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+          echo "Creating staging area"
+          ssh -i privkey ${{ secrets.USERNAME }}@${{ secrets.HOST }} "mkdir -p /tmp/deploy && rm -rf /tmp/deploy/*"
+          echo "Copying files via scp"
+          scp -i privkey -r dist ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/tmp/deploy
+          echo "Deploying"
+          ssh -i privkey ${{ secrets.USERNAME }}@${{ secrets.HOST }} "rm -rf /code/gitrepos/yyjlincoln.com/dist && mv /tmp/deploy/dist /code/gitrepos/yyjlincoln.com/dist && rm -rf /tmp/deploy"
+          echo "Deployed to the server"
+          rm privkey
