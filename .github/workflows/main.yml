@@ -14,6 +14,7 @@ jobs:
           cd yyjlincoln.com
           git checkout master
           git status
+          export VERSION=$(git rev-parse --short HEAD)
           yarn
           yarn build
           echo "Copying files to the server"
