@@ -15,6 +15,7 @@ jobs:
           git checkout master
           git status
           export VERSION=$(git rev-parse --short HEAD)
+          yarn update:version
           yarn
           yarn build
           (cd dist; echo -n "$VERSION" > .version)
