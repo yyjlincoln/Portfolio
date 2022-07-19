@@ -17,6 +17,7 @@ jobs:
           export VERSION=$(git rev-parse --short HEAD)
           yarn
           yarn build
+          (cd dist; echo -n "$VERSION" > .version)
           echo "Copying files to the server"
           echo "${{ secrets.KEY }}" > privkey
           chmod 600 privkey
