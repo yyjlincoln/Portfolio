@@ -5,7 +5,7 @@ import Vue from 'vue'
 import ProductData from "../product-data.json"
 
 const endpoint = "https://apis.yyjlincoln.com"
-const version = "1.6.0"
+const version = "{{{ VERSION }}}"
 const downloaded = new Date().getTime()
 const versionIdentifier = `${version}@${String(downloaded)}`
 
