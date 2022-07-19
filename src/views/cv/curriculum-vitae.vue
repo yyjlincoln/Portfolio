@@ -27,6 +27,35 @@
             </text-styles>
           </div>
         </ui-area>
+
+        <ui-area
+          innerclass="flex flex-col md:flex-row justify-center md:justify-start"
+        >
+          <div
+            class="
+              flex flex-col
+              md:flex-row
+              justify-center
+              text-center
+              md:text-left
+              md:space-x-4
+            "
+          >
+            <div class="flex flex-col justify-center">
+              <div class="mx-auto text-center">
+                <text-styles type="large warn"> ⚠️ </text-styles>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <text-styles type="smaller warn extrabold"
+                >This page is no longer actively maintained</text-styles
+              >
+              <text-styles type="smallerer warn_secondary extrabold"
+                >Information on this page may be outdated and/or inaccurate.</text-styles
+              >
+            </div>
+          </div>
+        </ui-area>
         <div>
           <!-- Section I -->
           <ui-area>

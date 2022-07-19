@@ -48,7 +48,7 @@
                 A UNSW BCom + BSc (Computer Science) Student
               </div>
               <div style="color: #84cf95" class="subtitle">
-                Python &amp; Javascript (Web) Developer
+                Full Stack Developer
               </div>
               <div class="subtitle" style="color: #84cf95">
                 Software Engineer at Learnable

@@ -72,10 +72,12 @@ const colors = {
     style: "color: #5595FF;",
   },
   nam_primary_color: {
-    style: "color: black; background: linear-gradient(90deg,#4e46e5,#9c2f9e); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
+    style:
+      "color: black; background: linear-gradient(90deg,#4e46e5,#9c2f9e); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
   },
   nam_secondary_color: {
-    style: "color: black; background: linear-gradient(90deg,#837dec,#C646C8); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
+    style:
+      "color: black; background: linear-gradient(90deg,#837dec,#C646C8); -webkit-text-fill-color: transparent; -webkit-background-clip: text;",
   },
   gray: {
     class: "text-gray-700",
@@ -83,9 +85,15 @@ const colors = {
   light_gray: {
     class: "text-gray-400",
   },
-  white:{
+  white: {
     class: "text-white",
-  }
+  },
+  warn: {
+    class: "text-yellow-500",
+  },
+  warn_secondary: {
+    class: "text-yellow-400",
+  },
 };
 
 const properties = {
@@ -104,7 +112,7 @@ const spacing = {
   x_spacing: {
     class: "mx-5",
   },
-}
+};
 
 const font_styles = {
   ...sizes,

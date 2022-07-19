@@ -183,7 +183,8 @@
             :linkClickPrevent="
               $func.utils.inlineOpenInNewWindow(
                 'https://redirect.yyjlincoln.com/linkedin'
-              )"
+              )
+            "
             >Linkedin</ui-button
           >
         </ui-button-stack>
