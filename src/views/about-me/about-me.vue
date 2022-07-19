@@ -147,7 +147,7 @@
           students.</text-styles
         >
         <text-styles type="secondary" class="mt-4"
-          >I'm currently a Software Engineer Intern</text-styles
+          >Software Engineer</text-styles
         >
       </div>
       <div class="mt-12">
