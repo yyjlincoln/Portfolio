@@ -23,13 +23,15 @@
           </div>
           <div class="flex flex-col">
             <text-styles type="primary_color extrabold small"
-              >I learn coding by working on projects</text-styles
+              >Ooooold projects</text-styles
             >
             <text-styles type="secondary_color bold smaller"
-              >Therefore the quality of code in those projects do not represent
-              my current ability - including recent commits in old projects. It
-              would take a long time to fix them and time is what I don't have
-              as an HSC student.</text-styles
+              >Most projects are old and no longer reflect of my coding
+              abilities. (lang, tech-stack, code style, algorithms, etc).</text-styles
+            >
+            <text-styles type="secondary_color bold smaller"
+              >For more recent projects, check out my work at
+              Learnable.Education or visit my Github homepage.</text-styles
             >
           </div>
         </ui-area>

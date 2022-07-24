@@ -60,26 +60,6 @@
             "bg": "",
             "bgstyle": "background-color: #0e141b",
             "status": "Actively being developed."
-        },
-
-        "yyjlincoln": {
-            "routes": [
-                "/yyjlincoln",
-                "/portfolio/yyjlincoln"
-            ],
-            "name": "yyjlincoln.com",
-            "description": [
-                "This website.",
-                "Vue PWA"
-            ],
-            "link": "/portfolio/yyjlincoln",
-            "nametype": "primary_color",
-            "descriptiontype": "secondary_color",
-            "bg": "",
-            "bgstyle": "background-color: #e2f3e8",
-            "image": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
-            "fullimage": "https://static.yyjlincoln.com/yyjlincoln/yyjlincoln-logo.png",
-            "status": "Actively being developed"
         }
     },
     "utilities": {
