@@ -8,7 +8,6 @@ import GoEALD from '@/views/go/hsc-eald.vue';
 import Home from '@/views/home/home.vue';
 import Journey from '@/views/journey/journey.vue';
 import NotFound from '@/views/not-found.vue';
-import COVIDWishes from '@/views/portfolio/covidwishes.vue';
 import DocumentXIOS from '@/views/portfolio/documentx-ios.vue';
 import DocumentX from '@/views/portfolio/documentx.vue';
 import khhspsn from '@/views/portfolio/khhs-psn.vue';
@@ -46,19 +45,6 @@ const Products = [
                 name: "Portfolio"
             },
             title: "Portfolio"
-        }
-    },
-    {
-        path: 'wishes',
-        name: 'COVID Wishes',
-        component: COVIDWishes,
-        meta: {
-            nav: {
-                available: true,
-                name: "COVID Wishes",
-                translucent: true
-            },
-            title: "COVID Wishes"
         }
     },
     {

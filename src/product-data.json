@@ -61,26 +61,7 @@
             "bgstyle": "background-color: #0e141b",
             "status": "Actively being developed."
         },
-        "wishes": {
-            "routes": [
-                "/wishes",
-                "/portfolio/wishes"
-            ],
-            "name": "COVID Wishes",
-            "description": [
-                "Make a wish & Get it emailed to you when COVID is over. Or simply write something to your future self.",
-                "Coming early 2022."
-            ],
-            "link": "/portfolio/wishes",
-            "github": "",
-            "nametype": "primary_color",
-            "descriptiontype": "secondary_color",
-            "bg": "",
-            "bgstyle": "background-color: #e2f3e8",
-            "image": "https://static.yyjlincoln.com/yyjlincoln/covidwishes-logo.png",
-            "fullimage": "https://static.yyjlincoln.com/covidwishes-bg.jpg",
-            "status": "In the planning & preperation phase."
-        },
+
         "yyjlincoln": {
             "routes": [
                 "/yyjlincoln",
