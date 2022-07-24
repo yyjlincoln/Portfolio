@@ -89,7 +89,7 @@
           <div class="mx-1 hidden md:block">|</div>
           <div class="text-xl font-bold">@yyjlincoln</div>
         </div>
-        <div class="text-xl text-gray-400 font-bold">"Stay Conscious"</div>
+        <div class="text-xl text-gray-400 font-bold text-center md:text-left">"Stay Conscious"</div>
         <div
           class="
             text-md
