@@ -31,14 +31,14 @@
                 Linkedin (yyjlincoln)</text-styles
               >
             </a>
-            <a href="mailto:yyjlincoln@yyjlincoln.com">
+            <a href="mailto:lincoln@yyjlincoln.com">
               <text-styles class="mt-4 text-hover text" type="subtitle">
                 <box-icon
                   name="paper-plane"
                   color="#3fab52"
                   class="mr-1"
                 ></box-icon>
-                Email (yyjlincoln@yyjlincoln.com)</text-styles
+                Email (lincoln@yyjlincoln.com)</text-styles
               >
             </a>
           </div>

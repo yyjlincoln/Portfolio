@@ -45,13 +45,13 @@
               "
             >
               <div style="color: #84cf95" class="subtitle md:mt-4">
-                A UNSW BCom + BSc (Computer Science) Student
-              </div>
-              <div style="color: #84cf95" class="subtitle">
                 Full Stack Developer
               </div>
               <div class="subtitle" style="color: #84cf95">
                 Software Engineer at Learnable
+              </div>
+              <div style="color: #84cf95" class="subtitle">
+                UNSW Computer Science + Commerce
               </div>
             </div>
           </div>

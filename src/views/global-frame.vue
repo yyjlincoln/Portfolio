@@ -77,17 +77,28 @@
       </div>
       <!-- </transition> -->
       <div
-        class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print"
+        class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print space-y-2"
         style="z-index: 10000000"
       >
         <!-- Footer -->
-        <div class="my-2 flex flex-row flex-wrap">
-          <div class="text-xl font-bold mr-1">Lincoln Yan</div>
-          <div class="text-xl font-bold text-gray-400">aka Yijun Yan</div>
-          <div class="mx-1">|</div>
+        <div class="flex flex-col flex-wrap md:flex-row items-center">
+          <div class="flex flex-row">
+            <div class="text-xl font-bold mr-1">Lincoln Yan</div>
+            <div class="text-xl font-bold text-gray-400">(Yijun Yan)</div>
+          </div>
+          <div class="mx-1 hidden md:block">|</div>
           <div class="text-xl font-bold">@yyjlincoln</div>
         </div>
-        <div class="text-md font-bold flex flex-row">
+        <div class="text-xl text-gray-400 font-bold">"Stay Conscious"</div>
+        <div
+          class="
+            text-md
+            font-bold
+            flex flex-row
+            justify-center
+            md:justify-start
+          "
+        >
           <a href="https://github.com/yyjlincoln/" class="mx-1" target="_blank">
             <box-icon type="logo" name="github" target="_blank"></box-icon>
           </a>
@@ -98,27 +109,42 @@
           >
             <box-icon type="logo" name="linkedin-square"></box-icon
           ></a>
-          <a href="mailto:yyjlincoln@yyjlincoln.com" class="mx-1"
+          <a href="mailto:lincoln@yyjlincoln.com" class="mx-1"
             ><box-icon name="mail-send"></box-icon
           ></a>
         </div>
         <div class="my-2 flex flex-col">
-          <div class="text-md font-bold">
-            Designed with ❤️ and with the help of open-source modules &amp;
-            GSAP.
-          </div>
-          <div class="text-md font-bold">
-            All rights reserved |
-            <router-link to="/acknowledgements"> Acknowledgements </router-link>
-          </div>
+          <div class="text-md font-bold"></div>
+          <div class="text-md font-bold"></div>
           <div
-            class="text-md font-bold text-gray-400"
-            @click="() => (this.timeDifferenceString = `at ${downloaded}`)"
+            class="
+              text-xs
+              font-bold
+              text-gray-400
+              flex flex-col
+              mt-4
+              text-center
+              md:text-left
+            "
           >
-            Version {{ version }} - Downloaded {{ timeDifferenceString }}
-          </div>
-          <div class="text-md font-bold text-gray-400">
-            Diagnostic purposes only. We don't track you.
+            <div>{{ version }}@{{ downloaded }}</div>
+            <div
+              class="
+                flex
+                md:flex-row
+                flex-col flex-wrap
+                text-center
+                md:text-left md:space-x-1
+              "
+            >
+              <div>
+                Designed with ❤️ and with the help of open-source modules &amp;
+                GSAP.
+              </div>
+              <router-link to="/acknowledgements" class="w-fit">
+                Acknowledgements.
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
@@ -130,6 +156,7 @@
 import Vue from "vue";
 import gsap from "gsap";
 import { version, downloaded, stringifyTimeDifference } from "@/commonjs";
+
 export default {
   data: () => ({
     ui: {
@@ -163,9 +190,6 @@ export default {
   },
   methods: {
     stringifyTimeDifference,
-    refreshTimeDifference() {
-      this.timeDifferenceString = stringifyTimeDifference(downloaded);
-    },
     handle_route_change(route) {
       Vue.set(this, "nav", route.meta.nav);
     },
@@ -186,10 +210,6 @@ export default {
   },
   mounted() {
     this.handle_route_change(this.$route);
-    this.refreshTimeDifference();
-    setInterval(() => {
-      this.refreshTimeDifference();
-    }, 10000);
   },
 };
 </script>
