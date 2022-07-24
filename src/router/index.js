@@ -17,8 +17,6 @@ import Portfolio from "@/views/portfolio/portfolio.vue";
 import requestMap from "@/views/portfolio/requestmap.vue";
 import vueAlerts from "@/views/portfolio/vuealerts.vue";
 import yyjlincoln from "@/views/portfolio/yyjlincoln.vue";
-import ScholarshipsFrame from "@/views/scholarship/scholarship-frame.vue";
-import Scholarships from "@/views/scholarship/scholarship.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -257,32 +255,6 @@ const MAIN_ROOTS = [
       },
       title: "Open-source Software Acknowledgements",
     },
-  },
-  {
-    path: "scholarship",
-    name: "scholarship-frame",
-    component: ScholarshipsFrame,
-    meta: {
-      nav: {
-        available: true,
-        name: "Scholarship:Frame",
-      },
-      title: "Scholarship:Frame",
-    },
-    children: [
-      {
-        path: "",
-        name: "scholarship",
-        component: Scholarships,
-        meta: {
-          nav: {
-            available: true,
-            name: "Scholarship",
-          },
-          title: "Scholarship",
-        },
-      },
-    ],
   },
   ...Products,
 ];
