@@ -77,7 +77,15 @@
       </div>
       <!-- </transition> -->
       <div
-        class="bg-gray-100 px-8 py-8 text-gray-600 pagebreak-prevent no-print space-y-2"
+        class="
+          bg-gray-100
+          px-8
+          py-8
+          text-gray-600
+          pagebreak-prevent
+          no-print
+          space-y-2
+        "
         style="z-index: 10000000"
       >
         <!-- Footer -->
@@ -89,7 +97,9 @@
           <div class="mx-1 hidden md:block">|</div>
           <div class="text-xl font-bold">@yyjlincoln</div>
         </div>
-        <div class="text-xl text-gray-400 font-bold text-center md:text-left">"Stay Conscious"</div>
+        <div class="text-xl text-gray-400 font-bold text-center md:text-left">
+          &ldquo;Stay Conscious&rdquo;
+        </div>
         <div
           class="
             text-md
