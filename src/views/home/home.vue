@@ -44,11 +44,11 @@
                 max-w-4xl
               "
             >
-              <div style="color: #84cf95" class="subtitle md:mt-4">
-                Full Stack Developer
+              <div class="subtitle md:mt-4" style="color: #84cf95">
+                Full Stack Software Engineer at Learnable
               </div>
               <div class="subtitle" style="color: #84cf95">
-                Software Engineer at Learnable
+                Performance Optimisation Software Engineer at Sunswift Racing
               </div>
               <div style="color: #84cf95" class="subtitle">
                 UNSW Computer Science + Commerce
