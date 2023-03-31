@@ -3,27 +3,11 @@
     <!-- Root -->
     <div class="" style="z-index: 0">
       <div
-        class="
-          flex flex-col
-          pt-20
-          sm:mt-0 sm:flex-row
-          min-h-screen
-          h-fit
-          justify-space-between
-          2xl:justify-center
-        "
+        class="flex flex-col pt-20 sm:mt-0 sm:flex-row min-h-screen h-fit justify-space-between 2xl:justify-center"
       >
         <!-- First full screen -->
         <div
-          class="
-            flex flex-col
-            h-fit
-            justify-center
-            ml-10
-            sm:ml-20
-            md:ml-40
-            mr-10
-          "
+          class="flex flex-col h-fit justify-center ml-10 sm:ml-20 md:ml-40 mr-10"
         >
           <div>
             <div
@@ -34,21 +18,13 @@
               <div style="color: #157f1f" class="title">I'm Lincoln.</div>
             </div>
             <div
-              class="
-                text-lg
-                sm:text-xl
-                md:text-2xl
-                font-extrabold
-                mt-4
-                md:mt-0
-                max-w-4xl
-              "
+              class="text-lg sm:text-xl md:text-2xl font-extrabold mt-4 md:mt-0 max-w-4xl"
             >
               <div class="subtitle md:mt-4" style="color: #84cf95">
-                Full Stack Software Engineer at Learnable
+                Software Engineer (Full Stack) @ Learnable
               </div>
               <div class="subtitle" style="color: #84cf95">
-                Performance Optimisation Software Engineer at Sunswift Racing
+                Software Engineer (Performance Optimisation) @ Sunswift Racing
               </div>
               <div style="color: #84cf95" class="subtitle">
                 UNSW Computer Science + Commerce
@@ -76,15 +52,7 @@
           </ui-button-stack>
         </div>
         <div
-          class="
-            mx-auto
-            my-10
-            sm:mx-10
-            flex flex-col
-            justify-center
-            sm:hidden
-            md:flex
-          "
+          class="mx-auto my-10 sm:mx-10 flex flex-col justify-center sm:hidden md:flex"
         >
           <div class="w-fit h-fit logo">
             <img class="w-80 h-80 object-contain" src="@/assets/logo.png" />
