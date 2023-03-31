@@ -5,9 +5,13 @@ on:
       - master
   workflow_dispatch:
 jobs:
-  Testing:
-    runs-on: ubuntu-20.04
+  Deploy:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 17
       - name: Test and Deploy
         run: |
           git clone https://github.com/yyjlincoln/yyjlincoln.com
