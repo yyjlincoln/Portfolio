@@ -33,9 +33,10 @@
           </div>
           <ui-button-stack class="mt-8 max-w-2xl" :centered="false">
             <!-- Buttons -->
-            <ui-button to="/about-me">About Me</ui-button>
-            <ui-button to="/portfolio">My Portfolio</ui-button>
+            <ui-button class="btn" to="/about-me">About Me</ui-button>
+            <ui-button class="btn" to="/portfolio">My Portfolio</ui-button>
             <ui-button
+              class="btn"
               :asRouterLink="false"
               to="https://redirect.yyjlincoln.com/resume"
               type="external_primary"
@@ -46,7 +47,7 @@
               "
               >Download Resume</ui-button
             >
-            <ui-button to="/connect" type="secondary"
+            <ui-button to="/connect" type="secondary" class="btn"
               >Connect with me</ui-button
             >
           </ui-button-stack>
@@ -138,11 +139,11 @@ export default {
         "<+1"
       )
       .from(
-        ".buttons",
+        ".btn",
         {
           opacity: 0,
           duration: 0.5,
-          stagger: 0.25,
+          stagger: 0.1,
         },
         "<"
       );
