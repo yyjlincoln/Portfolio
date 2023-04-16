@@ -16,22 +16,23 @@
           innerclass="flex flex-col flex-nowrap sm:flex-row justify-center md:justify-start"
           class="infoarea"
         >
-          <div class="flex flex-col justify-center">
-            <div class="mx-auto text-center pr-4">
-              <text-styles type="large"> 👨🏻‍💻 </text-styles>
-            </div>
-          </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col space-y-4">
             <text-styles type="primary_color extrabold small"
-              >Ooooold projects</text-styles
+              >These projects are old and do not reflect my ability to
+              code.</text-styles
             >
             <text-styles type="secondary_color bold smaller"
-              >Most projects are old and no longer reflect of my coding
-              abilities. (lang, tech-stack, code style, algorithms, etc).</text-styles
-            >
+              >As I joined Learnable, Sunswift Racing and UNSW HCI BoDi Lab
+              (plus study and social commitments), it turns out that I don't
+              really have time for personal projects anymore. While I do work on
+              them, they are nowhere near a finished state, so I would rather
+              keep them quiet for now.
+            </text-styles>
             <text-styles type="secondary_color bold smaller"
-              >For more recent projects, check out my work at
-              Learnable.Education or visit my Github homepage.</text-styles
+              >For more recent projects, check out my work at Learnable
+              Education, Sunswift Racing (Performance Optimisation) and UNSW HCI
+              BoDi Lab, or checkout my resume. Alternatively, visit my Github
+              homepage for more information.</text-styles
             >
           </div>
         </ui-area>
