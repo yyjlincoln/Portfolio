@@ -68,7 +68,7 @@
 <script>
 import pageFrame from "../../components/page-frame.vue";
 import TextStyles from "../../components/text-styles.vue";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 export default {
   components: { pageFrame, TextStyles },
@@ -76,27 +76,27 @@ export default {
     timeline: null,
   }),
   mounted() {
-    this.timeline = gsap
-      .timeline({
-        defaults: {
-          ease: "power3.out",
-        },
-      })
-      .from(
-        ".text",
-        {
-          opacity: 0,
-          translateY: 100,
-          duration: 0.5,
-          stagger: {
-            amount: 0.4
-          },
-        },
-        ""
-      );
+    // this.timeline = gsap
+    //   .timeline({
+    //     defaults: {
+    //       ease: "power3.out",
+    //     },
+    //   })
+    //   .from(
+    //     ".text",
+    //     {
+    //       opacity: 0,
+    //       translateY: 100,
+    //       duration: 0.5,
+    //       stagger: {
+    //         amount: 0.4
+    //       },
+    //     },
+    //     ""
+    //   );
   },
   async beforeRouteLeave(to, from, next) {
-    await this.$func.reverseAnimation(this)
+    await this.$func.reverseAnimation(this);
     next();
   },
 };
